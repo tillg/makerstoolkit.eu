@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz &amp; Passwörter · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Was der Agent liest, geht in die Cloud. Passwörter in einen Passwort-Manager, nie in Projektdateien.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-wissen)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">Optionale Themen</a> <span aria-hidden="true">›</span> <span>Datenschutz &amp; Passwörter</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="datenschutz--passwörter">Datenschutz &amp; Passwörter</h1><p class="topic-meta">Optionales Thema · ca. 20 Min. · Braucht: <a href="../../II-git/1-git/">Git</a></p>
+<h2 id="datenschutz-wo-liegen-meine-daten">Datenschutz: Wo liegen meine Daten?</h2>
+<table>
+<thead>
+<tr>
+<th>Was</th>
+<th>Wo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Deine Dateien im Projektordner</td>
+<td>auf deinem Laptop</td>
+</tr>
+<tr>
+<td>Git-Verlauf (<code>.git</code>)</td>
+<td>auf deinem Laptop</td>
+</tr>
+<tr>
+<td>Was du Claude schreibst <strong>und alles, was Claude dafür liest</strong></td>
+<td>geht an Anthropic (Cloud)</td>
+</tr>
+<tr>
+<td>Ein Projekt auf GitHub</td>
+<td>online, privat oder öffentlich, wie du es einstellst</td>
+</tr>
+</tbody></table>
+<p>Merke: Liest der Agent eine Datei, schickt er ihren Inhalt mit. „Liegt nur auf meinem Laptop“ stimmt dann nicht mehr ganz.</p>
+<ul>
+<li>In den Datenschutz-Einstellungen von Claude nachsehen, ob deine Chats zum Training verwendet werden dürfen, und bewusst entscheiden.</li>
+<li>Uni- oder Schulkonto? Dann gelten deren Regeln.</li>
+<li>Nicht in den Projektordner: fremde vertrauliche Dokumente, Ausweise, Gesundheitsdaten, Passwörter.</li>
+</ul>
+<h2 id="passwörter-managen">Passwörter managen</h2>
+<ul>
+<li>Nutze einen <strong>Passwort-Manager</strong>: z. B. Bitwarden (kostenlos), die Apple-App „Passwörter“ oder 1Password. Dann hast du für jede Seite ein eigenes, starkes Passwort und musst dir nur eines merken.</li>
+<li>Schalte die <strong>Zwei-Faktor-Anmeldung</strong> ein, vor allem bei E-Mail, GitHub und deinem KI-Konto.</li>
+<li>Passwörter und API-Keys <strong>nie</strong> in normale Projektdateien schreiben. Der Agent würde sie lesen, und Git würde sie für immer speichern. Wenn nötig: in eine Datei <code>.env</code> und diese in <code>.gitignore</code> eintragen.</li>
+</ul>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../1-dateien-speicherort/"><small>← zurück</small>Dateien &amp; Speicherort</a><a class="pn-next" href="../3-webseite-bauen/"><small>weiter →</small>Webseite bauen</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

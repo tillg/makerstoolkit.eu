@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: Markdown · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-wissen)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">I · Basics</a> <span aria-hidden="true">›</span> <span>Markdown</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="markdown">Markdown</h1><div class="drehbuch-head">
+      <p><strong>Teil I · Basics</strong> · Dauer gesamt: ca. 20 Min. · Braucht: – · Führt zu: <a href="../5-claude-code/lehrer.html">Claude Code</a></p>
+      
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#15-markdown-verstehen">1.5 Markdown verstehen</a> · ca. 10 Min.</li><li><a href="#16-gemeinsam-an-dateien-arbeiten">1.6 Gemeinsam an Dateien arbeiten</a> · ca. 10 Min.</li></ul></div>
+<h2 id="15-markdown-verstehen">1.5 Markdown verstehen</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Markdown ist einfacher Text mit ein paar Zeichen für Struktur (<code>#</code>, <code>-</code>, <code>**</code>). <strong>Mensch und KI können es beide direkt lesen und schreiben, deshalb ist es unser gemeinsames Arbeitsformat.</strong></p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>Überschriften, Listen, fett/kursiv, Links, Tabellen und Code-Blöcke erkennen und selbst schreiben,</li>
+<li>eine <code>.md</code>-Datei in VS Code als Vorschau öffnen,</li>
+<li>erklären, warum <code>.md</code> besser zur KI-Zusammenarbeit passt als Word.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><p><strong>Problem zuerst:</strong> Word-Dateien sind für die KI ein Paket aus versteckter Formatierung. Markdown ist <strong>nur Text</strong>.</p>
+<blockquote>
+<p>Eine Markdown-Datei kannst du mit jedem Editor öffnen und lesen, auch in 20 Jahren. Die KI liest sie genauso wie du. Und: Sie kann Änderungen sauber machen, ohne dass das Layout kaputtgeht.</p>
+</blockquote>
+</li>
+<li><p><strong>Das Prinzip:</strong> Man schreibt Zeichen für Struktur, die Vorschau macht daraus das schöne Bild. Vergleich: Notenschrift vs. Musik. Oder: Einkaufszettel mit Sternchen und Strichen.</p>
+</li>
+<li><p><strong>Die Zeichen, mit einem Beispiel aus dem Segeltörn</strong> (Zielbild: Quelltext links, Vorschau rechts):</p>
+<pre><code class="language-markdown"># Segeltörn Kroatien
+## Tag 1: Split – Brač
+
+Wir segeln **ca. 25 sm**, *wenn der Wind passt*. Wetter siehe `wetter.md`.
+
+- Proviant einkaufen
+- Crew einweisen
+
+1. Ablegen
+2. Segel setzen
+
+[Hafenhandbuch](https://example.com)
+
+| Tag | Strecke | Hafen |
+|---|---|---|
+| 1 | 25 sm | Bol |
+</code></pre>
+</li>
+<li><p><strong>Auflistung der sechs Bausteine:</strong> Überschrift (<code>#</code>, <code>##</code>), Liste (<code>-</code>, <code>1.</code>), Betonung (<code>**fett**</code>, <code>*kursiv*</code>), Link (<code>[Text](Adresse)</code>), Tabelle (<code>|</code> und <code>---</code>), Code (<code>`Wort`</code> oder ein Block mit drei Backticks). Im <a href="./">Handout</a> steht dieselbe Übersicht zum Nachschlagen.</p>
+</li>
+<li><p><strong>Warum ideal für KI:</strong> (a) Text, den Menschen und Modelle gleich gut lesen, (b) Struktur durch Überschriften hilft der KI, sich zu orientieren, (c) später kommen Git (<a href="../../II-git/1-git/lehrer.html#21-was-ist-git">Teil II</a>) und <code>CLAUDE.md</code> (<a href="../../III-wissensbasis/2-claude-md/lehrer.html#34-projektkontext-mit-claudemd">3.4</a>) dazu, beide leben von Textdateien.</p>
+</li>
+<li><p><strong>Wichtig für uns:</strong> Wir schreiben Markdown nicht von Hand. Wir <strong>lesen</strong> es und lassen Claude schreiben. Die Zeichen kennen wir, damit wir Fehler sehen.</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<ol>
+<li>In VS Code eine Datei <code>probe.md</code> anlegen, den Beispieltext einfügen.</li>
+<li>Vorschau öffnen: Rechtsklick auf die Datei → <em>Vorschau öffnen</em> oder <code>Cmd/Strg + Shift + V</code> (Handout). Wenn es in der Seitenansicht erscheinen soll, vor dem Workshop prüfen, welche Variante wir nutzen.</li>
+<li>Im Quelltext <code>**fett**</code> ändern und die Vorschau live beobachten.</li>
+<li>Gegenprobe: Claude bitten, daraus eine Tabelle zu machen:</li>
+</ol>
+<pre><code class="language-text">Mach aus meiner Liste in probe.md eine Tabelle mit Spalten Tag, Strecke und Hafen.
+</code></pre>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Jede Person legt <code>markdown-spickzettel.md</code> an und schreibt von Hand: eine Überschrift, eine Liste mit drei Punkten, ein fettes Wort, einen Link. Dann Vorschau öffnen. Geschafft, wenn Überschrift groß und Liste mit Punkten erscheint. Zusatz: Fehler bewusst einbauen (Leerzeile vor der Liste weglassen) und beobachten, was passiert.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Tabelle wird nicht dargestellt:</strong> Meist fehlt die Trennzeile <code>|---|---|</code> oder eine Leerzeile davor.</li>
+<li><strong>Liste erscheint als Fließtext:</strong> Leerzeile vor der Liste fehlt oder <code>-</code> ohne Leerzeichen danach.</li>
+<li><strong><code>#</code> im Terminal:</strong> Dort ist es nur Text, die Vorschau gibt es nur in VS Code.</li>
+<li><strong>Vorschau-Kürzel auf Windows/Linux:</strong> <code>Strg + Shift + V</code> (Handout nennt <code>Cmd/Strg</code>).</li>
+<li><strong>„Kann ich Markdown in Word umwandeln?“</strong> Ja, Claude kann das (z. B. Pandoc oder Export). Nicht jetzt vertiefen.</li>
+<li><strong>Bilder, Formeln?</strong> Geht (<code>![Beschreibung](datei.png)</code>), aber nicht Teil von 1.5. Formeln in Physik/Mathe: später bei Bedarf.</li>
+<li><strong>Warum nicht gleich Word/PDF?</strong> Siehe Schritt 1. PDFs kann Claude lesen, aber Markdown lässt sich sauberer bearbeiten.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Markdown in 5 Minuten“)</li>
+<li>Markdown-Kurzanleitung: <a href="https://www.markdownguide.org/basic-syntax/" rel="noopener">https://www.markdownguide.org/basic-syntax/</a></li>
+<li>VS Code: Markdown-Vorschau <a href="https://code.visualstudio.com/docs/languages/markdown" rel="noopener">https://code.visualstudio.com/docs/languages/markdown</a></li>
+</ul>
+<p><em>Stand: 2026-11-06</em></p>
+<h2 id="16-gemeinsam-an-dateien-arbeiten">1.6 Gemeinsam an Dateien arbeiten</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-1">Worum geht&#39;s</h3>
+<p>Claude schreibt ein Dokument, wir lesen, korrigieren, lassen es überarbeiten. Runde um Runde. <strong>Der erste Entwurf ist nie das Ziel: Gut wird es durch Prüfen und Nachsteuern.</strong></p>
+<h3 id="lernziel-1">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>ein Markdown-Dokument von Claude erstellen lassen,</li>
+<li>das Ergebnis kritisch lesen und konkrete Änderungswünsche formulieren,</li>
+<li>Änderungen im Editor erkennen und selbst direkt in der Datei korrigieren,</li>
+<li>mindestens zwei Überarbeitungsrunden durchlaufen. Das ist der Meilenstein von Teil I.</li>
+</ul>
+<h3 id="so-erklären-wir-es-1">So erklären wir es</h3>
+<ol>
+<li><strong>Bild: Redaktion.</strong> Claude ist die Autorin, wir sind die Redaktion.<blockquote>
+<p>Du gibst ein Briefing, bekommst einen Entwurf, streichst an, gibst ihn zurück. Niemand erwartet, dass die erste Fassung fertig ist.</p>
+</blockquote>
+</li>
+<li><strong>Gute Änderungswünsche sind konkret.</strong> Vergleich:<ul>
+<li>schlecht: „Mach es besser.“</li>
+<li>gut: „Kürze Tag 2 auf drei Sätze und nenne den Hafen, in dem wir übernachten.“</li>
+<li>gut: „Ergänze eine Spalte ‚Distanz in Seemeilen‘ und markiere Zahlen, bei denen du unsicher bist.“</li>
+</ul>
+</li>
+<li><strong>Zwei Wege zur Korrektur:</strong> (a) Claude per Satz anweisen, (b) selbst in der Datei in VS Code tippen und Claude sagen „Ich habe etwas geändert, lies nach.“ Beides ist normal. Claude sieht die Datei immer in ihrem aktuellen Stand.</li>
+<li><strong>Wir prüfen immer:</strong> Zahlen, Namen, Fakten. Claude kann überzeugend schreiben und trotzdem irren (<a href="../5-claude-code/lehrer.html#11-was-ist-agentische-ki">1.1</a>: belesener Autor, keine Datenbank). Hilfreicher Zusatz im Prompt: „Wenn du dir bei etwas nicht sicher bist, sag es, statt zu raten.“ ([CW] S. 9).</li>
+<li><strong>Ausblick:</strong> Wie man genau sieht, was sich geändert hat, kommt mit Git (<a href="../../II-git/1-git/lehrer.html#23-%C3%A4nderungen--diffs">2.3</a>). Hier schauen wir nur mit den Augen auf die Datei.</li>
+<li><strong>Domänen-Beispiele</strong> für eigene Dokumente: Mathe-Zusammenfassung („Erkläre den Satz von Bayes in einem Absatz und mit Beispiel“), Skitrip („Vergleiche zwei Skigebiete in einer Tabelle“), Physik („Lernzettel zum Doppelpendel“).</li>
+</ol>
+<h3 id="zeigen-live-demo-1">Zeigen (Live-Demo)</h3>
+<p>Segeltörn-Briefing, drei Runden am großen Bildschirm:</p>
+<pre><code class="language-text">Erstelle toern-briefing.md: ein Briefing für einen 7-Tage-Segeltörn in Kroatien für 4 Personen mit Überschriften für Route, Crew, Proviant und Sicherheit. Kurz und stichpunktartig.
+</code></pre>
+<p>Dann (Runde 2, Redaktion):</p>
+<pre><code class="language-text">Der Abschnitt Sicherheit ist zu dünn. Ergänze eine Checkliste für den Tag vor dem Ablegen und eine Tabelle mit Notfallnummern. Markiere alles, was ich vor dem Törn prüfen muss.
+</code></pre>
+<p>Runde 3: Wir tippen selbst in der Datei einen Fehler hinein (falscher Hafenname) und sagen:</p>
+<pre><code class="language-text">Ich habe Tag 2 selbst geändert. Lies die Datei neu und prüfe, ob die Route noch stimmig ist.
+</code></pre>
+<p>Hinweisen: Wir sehen die Änderung sofort in VS Code, Claude fragt vor dem Schreiben (Berechtigung, <a href="../5-claude-code/lehrer.html#17-berechtigungen">1.7</a>).</p>
+<h3 id="selbst-machen-übung-1">Selbst machen (Übung)</h3>
+<p>Das ist die Handout-Übung: <strong><code>ueber-mich.md</code></strong> anlegen lassen (wer ich bin, welches Thema heute, was am Ende herauskommen soll), lesen, korrigieren, per Anweisung oder von Hand. Mindestens zwei Runden. Prompt-Vorlage:</p>
+<pre><code class="language-text">Lege ueber-mich.md an. Ich bin [Name], ich beschäftige mich heute mit [Thema], und am Ende möchte ich [Ergebnis] haben. Stelle mir erst drei Fragen, wenn dir etwas fehlt.
+</code></pre>
+<p>Geschafft, wenn das Dokument stimmt und mindestens eine eigene Korrektur drin ist. Wer schnell ist: „Mach daraus einen Steckbrief mit Tabelle.“</p>
+<h3 id="stolpersteine--fragen-1">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Claude erfindet Details über mich:</strong> Gut als Lernmoment. Daten über uns nur angeben, was wir wirklich wollen. Korrigieren lassen.</li>
+<li><strong>Datei bleibt leer / falscher Ort:</strong> Prüfen, ob das Terminal im Projektordner läuft (<a href="../5-claude-code/lehrer.html#14-die-erste-agenten-session">1.4</a>).</li>
+<li><strong>Ich habe selbst geändert, Claude weiß nichts davon:</strong> Sagen „lies die Datei neu“.</li>
+<li><strong>Umlaute/Sonderzeichen im Dateinamen:</strong> Besser ohne, siehe <a href="../../optional/1-dateien-speicherort/lehrer.html#o2-namenskonventionen">O.2 Namenskonventionen</a>. Deshalb heißt die Demo-Datei <code>toern-briefing.md</code>.</li>
+<li><strong>Claude überschreibt alles:</strong> Wir bitten im Prompt: „Ändere nur Abschnitt X.“ Zurückholen lernen wir in <a href="../../II-git/1-git/lehrer.html#26-fehler-r%C3%BCckg%C3%A4ngig-machen">2.6</a>.</li>
+<li><strong>„Wie viele Runden?“</strong> So lange, bis wir es verantworten würden. Das ist der Kern.</li>
+</ul>
+<h3 id="material--quellen-1">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Übung“), Meilenstein in <a href="../">Teil-Übersicht</a></li>
+<li>Kollegen-Folien: [CW] S. 9 – „Sag es, wenn du unsicher bist“ (Kürzel siehe <span class="ref" title="intern">material.md</span>)</li>
+<li>Segeltörn-Beispiel: <span class="ref" title="intern">beispielprojekte.md</span></li>
+</ul>
+<p><em>Stand: 2026-11-06</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../2-vscode/lehrer.html"><small>← zurück</small>VS Code</a><a class="pn-next" href="../4-diktieren/lehrer.html"><small>weiter →</small>Diktieren</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

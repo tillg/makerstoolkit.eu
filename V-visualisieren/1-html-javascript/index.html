@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML &amp; JavaScript · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Der Agent baut aus deinem Wissen eine Webseite mit Schiebereglern, Animationen, Diagrammen.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ergebnis)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">V · Erschaffen &amp; visualisieren</a> <span aria-hidden="true">›</span> <span>HTML &amp; JavaScript</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="html--javascript">HTML &amp; JavaScript</h1><p class="topic-meta">Teil V · Erschaffen &amp; visualisieren · ca. 55 Min. · Braucht: <a href="../../IV-agentisch-arbeiten/1-plan-modus/">Plan-Modus</a>, <a href="../../III-wissensbasis/1-wissensbasis/">Wissensbasis</a></p>
+<p>Claude kann <strong>HTML und JavaScript</strong> schreiben: Webseiten mit Schiebereglern, Animationen, Diagrammen und Karten, die einfach im Browser laufen. Du beschreibst, Claude baut, du testest.</p>
+<p>Selbst schreiben musst du das nicht. Aber wenn du ungefähr weißt, wie es aussieht, verstehst du besser, was Claude baut, und kannst gezielter Feedback geben.</p>
+<h2 id="was-ist-html">Was ist HTML?</h2>
+<p><strong>HTML</strong> beschreibt, <strong>was</strong> auf einer Webseite steht: Überschriften, Absätze, Bilder, Knöpfe, Schieberegler. Wie Markdown, nur ausführlicher. Jede Webseite im Internet ist HTML.</p>
+<p>So ist es aufgebaut:</p>
+<ul>
+<li>Alles steht in <strong>Tags</strong> (Etiketten) in spitzen Klammern: <code>&lt;h1&gt;</code> öffnet eine Überschrift, <code>&lt;/h1&gt;</code> schließt sie wieder.</li>
+<li>Tags stecken ineinander wie Schachteln. Ein Absatz <code>&lt;p&gt;</code> kann z. B. ein fett gedrucktes Wort <code>&lt;b&gt;</code> enthalten.</li>
+<li>Manche Tags haben <strong>Attribute</strong>, also Zusatzangaben: <code>&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;10&quot;&gt;</code> ist ein Schieberegler von 0 bis 10.</li>
+<li>Eine Seite hat zwei Teile: <code>&lt;head&gt;</code> (Titel, Einstellungen, unsichtbar) und <code>&lt;body&gt;</code> (alles, was man sieht).</li>
+</ul>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;de&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sparplan&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Mein Sparplan&lt;/h1&gt;
+    &lt;p&gt;Wie viel Zinsen pro Jahr? &lt;b id=&quot;zins-anzeige&quot;&gt;3&lt;/b&gt; %&lt;/p&gt;
+    &lt;input id=&quot;zins&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;10&quot; value=&quot;3&quot;&gt;
+    &lt;p&gt;Aus 1000 € werden in 10 Jahren: &lt;b id=&quot;ergebnis&quot;&gt;1344&lt;/b&gt; €&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Diese Seite zeigt eine Überschrift, zwei Sätze und einen Schieberegler. Aber: Der Regler tut noch nichts. Dafür braucht es JavaScript.</p>
+<p>Das Aussehen (Farben, Schriften, Abstände) regelt eine dritte Sprache: <strong>CSS</strong>. Die schreibt Claude gleich mit.</p>
+<h2 id="was-ist-javascript">Was ist JavaScript?</h2>
+<p><strong>JavaScript</strong> (kurz JS) beschreibt, <strong>was passiert</strong>: rechnen, auf Klicks und Regler reagieren, Inhalte ändern, Animationen abspielen. Es läuft direkt im Browser, nichts zu installieren.</p>
+<p>So ist es aufgebaut:</p>
+<ul>
+<li>Eine Folge von <strong>Anweisungen</strong>, die der Browser der Reihe nach ausführt. Jede endet meist mit <code>;</code>.</li>
+<li><strong>Variablen</strong> merken sich Werte: <code>const startbetrag = 1000;</code></li>
+<li><strong>Funktionen</strong> sind kleine Rezepte, die man immer wieder aufrufen kann.</li>
+<li>Über <code>document.getElementById(&quot;…&quot;)</code> greift JavaScript auf ein HTML-Element mit diesem <code>id</code> zu.</li>
+<li>Mit <code>addEventListener</code> sagt man: „Wenn <em>das</em> passiert (z. B. der Regler bewegt wird), dann tu <em>dies</em>.“</li>
+</ul>
+<p>Dieses Stück gehört vor <code>&lt;/body&gt;</code> in die Seite oben. Dann rechnet die Seite bei jeder Reglerbewegung neu:</p>
+<pre><code class="language-html">&lt;script&gt;
+  const regler = document.getElementById(&quot;zins&quot;);
+
+  function neuBerechnen() {
+    const zins = Number(regler.value);
+    const ergebnis = 1000 * (1 + zins / 100) ** 10;
+    document.getElementById(&quot;zins-anzeige&quot;).textContent = zins;
+    document.getElementById(&quot;ergebnis&quot;).textContent = Math.round(ergebnis);
+  }
+
+  regler.addEventListener(&quot;input&quot;, neuBerechnen);
+&lt;/script&gt;
+</code></pre>
+<p>Kurz gesagt: <strong>HTML ist das Gerüst, CSS die Farbe, JavaScript der Motor.</strong></p>
+<p>Probier es aus: „Erklär mir Zeile für Zeile, was in <code>viz/pendel.html</code> passiert.“ Oder: „Wo im Code wird die Energie berechnet?“</p>
+<h2 id="ideen">Ideen</h2>
+<table>
+<thead>
+<tr>
+<th>Thema</th>
+<th>Visualisierung</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Physik</td>
+<td>Pendel mit Reglern für Länge und Startwinkel, Energie-Diagramm</td>
+</tr>
+<tr>
+<td>Mathematik</td>
+<td>Fourier-Reihe: wie aus Kreisen eine Rechteckwelle wird</td>
+</tr>
+<tr>
+<td>Wirtschaft</td>
+<td>Sparplan-Rechner mit Zinseszins-Kurve</td>
+</tr>
+<tr>
+<td>Berge</td>
+<td>Höhenprofil und Gehzeiten der geplanten Tour</td>
+</tr>
+<tr>
+<td>Segeln</td>
+<td>Törnroute auf der Karte mit Etappen und Distanzen</td>
+</tr>
+<tr>
+<td>Reisen</td>
+<td>Reiseplan als Zeitleiste mit Kosten</td>
+</tr>
+</tbody></table>
+<h2 id="so-gehst-du-vor">So gehst du vor</h2>
+<ol>
+<li>Beschreiben: „Erstelle eine Datei <code>viz/pendel.html</code>, eine interaktive Simulation … Grundlage ist <code>notizen/schwingungen.md</code>.“</li>
+<li>Öffnen: Claude startet sie im Browser oder du öffnest die Datei per Doppelklick.</li>
+<li>Verbessern: „Der Regler soll bis 90° gehen.“ „Zeig zusätzlich die Energie als Kurve.“</li>
+<li>Committen, wenn es dir gefällt.</li>
+</ol>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../../IV-agentisch-arbeiten/2-skills/"><small>← zurück</small>Skills</a><a class="pn-next" href="../2-recherche-pruefen/"><small>weiter →</small>Recherche &amp; Prüfen</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

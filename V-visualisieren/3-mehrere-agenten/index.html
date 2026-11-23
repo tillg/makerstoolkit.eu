@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mehrere Agenten · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Getrennte Agenten recherchieren, bauen und prüfen. herdr zeigt, wer gerade arbeitet.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ki)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">V · Erschaffen &amp; visualisieren</a> <span aria-hidden="true">›</span> <span>Mehrere Agenten</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="mehrere-agenten">Mehrere Agenten</h1><p class="topic-meta">Teil V · Erschaffen &amp; visualisieren · ca. 15 Min. · Braucht: <a href="../../IV-agentisch-arbeiten/1-plan-modus/">Plan-Modus</a>, <a href="../../III-wissensbasis/3-kontextfenster/">Kontextfenster</a></p>
+<p>Claude kann Teilaufgaben an <strong>Subagents</strong> abgeben, z. B. einer recherchiert, einer baut, einer prüft unabhängig. Aber: Wenn sich zwei Agenten einig sind, ist das noch kein Beweis.</p>
+<h2 id="beispiel-drei-baumeister-eine-galerie">Beispiel: Drei Baumeister, eine Galerie</h2>
+<p>Im Ordner <code>demos/doppelpendel/</code> liegt die Seite <code>galerie.html</code> mit drei leeren Kacheln. Jede Kachel wartet auf eine Datei. Sobald die Datei da ist, erscheint sie.</p>
+<ol>
+<li><p>Galerie im Browser öffnen. Claude startet dafür einen kleinen lokalen Server: „Starte einen lokalen Webserver und öffne <code>demos/doppelpendel/galerie.html</code>.“</p>
+</li>
+<li><p>Drei Subagents gleichzeitig losschicken:</p>
+<pre><code class="language-text">Nutze drei Subagents parallel. Jeder baut eine Ansicht des Doppelpendels
+und nutzt dafür demos/doppelpendel/physik.js:
+A → demos/doppelpendel/ansicht-a.html: Animation mit Leuchtspur
+B → demos/doppelpendel/ansicht-b.html: Energie über die Zeit
+C → demos/doppelpendel/ansicht-c.html: zwei Pendel, Startwinkel um
+    0,001° verschieden
+Keiner liest die Dateien der anderen.
+</code></pre>
+</li>
+<li><p>Zuschauen: Im Terminal laufen drei Agenten nebeneinander. Im Browser füllen sich die Kacheln nacheinander, jede in ihrem eigenen Tempo.</p>
+</li>
+<li><p>Unabhängig prüfen lassen:</p>
+<pre><code class="language-text">Starte einen weiteren Subagent. Er soll widerlegen, dass die Gesamtenergie
+in ansicht-b.html gleich bleibt. Er rechnet selbst mit physik.js nach und
+liest ansicht-b.html nicht.
+</code></pre>
+</li>
+</ol>
+<p>Achtung: Jeder Agent verbraucht Kontingent von deinem Abo. Drei bis vier sind für so ein Beispiel in Ordnung.</p>
+<p>Du kannst auch selbst <strong>mehrere Claude-Sessions gleichzeitig</strong> laufen lassen, z. B. eine recherchiert, eine baut die Visualisierung. Damit du den Überblick behältst, gibt es <a href="https://herdr.dev" rel="noopener">herdr</a>: Es läuft in deinem Terminal, zeigt alle Sessions nebeneinander und in einer Seitenleiste, welcher Agent gerade arbeitet, fertig ist oder auf deine Antwort wartet. Läuft auf Mac, Linux und Windows, kostenlos und Open Source.</p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../2-recherche-pruefen/"><small>← zurück</small>Recherche &amp; Prüfen</a><a class="pn-next" href="../../VI-toolkit/1-mcp/"><small>weiter →</small>MCP &amp; Co.</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

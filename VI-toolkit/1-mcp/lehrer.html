@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: MCP &amp; Co. · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ki)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">VI · Toolkit</a> <span aria-hidden="true">›</span> <span>MCP &amp; Co.</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="mcp--co">MCP &amp; Co.</h1><div class="drehbuch-head">
+      <p><strong>Teil VI · Toolkit</strong> · Dauer gesamt: ca. 15 Min. · Braucht: <a href="../../II-git/2-github/lehrer.html">GitHub</a>, <a href="../../IV-agentisch-arbeiten/2-skills/lehrer.html">Skills</a>, <a href="../../V-visualisieren/3-mehrere-agenten/lehrer.html">Mehrere Agenten</a> · Führt zu: –</p>
+      <p><strong>Material:</strong> MCP [CC] 22, Spec-Driven Development [CC] 30, Marketplaces [CC] 31, Tokens sparen [CC] 29</p>
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#64-die-nächste-stufe">6.4 Die nächste Stufe</a> · ca. 15 Min.</li></ul></div>
+<h2 id="64-die-nächste-stufe">6.4 Die nächste Stufe</h2>
+<p><em>Dauer: ca. 15 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Ausblick, keine Übung: Was gibt es nach dem Workshop? <strong>Du musst nichts davon heute können. Du sollst wissen, dass es das gibt und wann es sich lohnt.</strong> Wir zeigen fünf Wege und die Kniffe, mit dem eigenen Kontingent sparsam umzugehen.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>die fünf Stufen (GitHub, MCP, Spec Kit &amp; Co., Subagents, Automatisierung) in einem Satz erklären</li>
+<li>einen nächsten Schritt für sich wählen und aufschreiben</li>
+<li>einfache Spartipps (<code>/clear</code>, <code>/effort</code>, Modell) anwenden</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<p>Einstieg mit dem Flyer-Motiv: Idee → Planung → Umsetzung → Ergebnis. Wir haben heute eine Etappe gesegelt. Jetzt der Blick auf die nächsten Häfen.
+<img loading="lazy" src="route-idee-ergebnis.png" alt="Route von Idee über Planung und Umsetzung zu Ergebnissen, mit Segelboot über Bergen"></p>
+<p>Pro Stufe 1–2 Minuten, jeweils mit Alltagsbild:</p>
+<ol>
+<li><strong>GitHub</strong> (Verweis <a href="../../II-git/2-github/lehrer.html#29-github-kurz">2.9</a>): Das Projekt online sichern und teilen. Bild: Cloud-Backup plus gemeinsames Dokument. Lohnt sich, sobald du das Projekt nicht verlieren oder mit anderen bearbeiten willst.</li>
+<li><strong>MCP</strong> (Model Context Protocol, [CC] 22): Steckdosen für Werkzeuge.<blockquote>
+<p>Bisher hat Claude nur deine Dateien gesehen. Mit MCP kann es zusätzliche Werkzeuge benutzen: einen Browser bedienen, in Dokumentation nachschlagen, auf eine Datenbank zugreifen. Der Agent entscheidet selbst, wann er sie braucht. Dazu: Claude kann ohnehin jedes Programm im Terminal bedienen (z. B. <code>gh</code> für GitHub), ganz ohne MCP (<span class="ref" title="intern">[KB] 09</span>, §Any CLI is a tool).
+Beispiel für uns: Wetterdaten oder Kalender für den Törn-Planer. Vorsicht: Jedes angeschlossene Werkzeug ist ein Zugriff auf Daten. Nur Vertrauenswürdiges verbinden (<a href="../../optional/2-datenschutz-passwoerter/lehrer.html#o1-datenschutz-wo-liegen-meine-daten">O.1 Datenschutz</a>).</p>
+</blockquote>
+</li>
+<li><strong>Spec-Driven Development</strong> ([CC] 30): Du kennst es schon, wir haben es in <a href="../../IV-agentisch-arbeiten/1-plan-modus/lehrer.html#41-vom-prompt-zur-spezifikation">Teil IV</a> in klein gemacht: erst Spezifikation, dann Plan, dann Umsetzung. Es gibt Baukästen, die diesen Ablauf fest einbauen: <strong>Spec Kit</strong>, <strong>BMAD</strong>, <strong>Superpowers</strong>, <strong>OpenSpec</strong>.<blockquote>
+<p>Die Spezifikation ist die Wahrheit, nicht der Code. Sie überlebt auch, wenn Claude den Kontext vergisst.
+Es gibt kein Richtig oder Falsch. Für große Projekte spannend, für heute zu viel.</p>
+</blockquote>
+</li>
+<li><strong>Subagents</strong> (Verweis <a href="../../V-visualisieren/3-mehrere-agenten/lehrer.html#55-mehrere-agenten">5.5</a>): Spezialisierte Helfer mit eigenem Arbeitsgedächtnis. Bild: Der Chef delegiert Recherche an eine Assistentin und bekommt nur das Ergebnis zurück. Mehrere arbeiten parallel, und eine zweite Person kann unabhängig prüfen.</li>
+<li><strong>Automatisierung:</strong> Wiederkehrende Abläufe laufen von selbst, z. B. jeden Morgen eine Zusammenfassung neuer Quellen. Kollegen-Hinweis ([CC] 24): Für feste, immer gleiche Aufgaben keine KI nehmen, sondern die KI ein Skript schreiben lassen.</li>
+</ol>
+<p><strong>Plugins und Marketplaces</strong> ([CC] 31): Skills, Helfer und mehr werden als Pakete geteilt (wie <code>grill-with-docs</code> in <a href="../../IV-agentisch-arbeiten/2-skills/lehrer.html#47-skill-beispiel-grill-with-docs">4.7</a>). Wer viele Skills teilen will, kann eine eigene Sammlung anlegen. Wie immer: nur aus vertrauenswürdigen Quellen.</p>
+<p><strong>Tokens und Limits sparen</strong> ([CC] 29, 15), Stand 2026-11 (<span class="ref" title="intern">[KB] 16</span>, <span class="ref" title="intern">[KB] 17</span>). Ausführlich in <a href="../../I-basics/5-claude-code/lehrer.html#o5-modell-effort-und-abo-limits">O.5 Modell und Limits</a>:</p>
+<ul>
+<li>Abos haben ein Limit pro <strong>rollendem 5-Stunden-Fenster</strong> und ein <strong>Wochenlimit</strong>, geteilt mit dem Claude-Chat (nicht „pro Session“). Je länger ein Gespräch, desto teurer jede Runde (<a href="../../III-wissensbasis/3-kontextfenster/lehrer.html#36-kontext-verstehen">3.6 Kontext</a>). Mit <code>/usage</code> siehst du, wo es hingeht.</li>
+<li><code>/clear</code> oft: neue Aufgabe, neuer Kontext.</li>
+<li>Erst <code>/effort</code> ändern, dann das Modell: Ein Modellwechsel mitten in der Session macht den Zwischenspeicher ungültig, <code>/effort</code> bei aktuellen Modellen nicht. <code>/effort</code> steuert, wie gründlich das Modell nachdenkt.</li>
+<li>Planen mit dem starken Modell, Umsetzen mit dem schnelleren: Das gibt es als Kürzel <code>opusplan</code> (Opus im Plan-Modus, Sonnet beim Umsetzen). Jeder Wechsel kostet einen Neustart des Zwischenspeichers.</li>
+<li>Haiku nicht für Agenten-Arbeit nehmen.</li>
+<li>Auf Pro werden Fable und <code>/fast</code> aus bezahlten Nutzungsguthaben (Usage Credits) abgerechnet, nicht aus dem Abo-Limit.</li>
+</ul>
+<p><strong>Abschluss: die fünf Gedanken zum Mitnehmen</strong> (wie im Handout). Wir lesen sie vor und fragen, welcher am meisten hängen geblieben ist.</p>
+<ol>
+<li>Beschreibe Ergebnisse, nicht Code.</li>
+<li>Erst planen, dann bauen.</li>
+<li>Kontext ist alles.</li>
+<li>Mit Sicherheitsnetz experimentieren.</li>
+<li>Vertrauen ist gut, prüfen ist Pflicht.</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Kurz, nur eine Sache live (3–4 Min.), Rest erzählen:</p>
+<ul>
+<li><strong>Variante A, Plugins:</strong> <code>/plugin</code> öffnen und durch einen Marketplace blättern ([CC] 31 „Show live“). Nichts installieren, nur zeigen. Befehl und Anzeige vorab prüfen.</li>
+<li><strong>Variante B, Subagents:</strong> Prompt „Lass drei Subagents parallel die Häfen A, B, C recherchieren und fasse die Ergebnisse zusammen.“ und zeigen, wie mehrere Aufgaben gleichzeitig laufen.</li>
+<li><strong>MCP:</strong> Wenn vorbereitet, ein MCP-Server (z. B. Browser) als Beispiel. Sonst nur erzählen. Einrichtung vor dem Workshop prüfen (Befehl <code>claude mcp add</code>, offizielle Doku).</li>
+</ul>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Reflexion statt Übung (3–5 Min., schriftlich in <code>notizen/naechste-schritte.md</code>, Claude darf helfen):</p>
+<pre><code class="language-text">Hilf mir, meinen nächsten Schritt zu wählen. Frag mich, was ich mit diesem Projekt vorhabe,
+und schlage mir aus GitHub, MCP, Spec Kit, Subagents und Automatisierung genau einen vor.
+Schreib das Ergebnis in notizen/naechste-schritte.md.
+</code></pre>
+<p>Geklappt, wenn: In der Datei steht ein konkreter nächster Schritt mit einem Satz Begründung. Meilenstein aus dem Handout: aufgeräumtes Projekt, ein eigener Skill, eine Idee, wie es weitergeht.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Muss ich das alles lernen?“</strong> Nein. Einen Schritt wählen, den Rest vergessen, bis du ihn brauchst.</li>
+<li><strong>„Was kostet das?“</strong> Preise und Limits ändern sich. Nicht aus dem Kopf nennen, aktuellen Stand nachsehen (Stand 2026-11: <a href="../../I-basics/5-claude-code/lehrer.html#o5-modell-effort-und-abo-limits">O.5</a>).</li>
+<li><strong>Sicherheit bei MCP und Plugins:</strong> Das sind Anweisungen und Zugriffe für deinen Agenten. Nur Bekanntes installieren, Berechtigungen lesen.</li>
+<li><strong>„Welcher Baukasten (Spec Kit, BMAD …) ist der beste?“</strong> Keine Empfehlung nötig. Erst mit dem Ablauf aus Teil IV Erfahrung sammeln.</li>
+<li><strong>Abo-Regeln:</strong> Manche Werkzeuge anderer Anbieter dürfen nicht mit jedem Abo genutzt werden. Vor dem Einsatz die Nutzungsbedingungen lesen ([CC] 30).</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, „Die fünf Gedanken“ in <a href="../">Teil-Übersicht</a></li>
+<li>Wissensbasis: <span class="ref" title="intern">[KB] 16</span>, <span class="ref" title="intern">[KB] 17</span>, <span class="ref" title="intern">[KB] 09</span></li>
+<li>Kollegen-Folien: [CC] 15 – Modelle und <code>/effort</code>; [CC] 22 – MCP; [CC] 29 – Tokens sparen; [CC] 30 – Spec-Driven Development; [CC] 31 – Marketplaces (Kürzel siehe <span class="ref" title="intern">material.md</span>)</li>
+<li>Offizielle Doku: code.claude.com/docs (MCP, Subagents, Plugins; vor dem Workshop prüfen)</li>
+<li>Bild: eigener Flyer</li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../../V-visualisieren/3-mehrere-agenten/lehrer.html"><small>← zurück</small>Mehrere Agenten</a><a class="pn-next" href="../../optional/1-dateien-speicherort/lehrer.html"><small>weiter →</small>Dateien &amp; Speicherort</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

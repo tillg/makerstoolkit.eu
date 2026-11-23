@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Der Agent: liest Dateien, schreibt, führt Befehle aus. Fragt vorher um Erlaubnis. Nicht verstanden? Tippe ELI5.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/mermaid.min.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ki)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">I · Basics</a> <span aria-hidden="true">›</span> <span>Claude Code</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="claude-code">Claude Code</h1><p class="topic-meta">Teil I · Basics · ca. 55 Min. · Braucht: <a href="../1-terminal/">Terminal</a>, <a href="../2-vscode/">VS Code</a>, <a href="../3-markdown/">Markdown</a></p>
+<h2 id="chatbot-vs-agent">Chatbot vs. Agent</h2>
+<table>
+<thead>
+<tr>
+<th>Chatbot</th>
+<th>Agent</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Du fragst, er antwortet</td>
+<td>Du gibst eine Aufgabe, er erledigt sie</td>
+</tr>
+<tr>
+<td>Kopieren &amp; Einfügen</td>
+<td>Liest und schreibt Dateien direkt in deinem Projekt</td>
+</tr>
+<tr>
+<td>Ein Schritt</td>
+<td>Viele Schritte: lesen, planen, ausführen, prüfen</td>
+</tr>
+</tbody></table>
+<h2 id="programm-und-modell">Programm und Modell</h2>
+<p>Das Programm, das du bedienst (der <em>Client</em>), ist nicht die KI selbst. Die eigentliche KI ist ein großes Sprachmodell (<em>LLM</em>), das in der Cloud läuft. Der Client schickt deine Nachricht dorthin und zeigt die Antwort an.</p>
+<div class="mermaid"><pre class="mermaid-src">flowchart LR
+  subgraph clients[&quot;Clients (dein Rechner)&quot;]
+    chatgpt[&quot;ChatGPT-App&quot;]
+    claudeapp[&quot;Claude-App&quot;]
+    claudecode[&quot;Claude Code&lt;br/&gt;(im Terminal)&quot;]
+  end
+  subgraph llms[&quot;LLMs (Cloud)&quot;]
+    gpt5[&quot;GPT-5&lt;br/&gt;(OpenAI)&quot;]
+    opus[&quot;Claude Opus&lt;br/&gt;(Anthropic)&quot;]
+  end
+  chatgpt --&gt; gpt5
+  claudeapp --&gt; opus
+  claudecode --&gt; opus
+</pre></div>
+<p>Claude-App und Claude Code nutzen dasselbe Modell. Der Unterschied: Die App chattet mit dir, Claude Code darf zusätzlich Dateien in deinem Projekt lesen und schreiben und Befehle ausführen.</p>
+<h2 id="die-erste-session">Die erste Session</h2>
+<ol>
+<li>Lege einen Ordner an, z. B. <code>mein-projekt</code>.</li>
+<li>Öffne ihn in VS Code (<em>Datei → Ordner öffnen</em>).</li>
+<li>Öffne das Terminal in VS Code (<em>Terminal → Neues Terminal</em>) und tippe <code>claude</code>.</li>
+<li>Probier aus:<ul>
+<li>„Was befindet sich in diesem Ordner?“</li>
+<li>„Lege eine Datei <code>ideen.md</code> an mit drei Ideen für ein Projekt zum Thema …“</li>
+<li>„Mach aus der Liste eine Tabelle mit Spalten für Aufwand und Spaßfaktor.“</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>Trick: <code>ELI5</code>.</strong> Claude fragt oder schreibt etwas, das du nicht verstehst? Tippe einfach <code>ELI5</code>. Das heißt <em>Explain Like I&#39;m 5</em> („Erklär es mir, als wäre ich fünf“). Claude erklärt es dann noch einmal ganz einfach, ohne Fachwörter.</p>
+</blockquote>
+<h2 id="system-prompt-und-so">System Prompt und so</h2>
+<ul>
+<li>Was passiert lokal, was am Server</li>
+<li>Wie wird das Prompt zusammengestellt</li>
+<li>Lokale Tools</li>
+<li>Rechte oder nicht</li>
+<li>Claude startet im <strong>Auto-Modus</strong>: Ein zweites Modell prüft im Hintergrund und erlaubt Harmloses selbst. Für den Anfang schalten wir auf <strong>manual</strong> (einmal <code>Shift+Tab</code>, unten steht dann <code>manual mode on</code>). Dann fragt Claude nach, bevor es Dateien ändert oder Befehle ausführt. Lies, was es vorhat, bevor du zustimmst. Du bist der Chef, Claude ist der Assistent. <em>(Stand 2026-11)</em></li>
+</ul>
+<h2 id="claude-code-bedienen">Claude Code bedienen</h2>
+<table>
+<thead>
+<tr>
+<th>Taste</th>
+<th>Was passiert</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Enter</code></td>
+<td>Schickt ab, auch einen halben Satz!</td>
+</tr>
+<tr>
+<td><code>Strg+J</code></td>
+<td>Neue Zeile (statt <code>Enter</code>)</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Stoppt Claude. Dann Korrektur tippen.</td>
+</tr>
+<tr>
+<td><code>Esc</code> <code>Esc</code></td>
+<td>Zurückspulen auf einen früheren Stand (bei leerer Eingabe)</td>
+</tr>
+<tr>
+<td><code>Shift+Tab</code></td>
+<td>Modus wechseln (Windows ggf. <code>Alt+M</code>)</td>
+</tr>
+<tr>
+<td><code>@datei.md</code></td>
+<td>„Schau dir genau diese Datei an.“</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Befehle, z. B. <code>/clear</code> (neues Gespräch), <code>/resume</code> (altes Gespräch), <code>/model</code> (Modell), <code>/usage</code> (Limit)</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Alle Tastenkürzel</td>
+</tr>
+</tbody></table>
+<p>Zurückspulen ersetzt Git nicht: Es erwischt nicht alles. Vor größeren Aufgaben committen.</p>
+<h2 id="optional-modell-effort-und-abo-limits">Optional: Modell, Effort und Abo-Limits</h2>
+<p><em>Stand 2026-11. Modelle und Limits ändern sich oft.</em></p>
+<ul>
+<li>Claude Pro hat ein Kontingent für <strong>5 Stunden</strong> und eines für die <strong>Woche</strong>. Chat im Browser und Claude Code teilen es sich.</li>
+<li>Mit <code>/usage</code> siehst du, wie viel schon verbraucht ist. In der Claude-App: Einstellungen → Nutzung.</li>
+<li>Mit <code>/model</code> wählst du das Modell. Voreingestellt ist Opus, Sonnet ist günstiger. In der Claude-App wählst du das Modell unten im Eingabefeld.</li>
+<li>Claude hat kein Gedächtnis: Bei jeder Runde wird das ganze Gespräch neu geschickt. <strong>Lange Gespräche kosten mehr.</strong> Neue Aufgabe → <code>/clear</code>. Nach einer langen Pause auch.</li>
+<li><strong>Erst Effort, dann Modell.</strong> Mit <code>/effort</code> stellst du ein, wie gründlich Claude arbeitet (<code>low</code>, <code>medium</code>, <code>high</code> …). Das Modell mitten im Gespräch zu wechseln ist teuer.</li>
+<li>Für eine einzelne schwere Frage: <code>ultrathink</code> in den Prompt schreiben.</li>
+<li>Auf Pro <strong>nicht einschalten:</strong> das Modell Fable und <code>/fast</code>. Beides kostet dort extra Geld.</li>
+<li>Mehrere Agenten gleichzeitig verbrauchen ein Vielfaches.</li>
+</ul>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../4-diktieren/"><small>← zurück</small>Diktieren</a><a class="pn-next" href="../../II-git/1-git/"><small>weiter →</small>Git</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

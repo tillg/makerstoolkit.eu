@@ -1,0 +1,31 @@
+/* The Modern Maker's Toolkit – Design-Tokens („Mathematical Adventure“). Siehe DESIGN.md. */
+@import url("../assets/fonts.css");
+
+:root {
+  /* Grundfarben */
+  --mmt-midnight: #081523; /* Hintergründe */
+  --mmt-slate: #172c40;    /* Karten & Flächen */
+  --mmt-paper: #f3f7fc;    /* Text auf dunkel, helle Seiten */
+
+  /* Akzente – jede Farbe hat eine Bedeutung */
+  --mmt-cyan: #48c6f2;     /* Wissen & Verbindungen */
+  --mmt-violet: #8c80f6;   /* KI & Ideen */
+  --mmt-amber: #f4b860;    /* Interaktion & Highlights */
+  --mmt-green: #53c995;    /* Ergebnisse & Validierung */
+
+  /* Hilfsfarben dunkel */
+  --mmt-grid: #244054;
+  --mmt-axis: #7594aa;
+  --mmt-text-muted: #b8c9d8;
+
+  /* Hilfsfarben hell (Unterlagen) */
+  --mmt-light-accent: #176a91;
+  --mmt-light-muted: #34495c;
+  --mmt-light-surface: #e0eaf2;
+  --mmt-light-rule: #c6d7e4;
+
+  /* Schriften */
+  --mmt-font-title: "Manrope", "Inter", system-ui, sans-serif;
+  --mmt-font-body: "Inter", system-ui, sans-serif;
+  --mmt-font-mono: "JetBrains Mono", ui-monospace, monospace;
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: Diktieren · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-werkzeug)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">I · Basics</a> <span aria-hidden="true">›</span> <span>Diktieren</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="diktieren">Diktieren</h1><div class="drehbuch-head">
+      <p><strong>Teil I · Basics</strong> · Dauer gesamt: ca. 10 Min. · Braucht: – · Führt zu: –</p>
+      
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#18-diktieren-statt-tippen">1.8 Diktieren statt tippen</a> · ca. 10 Min.</li></ul></div>
+<h2 id="18-diktieren-statt-tippen">1.8 Diktieren statt tippen</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Taste halten, sprechen, loslassen: Der Text steht im Terminal. <strong>Wer spricht, erzählt automatisch mehr Kontext, und genau der macht die Antworten der KI besser.</strong> Optional, aber ein großer Gewinn im Alltag.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>einen Prompt per Sprache eingeben (mit dem Tool oder dem Fallback des Betriebssystems),</li>
+<li>erklären, warum längere gesprochene Prompts oft bessere Ergebnisse liefern,</li>
+<li>vor dem Abschicken den diktierten Text kurz prüfen.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><strong>Beobachtung statt Theorie:</strong> Zwei Prompts vergleichen.<blockquote>
+<p>Getippt: „Mach mir einen Törnplan.“
+Gesprochen: „Ich möchte im Sommer eine Woche mit drei Freunden segeln, wir sind nicht erfahren, einer wird seekrank, wir starten in Split, maximal vier Stunden pro Tag, und abends sollen wir in einem Hafen mit Restaurant liegen.“</p>
+</blockquote>
+Der zweite ist in 15 Sekunden gesprochen, getippt dauert er eine Minute. Die Antwort wird besser, weil Claude mehr weiß ([CW] S. 4: Claude ist nur so gut wie der Kontext).</li>
+<li><strong>Warum das funktioniert:</strong> Beim Tippen kürzen wir. Beim Sprechen denken wir laut, mit Gründen und Nebensachen. Für die KI sind Gründe und Rahmenbedingungen Gold. Im Handout steht „etwa dreimal schneller“ (nicht nachgeprüft, deshalb von uns eher vorsichtig sagen: „deutlich schneller“).</li>
+<li><strong>Drei Wege, nach Aufwand:</strong><ul>
+<li><strong>Mac mit Apple-Chip:</strong> <a href="https://hex.kitlangton.com" rel="noopener">Hex</a>: Taste halten, sprechen, loslassen, Text erscheint am Cursor. Mikrofon- und Bedienungshilfen-Zugriff erlauben (steht in <a href="../../00-vorbereitung/">00-vorbereitung.md</a>). Läuft lokal.</li>
+<li><strong>Windows, Linux, ältere Macs:</strong> <a href="https://handy.computer" rel="noopener">Handy</a>: gleiches Prinzip, kostenlos, Open Source, offline.</li>
+<li><strong>Ohne Installation:</strong> Windows <code>Win + H</code>, Mac: <em>Systemeinstellungen → Tastatur → Diktat</em>. Meist etwas langsamer, aber sofort da.</li>
+</ul>
+</li>
+<li><strong>Enter schickt ab.</strong> In Claude Code schickt <code>Enter</code> die Nachricht sofort ab. Tippt eine Diktier-App Zeilenumbrüche als <code>Enter</code> mit, geht ein langer Diktat-Text in Teilen los (vor dem Workshop mit Hex/Handy prüfen). Neue Zeile ohne Abschicken: <code>Ctrl+J</code> (geht überall). <code>Shift+Enter</code> klappt im VS-Code-Terminal erst nach <code>/terminal-setup</code> (Stand 2026-11, <span class="ref" title="intern">[KB] 25</span>, §Input). Einfachster Weg: am Stück sprechen, ohne Absätze.</li>
+<li><strong>Locker bleiben:</strong> Mit „äh“ und Umwegen reden. Claude versteht, was gemeint ist. Danach kurz drüberlesen: Fachwörter und Eigennamen (Orte, Namen) werden gern falsch erkannt.</li>
+<li><strong>Grenzen:</strong> In lauter Umgebung (Workshopraum mit 14 Personen!) hilft Kopfhörer-Mikrofon oder man spricht leise nah am Mikro. Persönliches nicht laut im Raum diktieren.</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Kursleitung diktiert live mit Hex (Mac) bzw. Handy, im Terminal in laufender Claude-Session:</p>
+<pre><code class="language-text">(gesprochen, ca. 20 Sekunden) „Ich plane einen Segeltörn im September, wir sind vier Leute und ich möchte eine Tabelle mit sieben Tagen. Jeder Tag soll Start, Ziel, Distanz in Seemeilen und einen Hafen mit Restaurant haben. Wir sind Anfänger, also bitte nicht mehr als vier Stunden pro Tag. Lege das in toern-plan.md ab.“
+</code></pre>
+<p>Beobachten: Text erscheint, wir lesen kurz drüber, dann Enter. Danach denselben Wunsch kurz getippt zum Vergleich zeigen (Unterschied im Ergebnis). Wenn Hex/Handy nicht läuft: sofort den Fallback zeigen (macOS-Diktat oder <code>Win + H</code>), das ist selbst die Lehre „es gibt immer einen Weg“.</p>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Wer Hex/Handy installiert hat: Erst <code>ueber-mich.md</code>-Prompt aus <a href="../3-markdown/lehrer.html#16-gemeinsam-an-dateien-arbeiten">1.6</a> <strong>diktieren</strong>, 30 Sekunden Sprechzeit. Wer nichts installiert hat: Fallback ausprobieren. Geschafft, wenn der Text im Terminal steht und Claude darauf antwortet. Reflexion: „Was hast du diktiert, was du getippt weggelassen hättest?“</p>
+<p>Für Neugierige: Hex/Handy nach dem Workshop in Ruhe einrichten.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Kein Text erscheint (Mac):</strong> Mikrofon- und Bedienungshilfen-Zugriff erlaubt? In <em>Systemeinstellungen → Datenschutz &amp; Sicherheit</em> prüfen.</li>
+<li><strong>Welche Taste halten?</strong> Voreinstellung der App ansehen und in den Einstellungen ändern (vor dem Workshop in Hex und Handy selbst prüfen).</li>
+<li><strong>Intel-Mac / Windows:</strong> Hex läuft laut Handout nur mit Apple-Chip, dort Handy nehmen.</li>
+<li><strong>Erkennt Deutsch/Englisch gemischt schlecht:</strong> Sprache in der App einstellen, Fachwörter nach dem Diktat korrigieren.</li>
+<li><strong>Datenschutz:</strong> Die Spracherkennung läuft bei Hex und Handy laut Handout lokal. Das Betriebssystem-Diktat kann je nach Einstellung Audio an den Hersteller senden (vor dem Workshop prüfen).</li>
+<li><strong>Ohne Modell-Download geht nichts:</strong> Hex und Handy laden ein Sprachmodell. Das vorab im WLAN erledigen, nicht erst im Workshop.</li>
+<li><strong>Peinlich, laut zu sprechen:</strong> Verständlich. Wer will, bleibt beim Tippen. Diktieren ist ein Angebot.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Diktieren statt tippen“), Vorbereitung: <a href="../../00-vorbereitung/">Vorbereitung</a></li>
+<li>Kollegen-Folien: [CW] S. 4 – „Claude ist nur so gut wie der Kontext“ (Kürzel siehe <span class="ref" title="intern">material.md</span>)</li>
+<li>Hex: <a href="https://hex.kitlangton.com" rel="noopener">https://hex.kitlangton.com</a> · Handy: <a href="https://handy.computer" rel="noopener">https://handy.computer</a></li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../3-markdown/lehrer.html"><small>← zurück</small>Markdown</a><a class="pn-next" href="../5-claude-code/lehrer.html"><small>weiter →</small>Claude Code</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recherche &amp; Prüfen · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Eine Frage untersuchen lassen. Und dann: Schön ist nicht gleich richtig. Quellen und Zahlen kontrollieren.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ergebnis)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">V · Erschaffen &amp; visualisieren</a> <span aria-hidden="true">›</span> <span>Recherche &amp; Prüfen</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="recherche--prüfen">Recherche &amp; Prüfen</h1><p class="topic-meta">Teil V · Erschaffen &amp; visualisieren · ca. 45 Min. · Braucht: <a href="../../IV-agentisch-arbeiten/1-plan-modus/">Plan-Modus</a>, <a href="../../III-wissensbasis/1-wissensbasis/">Wissensbasis</a></p>
+<h2 id="erst-prüfen-dann-vertrauen">Erst prüfen, dann vertrauen</h2>
+<p>Eine Visualisierung kann wunderschön aussehen und trotzdem falsch sein. Prüffragen:</p>
+<ul>
+<li><strong>Grenzfälle:</strong> Was passiert bei 0, bei sehr groß, bei 45°?</li>
+<li><strong>Einheiten:</strong> Grad oder Bogenmaß? Monats- oder Jahreszins? Meter oder Höhenmeter?</li>
+<li><strong>Gegenrechnung:</strong> Stimmt ein Wert, den ich selbst ausrechnen oder nachschlagen kann?</li>
+<li><strong>Erhaltung:</strong> Bleibt die Energie konstant, die Summe gleich, die Wahrscheinlichkeit bei 100 %?</li>
+<li><strong>Quellen:</strong> „Woher hast du diese Formel? Zeig mir die Stelle.“</li>
+</ul>
+<h2 id="challenge-schön-aber-falsch">Challenge: „Schön, aber falsch“</h2>
+<p>Ihr bekommt eine Visualisierung mit einem versteckten Fehler. Findet ihn nicht selbst – <strong>bringt Claude mit kritischen Fragen dazu, ihn zu finden.</strong></p>
+<p>Unser Beispiel: <code>bergtour.html</code>, ein Gehzeit-Rechner für eine Rundtour in den Bergen, mit Höhenprofil, Kennzahlen und Tempo-Regler. Sieht gut aus. Stimmt aber nicht.</p>
+<ol>
+<li>Datei in deinen Projektordner legen und im Browser öffnen.</li>
+<li>Claude die Datei prüfen lassen, zuerst ganz allgemein: „Prüfe <code>bergtour.html</code>. Ist alles richtig?“</li>
+<li>Sagt Claude „alles korrekt“? Dann nachbohren, mit den Prüffragen oben. Zum Beispiel:<ul>
+<li>„Rechne die Gehzeit von Hand nach, mit den Werten aus der Tabelle.“</li>
+<li>„Was muss bei einer Rundtour für Aufstieg und Abstieg gelten?“</li>
+<li>„Woher kommt die Gehzeit-Formel? Stimmt der Code mit ihr überein?“</li>
+</ul>
+</li>
+<li>Notiert: Welche Frage hat den Fehler aufgedeckt?</li>
+</ol>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../1-html-javascript/"><small>← zurück</small>HTML &amp; JavaScript</a><a class="pn-next" href="../3-mehrere-agenten/"><small>weiter →</small>Mehrere Agenten</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

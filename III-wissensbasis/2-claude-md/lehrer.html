@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: CLAUDE.md · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-wissen)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">III · Wissensbasis</a> <span aria-hidden="true">›</span> <span>CLAUDE.md</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="claudemd">CLAUDE.md</h1><div class="drehbuch-head">
+      <p><strong>Teil III · Wissensbasis</strong> · Dauer gesamt: ca. 25 Min. · Braucht: <a href="../../I-basics/5-claude-code/lehrer.html">Claude Code</a> · Führt zu: <a href="../3-kontextfenster/lehrer.html">Kontextfenster</a>, <a href="../../IV-agentisch-arbeiten/1-plan-modus/lehrer.html">Plan-Modus</a>, <a href="../../IV-agentisch-arbeiten/2-skills/lehrer.html">Skills</a></p>
+      <p><strong>Material:</strong> Orte und Regeln [CC] 7, „nicht zu genau, nicht zu vage“ [CC] 11</p>
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#34-projektkontext-mit-claudemd">3.4 Projektkontext mit <code>CLAUDE.md</code></a> · ca. 15 Min.</li><li><a href="#48-karpathy-regeln">4.8 Karpathy-Regeln</a> · ca. 10 Min.</li></ul></div>
+<h2 id="34-projektkontext-mit-claudemd">3.4 Projektkontext mit <code>CLAUDE.md</code></h2>
+<p><em>Dauer: ca. 15 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p><code>CLAUDE.md</code> ist ein Zettel im Projektordner, den Claude bei jedem Start liest: Ziel, Regeln, Arbeitsweise. <strong>Wer Claude einmal gut einweist, muss es nicht jede Session neu erklären.</strong></p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden:</p>
+<ul>
+<li>erklären, was <code>CLAUDE.md</code> ist und wann sie geladen wird,</li>
+<li>eine eigene <code>CLAUDE.md</code> mit Ziel und 3–5 Regeln schreiben (lassen),</li>
+<li>beurteilen, ob eine Regel zu vage, zu genau oder passend ist.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><strong>Bild: Einarbeitungszettel für Vertretung.</strong> Die Kollegin, die einen Tag einspringt, kennt weder Projekt noch Vorlieben.<blockquote>
+<p>„Du schreibst ihr einen Zettel: Worum geht es, was ist wichtig, was soll sie nie tun. Claude hat jeden Morgen ‚Gedächtnisverlust‘. Der Zettel ist sein Gedächtnis.“
+Aber: Der Zettel ist eine <strong>Bitte</strong>, keine Garantie (<span class="ref" title="intern">[KB] 04</span>). Was wirklich nie passieren darf, gehört in Berechtigungsregeln (<a href="../../I-basics/5-claude-code/lehrer.html#17-berechtigungen">1.7</a>), nicht in die <code>CLAUDE.md</code>.</p>
+</blockquote>
+</li>
+<li><strong>Wann geladen:</strong> automatisch bei jedem Start einer Session im Ordner. <strong>Immer</strong> im Kontext, im Gegensatz zu Skills, die erst bei Bedarf geladen werden (Ausblick auf <a href="../../IV-agentisch-arbeiten/2-skills/lehrer.html#46-was-sind-skills">4.6</a>).</li>
+<li><strong>Wo sie liegen kann</strong> [CC] 7: im Projektordner, in Unterordnern, und persönlich für alle Projekte in <code>~/.claude/</code> (Stand 2026-11, <span class="ref" title="intern">[KB] 04</span>). Unterordner-Dateien werden erst geladen, wenn Claude dort eine Datei anfasst. Für uns reicht: <strong>im Projektordner</strong>.</li>
+<li><strong>Kurz halten, regelmäßig überarbeiten.</strong> Alles steht in jeder Runde im Kontext und kostet Platz (<a href="../3-kontextfenster/lehrer.html#36-kontext-verstehen">3.6</a>). Zeilentest (<span class="ref" title="intern">[KB] 03</span>, §Write for what the agent can&#39;t see): „Würde Claude das selbst finden und auch nachsehen?“ Wenn ja, streichen. Richtwert unter 200 Zeilen (<span class="ref" title="intern">[KB] 04</span>).</li>
+<li><strong>Nicht zu genau, nicht zu vage</strong> [CC] 11:
+<img loading="lazy" src="prompt-kalibrieren.png" alt="Anthropic-Grafik: Systemprompt kalibrieren, zu genau, genau richtig, zu vage, mit Bäckerei-Beispielen (Englisch)"><blockquote>
+<p>„Links: zu streng, jede Kleinigkeit festgelegt, Claude kann nicht mehr mitdenken. Rechts: zu vage, Claude rät. In der Mitte: klare Haltung, Raum fürs Urteil. Die Beispiele sind aus einer Bäckerei, wir machen gleich unsere.“</p>
+</blockquote>
+</li>
+<li><strong>Beispiele für „zu vage / passend / zu genau“</strong> (Segeln):<ul>
+<li>zu vage: „Hilf mir beim Törn.“</li>
+<li>passend: „Wir planen einen Törn ab Split. Nenne bei Fakten die Quelle aus <code>quellen/</code>. Distanzen in Seemeilen.“</li>
+<li>zu genau: „Schreibe immer genau drei Sätze, nutze nie das Wort ‚vielleicht‘ …“</li>
+</ul>
+</li>
+<li><strong>Mit Claude entwerfen lassen:</strong> Teilnehmende sagen, was sie wollen; Claude schreibt den Entwurf; wir lesen und streichen.</li>
+<li><strong>Claude schreibt auch selbst Notizen (Auto-Memory)</strong> (<span class="ref" title="intern">[KB] 04</span>): Claude Code merkt sich Vorlieben und Korrekturen in eigenen Dateien (<code>MEMORY.md</code>), in der Anzeige „Saved N memories“. Du kannst sagen „merk dir …“. Das ist kein Ersatz für die <code>CLAUDE.md</code>: Die schreibst du, die Notizen schreibt Claude. Ansehen und aufräumen mit <code>/memory</code>.</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<pre><code class="language-text">Erstelle eine CLAUDE.md für dieses Projekt. Ziel: Einen einwöchigen Segeltörn ab Split planen. Regeln: Antworte auf Deutsch, nenne bei Fakten die Quelle aus quellen/, Zusammenfassungen gehören nach notizen/, Distanzen in Seemeilen. Halte sie kurz.
+</code></pre>
+<p>Datei öffnen, vorlesen. Dann Beweis, dass sie wirkt: Claude beenden, neu starten (neue Session), fragen:</p>
+<pre><code class="language-text">Wie lang ist die Strecke von Split nach Hvar?
+</code></pre>
+<p>Zeigen: Antwort auf Deutsch, in Seemeilen, mit Quelle. Danach eine Regel streichen und Unterschied zeigen. Optional: Claude Codes eingebauten Befehl <code>/init</code> erwähnen: Er erzeugt einen Entwurf, den man danach vor allem kürzt (<span class="ref" title="intern">[KB] 04</span>, §Practical tips; Stand 2026-11).</p>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<pre><code class="language-text">Erstelle eine CLAUDE.md für mein Projekt. Mein Ziel: &lt;dein Ziel&gt;. Stelle mir erst bis zu drei Fragen, wenn dir etwas fehlt. Halte die Datei unter 15 Zeilen.
+</code></pre>
+<p>Dann: neue Session starten und prüfen, ob die Regeln greifen. Geklappt, wenn: eine neue Session hält sich ohne Erinnerung an mindestens zwei Regeln (z. B. Sprache und Quellenangabe). Commit.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Claude hält sich nicht daran.“</strong> Neue Session gestartet? Änderungen an der <code>CLAUDE.md</code> gelten erst nach <code>/clear</code> oder Neustart (<span class="ref" title="intern">[KB] 02</span>). Steht die Datei im richtigen Ordner und heißt exakt <code>CLAUDE.md</code>? Regel zu vage oder widersprüchlich? GROSSBUCHSTABEN oder „WICHTIG“ helfen nicht, eher übertreibt Claude dann die Regel. Besser den Grund nennen: „… weil die Quellen später zitiert werden“ (<span class="ref" title="intern">[KB] 04</span>, §Pitfalls).</li>
+<li><strong>Zu lang:</strong> Wenn 80 Zeilen drinstehen, geht Wichtiges unter. Kürzen lassen.</li>
+<li><strong>Vertrauliches</strong> (Passwörter, Keys) gehört nie hinein, siehe <a href="../../optional/2-datenschutz-passwoerter/lehrer.html#o3-passw%C3%B6rter-managen">O.3</a>.</li>
+<li><strong>„Gilt das nur für Claude?“</strong> Andere Tools nutzen eigene Dateinamen: <code>AGENTS.md</code> (Codex, Cursor u. a.). Claude Code liest <code>AGENTS.md</code>, wenn keine <code>CLAUDE.md</code> im Ordner liegt (<span class="ref" title="intern">[KB] 04</span>, §AGENTS.md interoperability). Gemini CLI gibt es seit 2026-06-18 nicht mehr für Privat- und Gratis-Konten; Nachfolger ist die Antigravity CLI (<code>agy</code>), sie liest <code>GEMINI.md</code> und <code>AGENTS.md</code> (<span class="ref" title="intern">[KB] 15</span>). Stand 2026-11.</li>
+<li><strong>Fremde <code>CLAUDE.md</code> übernehmen:</strong> sind Anweisungen an deinen Agenten, deshalb nur aus vertrauenswürdiger Quelle. Beispiel später: <a href="#48-karpathy-regeln">4.8 Karpathy-Regeln</a>.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a></li>
+<li>Kollegen-Folien: [CC] Folie 7 – <code>CLAUDE.md</code> (Orte und Regeln); [CC] Folie 11 – „nicht zu genau, nicht zu vage“ (Kürzel siehe <span class="ref" title="intern">material.md</span>)</li>
+<li>Offizielle Doku: <a href="https://code.claude.com/docs/en/memory" rel="noopener">https://code.claude.com/docs/en/memory</a> (vor dem Workshop prüfen)</li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="48-karpathy-regeln">4.8 Karpathy-Regeln</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-1">Worum geht&#39;s</h3>
+<p>Vier kurze Regeln in einer <code>CLAUDE.md</code> bremsen typische Fehler von KI-Agenten: raten, übertreiben, ungefragt ändern, nicht prüfen. <strong>Das ist ein gutes Beispiel, wie du deinem Agenten Arbeitsregeln gibst.</strong> Trotz des Namens „skills“ ist es kein Skill, sondern eine <code>CLAUDE.md</code>, also immer aktiv.</p>
+<h3 id="lernziel-1">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>die vier Regeln nennen und mit eigenen Worten erklären,</li>
+<li>sagen, warum das eine <code>CLAUDE.md</code> ist und kein Skill,</li>
+<li>Regeln davon in die eigene <code>CLAUDE.md</code> übernehmen.</li>
+</ul>
+<h3 id="so-erklären-wir-es-1">So erklären wir es</h3>
+<ol>
+<li><strong>Herkunft.</strong> Andrej Karpathy (KI-Forscher) beschrieb, was Agenten beim Programmieren oft falsch machen. Zitat, übersetzt, aus dem Repo-README:<blockquote>
+<p>Die Modelle treffen in deinem Namen falsche Annahmen und laufen damit los, ohne nachzufragen. Sie sagen nicht, wenn sie verwirrt sind, und widersprechen nicht, wenn sie sollten.
+Zwei weitere Beobachtungen: Sie machen Dinge <strong>zu kompliziert</strong>, und sie <strong>ändern Sachen, um die niemand gebeten hat</strong>.</p>
+</blockquote>
+</li>
+<li><strong>Bild: der übereifrige Praktikant.</strong> Du bittest um einen Kaffee, und er räumt die Küche um. Oder er rät, wie du ihn trinkst, statt zu fragen.</li>
+<li><strong>Die vier Regeln</strong>, jeweils ein Satz plus Beispiel (Domänen abwechseln):<ol>
+<li><strong>Erst denken.</strong> Annahmen nennen, bei Unklarheit fragen. <em>Bergtour: „Soll die Tour für Anfänger oder Fortgeschrittene sein?“ statt zu raten.</em></li>
+<li><strong>Einfach bleiben.</strong> Nichts bauen, worum keiner gebeten hat. <em>Du willst eine Packliste, nicht eine App mit Wetterdienst.</em></li>
+<li><strong>Gezielt ändern.</strong> Nur anfassen, was zur Aufgabe gehört. <em>Bitte um einen Tippfehler-Fix, nicht um umgeschriebene Absätze.</em></li>
+<li><strong>Prüfbar machen.</strong> Vorher festlegen, woran man erkennt, dass es fertig ist, und das dann prüfen. Das kennen wir schon aus <a href="../../IV-agentisch-arbeiten/1-plan-modus/lehrer.html#41-vom-prompt-zur-spezifikation">4.1</a> und <a href="../../IV-agentisch-arbeiten/1-plan-modus/lehrer.html#45-pr%C3%BCfen-und-iterieren">4.5</a>: „Fertig, wenn …“.</li>
+</ol>
+</li>
+<li><strong>Wichtigster Satz aus dem Repo (Regel 4):</strong> Gib dem Agenten keine Anweisungen, sondern <strong>Ziele, die er prüfen kann</strong>, und lass ihn laufen. „Mach, dass es funktioniert“ führt zu ständigen Rückfragen, ein klares Kriterium nicht.</li>
+<li><strong>Kein Skill, sondern <code>CLAUDE.md</code>:</strong> Aus <a href="../../IV-agentisch-arbeiten/2-skills/lehrer.html#46-was-sind-skills">4.6</a>: Eine <code>CLAUDE.md</code> ist <strong>immer</strong> geladen, ein Skill nur bei Bedarf. Die Regeln sollen immer gelten, darum die Datei. (Das Repo bietet auch eine Plugin-Installation an. Wir bleiben bei der Datei, sie ist transparenter.)</li>
+<li><strong>Für Code gemacht, passt auch auf Texte und Pläne.</strong> „Ändere nur, was zur Aufgabe gehört“ gilt auch, wenn Claude deinen Lernplan überarbeitet.</li>
+<li><strong>Kein Dogma.</strong> Das Repo sagt selbst: Die Regeln setzen auf Vorsicht statt Tempo. Für Kleinkram darf man locker sein.</li>
+<li><strong>Nur übernehmen, was passt:</strong> Eigene <code>CLAUDE.md</code> (<a href="#34-projektkontext-mit-claudemd">3.4</a>) kurz halten. Fremde Datei ist ein Anweisungstext an deinen Agenten: erst lesen (<a href="../../IV-agentisch-arbeiten/2-skills/lehrer.html#46-was-sind-skills">4.6</a>).</li>
+</ol>
+<h3 id="zeigen-live-demo-1">Zeigen (Live-Demo)</h3>
+<p>Die Datei im Repo kurz auf dem Bildschirm zeigen (<a href="https://github.com/forrestchang/andrej-karpathy-skills/blob/main/CLAUDE.md" rel="noopener">CLAUDE.md in forrestchang/andrej-karpathy-skills</a>), sie ist kurz genug zum Vorlesen. Dann Vergleich: zwei Sessions auf dasselbe Material.</p>
+<p>Ohne Regeln:</p>
+<pre><code class="language-text">Verbessere meinen Lernplan.
+</code></pre>
+<p>Mit Regeln (Auszug in die <code>CLAUDE.md</code> des Demo-Ordners kopiert, siehe unten):</p>
+<pre><code class="language-text">Verbessere meinen Lernplan.
+</code></pre>
+<p>Worauf wir hinweisen: Fragt Claude nach, was „verbessern“ heißt? Bleibt der Diff klein (<a href="../../II-git/1-git/lehrer.html#23-%C3%A4nderungen--diffs">2.3</a>)? Ergebnis kann variieren, das ist selbst eine Lehre: Regeln erhöhen die Chance, garantieren nichts. Falls der Effekt in der Demo nicht sichtbar ist: ehrlich sagen und Prompt schärfen.</p>
+<p>Anpassung für unsere Zielgruppe als Vorlage für die <code>CLAUDE.md</code> (eigene Kurzfassung, dem Repo nachempfunden):</p>
+<pre><code class="language-markdown">### Arbeitsregeln
+1. Erst denken: Nenne deine Annahmen. Bei Unklarheit frag nach, statt zu raten.
+2. Einfach bleiben: Mach nur, worum ich gebeten habe. Nichts Zusätzliches.
+3. Gezielt ändern: Fass nur an, was zur Aufgabe gehört. Bemerkst du etwas anderes, sag es, aber ändere es nicht.
+4. Prüfbar machen: Sag vorher, woran wir erkennen, dass es fertig ist, und prüfe es am Ende.
+</code></pre>
+<h3 id="selbst-machen-übung-1">Selbst machen (Übung)</h3>
+<p>Die vier Regeln in die eigene <code>CLAUDE.md</code> kopieren (oder eine Kurzfassung). Dann eine kleine Aufgabe stellen, bei der Claude gern übertreibt:</p>
+<pre><code class="language-text">Korrigiere nur die Rechtschreibung in notizen.md.
+</code></pre>
+<p>Geklappt, wenn: Im Diff nur Rechtschreibung geändert ist. Reflexionsfrage: <em>Welche der vier Regeln hättest du dir bei deiner letzten Claude-Session gewünscht?</em></p>
+<h3 id="stolpersteine--fragen-1">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Ist das ein Skill?“</strong> Nein. Das Repo heißt <code>andrej-karpathy-skills</code>, enthält aber eine <code>CLAUDE.md</code> (und bietet sie zusätzlich als Plugin an).</li>
+<li><strong>Hat Karpathy das geschrieben?</strong> Nein. Die Regeln stammen von Forrest Chang und sind von Karpathys Beobachtungen abgeleitet. Nicht als Karpathys eigene Regeln ausgeben.</li>
+<li><strong>Regeln werden ignoriert.</strong> Möglich. Sie erhöhen die Wahrscheinlichkeit. Bei langen Sessions wirken Regeln schwächer (<a href="../3-kontextfenster/lehrer.html#36-kontext-verstehen">3.6</a>).</li>
+<li><strong>Englisch oder Deutsch?</strong> Original ist englisch. Eine deutsche Kurzfassung funktioniert ebenso.</li>
+<li><strong>Zu viele Regeln in der <code>CLAUDE.md</code>?</strong> Kurz halten: Je länger die Datei, desto weniger wird jede Regel beachtet.</li>
+</ul>
+<h3 id="material--quellen-1">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt „Die Karpathy-Regeln“</li>
+<li>Repo: <a href="https://github.com/forrestchang/andrej-karpathy-skills" rel="noopener">forrestchang/andrej-karpathy-skills</a> (MIT), Dateien <code>CLAUDE.md</code> und <code>README.md</code></li>
+<li>Karpathys Post (im README verlinkt): x.com/karpathy/status/2015883857489522876</li>
+</ul>
+<p><em>Stand: 2026-11-06</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../1-wissensbasis/lehrer.html"><small>← zurück</small>Wissensbasis</a><a class="pn-next" href="../3-kontextfenster/lehrer.html"><small>weiter →</small>Kontextfenster</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

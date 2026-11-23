@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>The Modern Maker's Toolkit – Bildmarke</title>
+  <rect width="512" height="512" rx="112" fill="#081523"/>
+  <!-- Koordinatengitter -->
+  <g stroke="#244054" stroke-width="3">
+    <path d="M144 88V408M208 88V408M272 88V408M336 88V408M400 88V408"/>
+    <path d="M72 120H448M72 184H448M72 248H448M72 312H448"/>
+  </g>
+  <!-- Berg auf der x-Achse -->
+  <path d="M88 408 184 272 236 324 344 112 440 408Z" fill="#172C40" stroke="#7594AA" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M64 408H448" stroke="#7594AA" stroke-width="9" stroke-linecap="round"/>
+  <!-- Route: Idee → Plan → Ergebnis -->
+  <path d="M160 376C214 362 252 310 276 268S326 158 344 112" fill="none" stroke="#F3F7FC" stroke-width="10" stroke-linecap="round" stroke-dasharray="0 22"/>
+  <circle cx="160" cy="376" r="36" fill="#8C80F6" opacity=".25"/>
+  <circle cx="160" cy="376" r="22" fill="#8C80F6"/>
+  <circle cx="276" cy="268" r="36" fill="#48C6F2" opacity=".25"/>
+  <circle cx="276" cy="268" r="22" fill="#48C6F2"/>
+  <circle cx="344" cy="112" r="42" fill="#53C995" opacity=".25"/>
+  <circle cx="344" cy="112" r="27" fill="#53C995"/>
+</svg>

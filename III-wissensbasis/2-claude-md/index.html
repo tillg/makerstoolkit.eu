@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLAUDE.md · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Eine Datei mit Zielen und Regeln, die Claude bei jedem Start liest.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-wissen)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">III · Wissensbasis</a> <span aria-hidden="true">›</span> <span>CLAUDE.md</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="claudemd">CLAUDE.md</h1><p class="topic-meta">Teil III · Wissensbasis · ca. 25 Min. · Braucht: <a href="../../I-basics/5-claude-code/">Claude Code</a></p>
+<p>Claude liest <code>CLAUDE.md</code> zu Beginn jeder Session. Dort steht, worum es geht und wie Claude arbeiten soll. Beispiel:</p>
+<pre><code class="language-markdown"># Projekt: Segeltörn Kroatien 2027
+
+Ziel: Einen einwöchigen Törn ab Split planen.
+- Antworte auf Deutsch.
+- Nenne bei Fakten immer die Quelle aus `quellen/`.
+- Zusammenfassungen gehören nach `notizen/`.
+- Distanzen in Seemeilen.
+</code></pre>
+<h2 id="die-karpathy-regeln">Die Karpathy-Regeln</h2>
+<p>Andrej Karpathy (KI-Forscher) hat beschrieben, was KI-Agenten beim Programmieren oft falsch machen: Sie raten statt nachzufragen, machen alles zu kompliziert und ändern Dinge, um die keiner gebeten hat. Daraus ist eine bekannte <code>CLAUDE.md</code> mit vier Regeln entstanden (<a href="https://github.com/forrestchang/andrej-karpathy-skills" rel="noopener">andrej-karpathy-skills</a>):</p>
+<ol>
+<li><strong>Erst denken:</strong> Annahmen nennen, bei Unklarheit fragen.</li>
+<li><strong>Einfach bleiben:</strong> nichts bauen, worum keiner gebeten hat.</li>
+<li><strong>Gezielt ändern:</strong> nur anfassen, was zur Aufgabe gehört.</li>
+<li><strong>Prüfbar machen:</strong> vorher festlegen, woran man erkennt, dass es fertig ist, und das dann prüfen.</li>
+</ol>
+<p>Trotz des Namens ist das kein Skill, sondern eine <code>CLAUDE.md</code>, also immer aktiv. Die Regeln passen auch zu Texten und Plänen. Übernimm, was dir gefällt, in deine eigene <code>CLAUDE.md</code>.</p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../1-wissensbasis/"><small>← zurück</small>Wissensbasis</a><a class="pn-next" href="../3-kontextfenster/"><small>weiter →</small>Kontextfenster</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

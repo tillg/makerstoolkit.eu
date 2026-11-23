@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: Claude Code · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ki)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">I · Basics</a> <span aria-hidden="true">›</span> <span>Claude Code</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="claude-code">Claude Code</h1><div class="drehbuch-head">
+      <p><strong>Teil I · Basics</strong> · Dauer gesamt: ca. 55 Min. · Braucht: <a href="../1-terminal/lehrer.html">Terminal</a>, <a href="../2-vscode/lehrer.html">VS Code</a>, <a href="../3-markdown/lehrer.html">Markdown</a> · Führt zu: <a href="../../III-wissensbasis/1-wissensbasis/lehrer.html">Wissensbasis</a>, <a href="../../III-wissensbasis/2-claude-md/lehrer.html">CLAUDE.md</a></p>
+      <p><strong>Material:</strong> „Belesener Autor, keine Datenbank“, Chat vs. Cowork vs. Code [CW] S. 4, 8, 12 · [KB] 25, 16, 17</p>
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#11-was-ist-agentische-ki">1.1 Was ist agentische KI?</a> · ca. 10 Min.</li><li><a href="#14-die-erste-agenten-session">1.4 Die erste Agenten-Session</a> · ca. 15 Min.</li><li><a href="#17-berechtigungen">1.7 Berechtigungen</a> · ca. 10 Min.</li><li><a href="#19-claude-code-bedienen">1.9 Claude Code bedienen</a> · ca. 10 Min.</li><li><a href="#o5-modell-effort-und-abo-limits">O.5 Modell, Effort und Abo-Limits</a> · ca. 10 Min.</li></ul></div>
+<h2 id="11-was-ist-agentische-ki">1.1 Was ist agentische KI?</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Ein Chatbot antwortet, ein Agent erledigt. <strong>Ein Agent bekommt eine Aufgabe, arbeitet sie in mehreren Schritten selbst ab und prüft sein Ergebnis.</strong> Dahinter steckt trotzdem ein Sprachmodell: ein belesener Autor, keine Datenbank.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>den Unterschied zwischen Chatbot und Agent in eigenen Worten erklären,</li>
+<li>sagen, warum ein Agent Dateien lesen und schreiben darf (und was das bedeutet),</li>
+<li>einschätzen, dass KI-Antworten plausibel klingen, aber geprüft werden müssen.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><p><strong>Einstieg über die Demo.</strong> Die Live-Demo (Doppelpendel, siehe <span class="ref" title="intern">ablauf.md</span>) läuft schon vor diesem Thema. Wir knüpfen daran an:</p>
+<blockquote>
+<p>Eben habe ich keine Zeile Code geschrieben. Ich habe gesagt, was ich will. Der Agent hat Dateien angelegt, das Programm gestartet und geschaut, ob es läuft. Das ist der Unterschied zu dem, was ihr aus dem Chat kennt.</p>
+</blockquote>
+</li>
+<li><p><strong>Chatbot vs. Agent, mit Bild.</strong> Reise-Beispiel:</p>
+<blockquote>
+<p>Chatbot: Du fragst eine Freundin, die schon mal in Kroatien war: „Welche Marinas gibt es?“ Sie antwortet. Den Plan baust du selbst. Agent: Du gibst einer Assistentin den Auftrag „Plane mir einen Segeltörn“. Sie liest die Hafenhandbücher, rechnet Distanzen, legt eine Tabelle an und sagt dir, was noch fehlt.</p>
+</blockquote>
+<p>An die Tafel/Folie: Tabelle aus dem <a href="./">Handout</a> (Du fragst / Du gibst eine Aufgabe; Kopieren &amp; Einfügen / liest und schreibt Dateien; ein Schritt / viele Schritte).</p>
+</li>
+<li><p><strong>Drei Modi, ein Bild</strong> [CW] S. 12: mit einer klugen Kollegin reden (Chat), an einen Assistenten delegieren (Cowork), eine Werkstatt betreten (Code). Wir sind heute in der Werkstatt. Claude Code ist das Werkzeug dafür.</p>
+</li>
+<li><p><strong>Was steckt drin: belesener Autor, keine Datenbank</strong> [CW] S. 4, 8:</p>
+<blockquote>
+<p>Ein Sprachmodell sagt das nächste plausible Wort voraus. Es schlägt nichts nach. Stell dir einen unglaublich belesenen Autor vor, der in jedem Stil schreiben kann, aber neu schreibt, statt Fakten nachzuschlagen.</p>
+</blockquote>
+<p>Drei Fakten dazu, kurz (Stand 2026-11, <span class="ref" title="intern">[KB] 26</span>, §Three facts that explain most behaviour):</p>
+<ul>
+<li>Es sagt Wort für Wort das nächste voraus. Beispiel „Der Wind dreht auf …“: „Südwest“ ist wahrscheinlich, „Nord“ auch, „Marmelade“ fast nie. Gezogen wird eines davon, deshalb kann dieselbe Frage zwei Antworten geben. (Beispiel ausgedacht, keine echten Zahlen.)</li>
+<li>Sein Wissen endet an einem Stichtag (bei den aktuellen Claude-Modellen Juni 2026). Es lernt nicht aus unserem Gespräch.</li>
+<li>Es hat kein Gedächtnis: Claude Code schickt bei jeder Anfrage das ganze Gespräch noch einmal mit. Was nicht im Gespräch steht, weiß es nicht.</li>
+</ul>
+<p>Folge: Ideen, Entwürfe, Zusammenfassungen sind seine Stärke. Exakte Zahlen, Daten, Quellen muss man prüfen. Gleiche Frage zweimal kann zwei Antworten geben. Das ist Absicht (gut zum Brainstormen, riskant bei Zahlen).</p>
+</li>
+<li><p><strong>Der Agent hat Hände.</strong> Er hat Werkzeuge: Dateien lesen, schreiben, Programme starten, im Web suchen. Deshalb fragt er im Manual-Modus vor wichtigen Aktionen (siehe <a href="#17-berechtigungen">1.7 Berechtigungen</a>). Seit Claude Code v2.1.283 startet er im Auto-Modus: Dann entscheidet ein zweites Modell, was harmlos ist, und man bekommt nur eine Meldung, wenn etwas blockiert wird. Wir schalten in <a href="#14-die-erste-agenten-session">1.4</a> auf Manual, um die Abfragen zu lernen. Die Arbeitsweise dahinter ist immer eine Schleife: Kontext sammeln (lesen, suchen) → handeln (ändern, ausführen) → prüfen → wiederholen, bis es passt (<span class="ref" title="intern">[KB] 1</span>, §The agent loop).</p>
+</li>
+<li><p><strong>Rollen:</strong> Wir formulieren, planen, prüfen. Der Agent tippt. Kein Programmierkurs.</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Kurz (3 Min.), nicht die große Einstiegs-Demo wiederholen. Gleiche Frage zweimal:</p>
+<pre><code class="language-text">Chat (claude.ai im Browser): Plane mir einen Segeltörn in Kroatien, 7 Tage, 4 Personen.
+</code></pre>
+<p>Dann im Terminal mit Claude Code, im leeren Ordner:</p>
+<pre><code class="language-text">Lege eine Datei toern-plan.md an mit einem Tagesplan für einen Segeltörn in Kroatien, 7 Tage, 4 Personen. Mach eine Tabelle mit Tag, Strecke und Hafen.
+</code></pre>
+<p>Hinweisen: Der Chat liefert Text zum Kopieren. Der Agent legt die Datei an, wir sehen sie im Ordner. Beim zweiten Mal Zahlen (Distanzen) als „zu prüfen“ markieren.</p>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Reflexionsfrage in 2er-Gruppen (2 Min.): „Welche Aufgabe aus deinem Alltag würdest du an einen Agenten geben, welche nie? Warum?“ Einige Antworten einsammeln. Typische Ergebnisse: Recherche, Ordnen, Entwürfe: ja. Entscheidungen, Fakten ungeprüft übernehmen: nein.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Ist das nicht einfach ChatGPT?“</strong> Gleiche Technik (Sprachmodell), anderer Rahmen: Der Agent hat Werkzeuge und arbeitet in Schleifen.</li>
+<li><strong>„Denkt die KI?“</strong> Wir bleiben nüchtern: Sie erzeugt plausible Texte und handelt damit. Ob man das Denken nennt, ist offen. Wichtig ist: prüfen.</li>
+<li><strong>„Darf der Agent alles auf meinem Rechner?“</strong> Nein, er arbeitet im Projektordner. Im Manual-Modus fragt er vorher, im Auto-Modus prüft ein zweites Modell. Details in 1.7.</li>
+<li><strong>Datenschutz-Fragen:</strong> Gelesene Dateien gehen an den Anbieter. Verweis auf die optionale Einheit O.1 (<a href="../../optional/2-datenschutz-passwoerter/lehrer.html#o1-datenschutz-wo-liegen-meine-daten">Datenschutz</a>).</li>
+<li><strong>„Wird die KI mich ersetzen?“</strong> Ehrlich: offene Frage. Heute: Wer sie gut führt, schafft mehr.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Chatbot vs. Agent“)</li>
+<li>Kollegen-Folien: [CW] S. 4, 8 – belesener Autor, Nicht-Determinismus; [CW] S. 12 – Chat/Cowork/Code (Kürzel siehe <span class="ref" title="intern">material.md</span>)</li>
+<li>Doku: <a href="https://code.claude.com/docs" rel="noopener">https://code.claude.com/docs</a></li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="14-die-erste-agenten-session">1.4 Die erste Agenten-Session</h2>
+<p><em>Dauer: ca. 15 Min.</em></p>
+<h3 id="worum-gehts-1">Worum geht&#39;s</h3>
+<p>Erster echter Kontakt: Ordner anlegen, in VS Code öffnen, <code>claude</code> starten, Dateien anlegen und ändern lassen. <strong>Der Agent arbeitet im Projektordner, und wir sehen jede Datei sofort links in VS Code entstehen.</strong></p>
+<h3 id="lernziel-1">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>einen Ordner in VS Code öffnen und dort Claude Code starten,</li>
+<li>Claude Fragen zum Ordner stellen und Dateien anlegen lassen,</li>
+<li>eine Datei per Anweisung ändern lassen und das Ergebnis in VS Code sehen.</li>
+</ul>
+<h3 id="so-erklären-wir-es-1">So erklären wir es</h3>
+<ol>
+<li><strong>Der Projektordner ist die Werkstatt.</strong><blockquote>
+<p>Claude sieht nur den Ordner, in dem du es startest. Alles, was drin liegt, kann es lesen. Was draußen liegt, nicht. Deshalb: ein Ordner pro Projekt.</p>
+</blockquote>
+</li>
+<li><strong>Vier Schritte</strong> (wie im <a href="./">Handout</a>): Ordner anlegen (<code>mein-projekt</code>) → in VS Code öffnen (<em>Datei → Ordner öffnen</em>) → Terminal in VS Code (<em>Terminal → Neues Terminal</em>) → <code>claude</code>.</li>
+<li><strong>Drei Prompts, die steigern:</strong> erst fragen (liest nur), dann anlegen (schreibt), dann ändern (liest und schreibt). Das zeigt den Weg vom Chatbot zum Agenten.</li>
+<li><strong>Beim ersten Start</strong> fragt Claude, ob es diesem Ordner vertrauen soll. Wir erklären: Das ist die erste Sicherheitsstufe, mehr in <a href="#17-berechtigungen">1.7</a>.</li>
+<li><strong>Auf Manual umschalten.</strong> Seit Claude Code v2.1.283 startet eine Session im <strong>Auto-Modus</strong>: Ein zweites Modell gibt harmlose Aktionen selbst frei, man bekommt nur eine Meldung, wenn etwas blockiert wird. Wir wollen aber die Abfragen sehen und lesen lernen. Darum einmal <code>Shift+Tab</code> drücken (Windows: ggf. <code>Alt+M</code>). In der Fußzeile steht dann <code>manual mode on</code> statt <code>auto mode on</code>. Den Auto-Modus erklären wir in <a href="#17-berechtigungen">1.7</a> als „für später“. Das Lesen von Dateien und eingebaute Nur-Lese-Befehle (<code>ls</code>, <code>cat</code>, <code>git status</code>) fragen auch im Manual-Modus nie. (<span class="ref" title="intern">[KB] 25</span>, §Permission modes)</li>
+<li><strong>Wie man spricht:</strong> normale Sätze, kein Spezialwort. Je genauer das Ziel, desto besser. Beispiele aus mehreren Domänen zeigen, was „genau“ heißt:<ul>
+<li>Physik: „Lege <code>pendel.md</code> an: Erkläre in 5 Sätzen, warum ein Doppelpendel chaotisch ist.“</li>
+<li>Berge: „Lege <code>tour.md</code> an mit drei Tagestouren im Karwendel, je mit Aufstieg und Gehzeit.“</li>
+<li>Wirtschaft: „Lege <code>budget.md</code> an: Tabelle Einnahmen/Ausgaben für eine WG.“</li>
+</ul>
+</li>
+<li><strong>Der <code>ELI5</code>-Trick:</strong> Versteht man eine Rückfrage oder Antwort von Claude nicht, einfach <code>ELI5</code> tippen (<em>Explain Like I&#39;m 5</em>, „Erklär es mir, als wäre ich fünf“). Claude erklärt dann ohne Fachwörter. Früh zeigen, damit sich niemand scheut nachzufragen. Nicht-Verstehen ist kein Fehler, sondern ein Prompt.</li>
+</ol>
+<h3 id="zeigen-live-demo-1">Zeigen (Live-Demo)</h3>
+<p>Mit dem Segeltörn-Beispiel (<span class="ref" title="intern">beispielprojekte.md</span>), im leeren Ordner <code>segeltoern</code>. Erst <code>claude</code> starten, dann einmal <code>Shift+Tab</code>, Fußzeile zeigen (<code>manual mode on</code>):</p>
+<pre><code class="language-text">Was befindet sich in diesem Ordner?
+</code></pre>
+<pre><code class="language-text">Lege eine Datei ideen.md an mit drei Ideen für einen Segeltörn im Mittelmeer.
+</code></pre>
+<pre><code class="language-text">Mach aus der Liste eine Tabelle mit Spalten für Aufwand und Spaßfaktor.
+</code></pre>
+<p>Hinweise beim Zeigen: (1) Claude zeigt, was es tun will, und fragt (Berechtigung, im Manual-Modus). Der erste Prompt fragt nicht, denn Lesen ist immer erlaubt. (2) <code>ideen.md</code> erscheint in der VS-Code-Seitenleiste. (3) Beim dritten Prompt liest Claude die Datei erst, dann ändert es sie. Nicht gleich alles erklären, Neugier wecken.</p>
+<h3 id="selbst-machen-übung-1">Selbst machen (Übung)</h3>
+<p>Alle machen die drei Prompts mit <strong>ihrem eigenen Thema</strong> (Material oder Beispiel-Thema). Geschafft, wenn <code>ideen.md</code> mit einer Tabelle im Ordner liegt. Wer fertig ist: „Füge eine Spalte ‚Was ich vorher klären muss‘ hinzu.“ Wir gehen herum und helfen bei Terminal-Problemen.</p>
+<h3 id="stolpersteine--fragen-1">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Terminal öffnet im falschen Ordner:</strong> Ordner in VS Code öffnen, <em>dann</em> Terminal. Unten im Terminal steht der Ordnername.</li>
+<li><strong>Claude fragt etwas, das ich nicht verstehe:</strong> <code>ELI5</code> tippen (siehe oben). Erst antworten, wenn die Frage klar ist.</li>
+<li><strong>Claude fragt gar nicht:</strong> Die Session läuft im Auto-Modus (Fußzeile <code>auto mode on</code>). <code>Shift+Tab</code> einmal drücken, bis <code>manual mode on</code> dasteht. Bei jedem Neustart von <code>claude</code> startet wieder Auto, dann erneut umschalten.</li>
+<li><strong>Claude fragt dauernd:</strong> Gewollt, siehe 1.7. Nicht „immer erlauben“ klicken, solange man nicht versteht, was gefragt wird.</li>
+<li><strong>Antwort kommt langsam:</strong> Normal. <code>Esc</code> stoppt.</li>
+<li><strong>Ergebnis weicht ab (Tabelle sieht anders aus):</strong> Nicht-deterministisch, das ist normal (<a href="#11-was-ist-agentische-ki">1.1</a>). Nachfragen, nicht neu anfangen.</li>
+<li><strong>Datei nicht sichtbar in VS Code:</strong> Seitenleiste neu laden oder prüfen, ob derselbe Ordner offen ist.</li>
+<li><strong>„Kann Claude auch meine PDFs lesen?“</strong> Ja, dazu mehr in Teil III.</li>
+<li><strong>Claude neu starten / Gespräch löschen:</strong> <code>/exit</code>, dann <code>claude</code>. Mit <code>/clear</code> beginnt man ein neues Gespräch im selben Fenster. Das alte bleibt erhalten und lässt sich mit <code>/resume</code> wieder öffnen. <code>claude -c</code> setzt das letzte Gespräch in diesem Ordner fort (Stand 2026-11, <span class="ref" title="intern">[KB] 25</span>, §Sessions and context).</li>
+<li><strong>Enter schickt sofort ab, ich wollte eine neue Zeile:</strong> Neue Zeile mit <code>Ctrl+J</code> (geht überall). <code>Shift+Enter</code> geht im VS-Code-Terminal erst nach <code>/terminal-setup</code> einmalig in Claude (Stand 2026-11, <span class="ref" title="intern">[KB] 25</span>, §Input).</li>
+<li><strong>Mehr Tasten und Tricks:</strong> Kurzer Verweis auf <a href="#19-claude-code-bedienen">1.9 Claude Code bedienen</a>.</li>
+</ul>
+<h3 id="material--quellen-1">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Die erste Session“)</li>
+<li>Doku Quickstart: <a href="https://code.claude.com/docs/en/quickstart" rel="noopener">https://code.claude.com/docs/en/quickstart</a></li>
+<li>Hands-on-Idee „Agent erklärt das Projekt“: [OC] Folie 16 (Kürzel siehe <span class="ref" title="intern">material.md</span>)</li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="17-berechtigungen">1.7 Berechtigungen</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-2">Worum geht&#39;s</h3>
+<p>Im Manual-Modus fragt Claude, bevor es Dateien ändert oder Befehle ausführt. <strong>Lies, was es vorhat, bevor du zustimmst: Du bist die Chefin, Claude ist der Assistent.</strong> Das Fragen ist keine Störung, sondern deine Kontrolle. Seit v2.1.283 startet Claude Code im Auto-Modus (ein zweites Modell entscheidet statt dir). Wir haben in <a href="#14-die-erste-agenten-session">1.4</a> auf Manual umgeschaltet, damit ihr die Abfragen seht. Auto kommt hier als „für später“.</p>
+<h3 id="lernziel-2">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>eine Berechtigungsabfrage lesen und verstehen, was Claude vorhat,</li>
+<li>zwischen „Ja“, „Ja, und nicht mehr fragen“ und „Nein“ bewusst wählen,</li>
+<li>ein „Nein“ nutzen, um Claude umzusteuern,</li>
+<li>den aktuellen Modus in der Fußzeile erkennen und mit <code>Shift+Tab</code> wechseln,</li>
+<li>erklären, warum sie nicht blind alles erlauben.</li>
+</ul>
+<h3 id="so-erklären-wir-es-2">So erklären wir es</h3>
+<ol>
+<li><strong>Bild: Handwerker im Haus.</strong><blockquote>
+<p>Du lässt jemanden in deiner Wohnung arbeiten. Bei Kleinkram sagst du „mach einfach“. Wenn er die Wand durchbohren will, fragt er vorher. Genau so arbeitet Claude.</p>
+</blockquote>
+</li>
+<li><strong>Was Claude fragt (nur im Manual-Modus):</strong> Ohne Rückfrage liest es Dateien im Projektordner und führt eingebaute Nur-Lese-Befehle aus (<code>ls</code>, <code>cat</code>, <code>grep</code>, <code>git status</code>). Fragen tut es bei Dateiänderungen, anderen Shell-Befehlen und Web-Zugriffen (Stand 2026-11, <span class="ref" title="intern">[KB] 11</span>, §1. Tool approval defaults). Im Auto-Modus gilt das nicht, siehe Punkt 6.</li>
+<li><strong>Die Abfrage lesen, in drei Fragen:</strong> (1) <em>Was?</em> (Datei anlegen, Befehl ausführen) (2) <em>Wo?</em> (nur im Projektordner?) (3) <em>Verstehe ich das?</em> Wenn nein: „Nein“ und Claude fragen: „Erkläre mir, was dieser Befehl tut.“</li>
+<li><strong>Die Optionen</strong> (so oder ähnlich im Terminal, der Wortlaut kann sich ändern; Stand 2026-11, <span class="ref" title="intern">[KB] 25</span>, §Permission prompts):<ul>
+<li><strong>Ja:</strong> einmal erlauben.</li>
+<li><strong>Ja, und nicht mehr fragen:</strong> für diese Art von Aktion merken. Für Befehle (auch Web-Domains und Websuche) gilt das dauerhaft für dieses Projekt: Es steht dann in <code>.claude/settings.local.json</code>. Für Dateiänderungen gilt es nur bis Sitzungsende. Manche Abfragen bieten nur „Ja“ (einmal). Zu Beginn sparsam nutzen.</li>
+<li><strong>Ja, und in den Auto-Modus wechseln:</strong> erlaubt und schaltet den Modus um. Gibt es nicht bei jeder Abfrage. Hier nicht wählen, wir bleiben in Manual.</li>
+<li><strong>Nein:</strong> ablehnen. Ein bloßes <code>Esc</code> bricht den ganzen Arbeitsschritt ab. Mit <code>Tab</code> auf „Nein“ kann man stattdessen eine Begründung mitgeben („mach es so …“). Claude macht dann mit dieser Begründung weiter. Das ist der Weg zum Umsteuern.</li>
+</ul>
+</li>
+<li><strong>Warum gut:</strong> Claude kann sich irren oder missverstehen. Die Abfrage ist die Stelle, an der wir Fehler abfangen, bevor sie passieren. Später kommt Git als zweite Sicherheit (<a href="../../II-git/1-git/lehrer.html#21-was-ist-git">2.1</a>).</li>
+<li><strong>Modi, nur erwähnen:</strong> Es gibt Stufen von „fragt bei allem“ bis „fragt fast nie“. Wechsel mit <code>Shift+Tab</code>, Reihenfolge ab Auto: Manual → Accept edits → Plan → Auto (Windows: ggf. <code>Alt+M</code>). Die Fußzeile zeigt den Modus: <code>manual mode on</code>, <code>accept edits on</code>, <code>plan mode on</code>, <code>auto mode on</code> (Stand 2026-11, <span class="ref" title="intern">[KB] 25</span>, §Permission modes).<ul>
+<li><strong>Manual:</strong> fragt bei allem außer Lesen. Hier lernen wir.</li>
+<li><strong>Auto:</strong> Ein Prüfmodell entscheidet statt dir. Harmloses läuft durch, du siehst nur eine Meldung, wenn etwas blockiert wird. Blockiert werden z. B. Programme aus dem Internet laden und sofort ausführen (<code>curl | bash</code>), Force-Push, <code>git reset --hard</code> und das Senden sensibler Daten nach außen. Für später, wenn du dich sicher fühlst und lange Aufgaben laufen lassen willst. Wer Auto nutzt, sollte vorher committen (<a href="../../II-git/1-git/lehrer.html#24-commits">2.4</a>). <span class="ref" title="intern">[KB] 11</span>, §3. Permission modes)</li>
+<li><strong>Accept edits:</strong> Dateiänderungen laufen ohne Frage. <strong>Achtung:</strong> Auch gängige Dateibefehle wie <code>rm</code>, <code>mv</code>, <code>cp</code> laufen im Projektordner ohne Frage, nicht nur Bearbeiten. Kann also auch löschen.</li>
+<li><strong>Plan:</strong> Claude liest und plant, ändert aber nichts, bis du den Plan freigibst. Kommt in <a href="../../IV-agentisch-arbeiten/1-plan-modus/lehrer.html#42-erst-planen-dann-bauen">4.2</a>.</li>
+<li><strong>Bypass permissions</strong> („Berechtigungen komplett überspringen“) nennen wir nur als Warnung: nicht für Anfänger, nur in Container oder VM.</li>
+</ul>
+</li>
+<li><strong>Wichtig:</strong> Die Regeln erzwingt das Programm, nicht Claude. Ein „Bitte frag nicht“ im Prompt ändert nichts (<a href="https://code.claude.com/docs/en/permissions" rel="noopener">Doku</a>).</li>
+<li><strong>Prompt-Müdigkeit:</strong> Wer in einer Stunde 50 Abfragen bestätigt, liest sie bald nicht mehr. Das ist selbst ein Sicherheitsrisiko. Ziel sind weniger, aber wichtigere Abfragen. Genau dafür gibt es Auto und gezieltes „nicht mehr fragen“ (<span class="ref" title="intern">[KB] 11</span>, §Core concept).</li>
+</ol>
+<h3 id="zeigen-live-demo-2">Zeigen (Live-Demo)</h3>
+<ol>
+<li>Fußzeile prüfen (<code>manual mode on</code>). Claude eine Datei anlegen lassen, bei der Abfrage <strong>anhalten</strong> und laut vorlesen:<pre><code class="language-text">Lege eine Datei checkliste.md an mit einer Packliste für eine Skitour.
+</code></pre>
+</li>
+<li><strong>„Nein“-Demo:</strong> Bei einem zweiten Prompt ablehnen und umsteuern:<pre><code class="language-text">Lösche alle Dateien in diesem Ordner, die mit &quot;test&quot; anfangen.
+</code></pre>
+Hier lesen wir den Befehl, zeigen auf das <code>rm</code> bzw. Löschen, wählen <strong>Nein</strong> und sagen: „Zeig mir erst, welche Dateien das wären.“ (Vorher harmlose Testdateien anlegen.)</li>
+<li>Kurz zeigen: Mit <code>/permissions</code> sieht man die Regeln und aus welcher Datei sie kommen. Im Auto-Modus listet es auch zuletzt blockierte Aktionen (Stand 2026-11, <span class="ref" title="intern">[KB] 11</span>, §2. Permission rules).</li>
+<li>Optional (1 Min.): <code>Shift+Tab</code> bis <code>auto mode on</code> durchschalten und denselben Löschen-Prompt zeigen. Er läuft ohne Abfrage. Danach zurück auf Manual. So sehen alle den Unterschied.</li>
+</ol>
+<h3 id="selbst-machen-übung-2">Selbst machen (Übung)</h3>
+<ol>
+<li>Prompt: „Lege einen Ordner <code>notizen</code> an und darin eine Datei <code>heute.md</code> mit drei Stichpunkten.“</li>
+<li>Bei jeder Abfrage laut lesen: Was will Claude tun? Dann zustimmen.</li>
+<li>Zweiter Prompt: „Lege mit dem Terminal-Befehl <code>mkdir</code> einen Ordner <code>archiv</code> an.“ Hier den Befehl lesen und erklären, was er tut. (Nicht <code>ls</code> bzw. <code>dir</code>: Nur-Lese-Befehle fragen nie, da gäbe es nichts zu lesen. Es muss eine schreibende Aktion sein.)
+Reflexion: „Bei welcher Aktion würdest du <em>nie</em> ‚nicht mehr fragen‘ wählen?“ (Löschen, Befehle aus dem Internet, alles mit Passwörtern.)</li>
+</ol>
+<h3 id="stolpersteine--fragen-2">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Es nervt, dass es ständig fragt.“</strong> Normal am Anfang. Erst Muster erkennen, dann gezielt „nicht mehr fragen“ für harmlose, wiederkehrende Dinge.</li>
+<li><strong>„Bei mir fragt nichts.“</strong> Auto-Modus. Fußzeile prüfen, <code>Shift+Tab</code> bis <code>manual mode on</code> (<a href="#14-die-erste-agenten-session">1.4</a>).</li>
+<li><strong>Versehentlich „nicht mehr fragen“ gewählt:</strong> Regeln mit <code>/permissions</code> ansehen und entfernen.</li>
+<li><strong>Blind „Ja, Ja, Ja“ drücken:</strong> Das größte Risiko. Wir üben bewusst das Lesen.</li>
+<li><strong>Befehle sind kryptisch:</strong> Normal. „Erkläre mir den Befehl in einem Satz, ohne Fachwörter.“</li>
+<li><strong>„Kann Claude außerhalb des Ordners etwas ändern?“</strong> Standardmäßig nicht ohne Rückfrage. Details in der Doku, nicht vertiefen.</li>
+<li><strong>Alte Doku/Videos zeigen andere Texte:</strong> Wortlaut ändert sich, und ältere Versionen starteten im Manual-Modus. Wir halten uns an das Prinzip.</li>
+<li><strong>Datenschutz:</strong> Was Claude liest, geht an den Anbieter, siehe <a href="../../optional/2-datenschutz-passwoerter/lehrer.html#o1-datenschutz-wo-liegen-meine-daten">O.1</a>.</li>
+</ul>
+<h3 id="material--quellen-2">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Berechtigungen“)</li>
+<li>Doku Berechtigungen: <a href="https://code.claude.com/docs/en/permissions" rel="noopener">https://code.claude.com/docs/en/permissions</a> (Stand 2026-11-06)</li>
+<li>Doku Modi: <a href="https://code.claude.com/docs/en/permission-modes" rel="noopener">https://code.claude.com/docs/en/permission-modes</a></li>
+<li>Kollegen-Wissensbasis: (<span class="ref" title="intern">[KB] 11</span>, §3. Permission modes), (<span class="ref" title="intern">[KB] 25</span>, §Permission prompts)</li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="19-claude-code-bedienen">1.9 Claude Code bedienen</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-3">Worum geht&#39;s</h3>
+<p>Eine Handvoll Tasten reicht, um Claude Code sicher zu steuern: senden, neue Zeile, stoppen, zurückspulen, Modus wechseln. <strong>Fünf Tasten zuerst, der Rest kommt mit <code>?</code>.</strong> Bisher war das über mehrere Themen verstreut. Hier steht es an einer Stelle, als Spickzettel.</p>
+<h3 id="lernziel-3">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>einen Prompt über mehrere Zeilen schreiben, ohne ihn aus Versehen abzuschicken,</li>
+<li>Claude stoppen und mit einer Korrektur weiterarbeiten lassen,</li>
+<li>am Fuß des Fensters ablesen, in welchem Modus Claude gerade arbeitet,</li>
+<li>ein neues Gespräch beginnen und ein altes wieder aufnehmen.</li>
+</ul>
+<h3 id="so-erklären-wir-es-3">So erklären wir es</h3>
+<ol>
+<li><p><strong>Bild: Fernbedienung.</strong></p>
+<blockquote>
+<p>Du musst nicht jede Taste kennen. Play, Pause, Zurück und Lautstärke reichen fürs Fernsehen. Bei Claude sind es fünf.</p>
+</blockquote>
+</li>
+<li><p><strong>Die fünf Tasten</strong> (Empfehlung aus [KB] 25, Practical tips; Stand 2026-11):</p>
+<table>
+<thead>
+<tr>
+<th>Taste</th>
+<th>Was passiert</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Esc</code></td>
+<td>Stoppt Claude. Was schon gemacht ist, bleibt. Dann Korrektur tippen.</td>
+</tr>
+<tr>
+<td><code>Esc</code> <code>Esc</code> (Eingabe leer)</td>
+<td>Zurückspulen (<code>/rewind</code>): Gespräch und/oder Dateien auf einen früheren Stand.</td>
+</tr>
+<tr>
+<td><code>Shift+Tab</code></td>
+<td>Modus wechseln (Windows ggf. <code>Alt+M</code>). Der Modus steht unten im Fenster.</td>
+</tr>
+<tr>
+<td><code>Strg+O</code></td>
+<td>Zeigt ausführlich, was Claude gemacht hat (Werkzeuge, Befehle).</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Zeigt alle Tastenkürzel.</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>Achtung <code>Enter</code>:</strong> <code>Enter</code> schickt sofort ab, auch einen halben Satz. Neue Zeile: <code>Strg+J</code> (geht überall) oder <code>\</code> und dann <code>Enter</code>. <code>Shift+Enter</code> geht in Ghostty, Windows Terminal und Apple Terminal direkt, im VS-Code-Terminal erst nach <code>/terminal-setup</code> ([KB] 25, Input).</p>
+</li>
+<li><p><strong>Die drei Zeichen am Anfang einer Nachricht:</strong></p>
+<ul>
+<li><code>@</code> + Dateiname: „Schau dir genau diese Datei an.“ Zeigen statt beschreiben.</li>
+<li><code>/</code> öffnet das Befehlsmenü (z. B. <code>/clear</code>, <code>/context</code>, <code>/usage</code>).</li>
+<li><code>!</code> führt einen Befehl selbst aus, ohne Rückfrage (z. B. <code>! git status</code>). Claude sieht das Ergebnis und reagiert darauf.</li>
+</ul>
+</li>
+<li><p><strong>Der Modus unten im Fenster</strong> ([KB] 25, Permission modes; Stand 2026-11, Claude Code ab v2.1.283):</p>
+<ul>
+<li><code>auto mode on</code>: Claude startet so. Ein zweites Modell prüft im Hintergrund und erlaubt Harmloses selbst.</li>
+<li><code>manual mode on</code>: Claude fragt vor jeder Änderung. <strong>So arbeiten wir im Workshop</strong> (einmal <code>Shift+Tab</code> nach dem Start).</li>
+<li><code>accept edits on</code>, <code>plan mode on</code>: kommen in <a href="#17-berechtigungen">1.7</a> und <a href="../../IV-agentisch-arbeiten/1-plan-modus/lehrer.html#42-erst-planen-dann-bauen">4.2</a>.</li>
+</ul>
+</li>
+<li><p><strong>Während Claude arbeitet, darfst du tippen.</strong> Mit <code>Enter</code> wird die Nachricht vorgemerkt und Claude liest sie, sobald der aktuelle Schritt fertig ist. So korrigierst du, ohne zu stoppen.</p>
+</li>
+<li><p><strong>Gespräche:</strong></p>
+<ul>
+<li><code>/clear</code>: frisch anfangen, gleicher Ordner. Das alte Gespräch ist nicht weg.</li>
+<li><code>/resume</code> bzw. <code>claude -r</code>: ein altes Gespräch wieder aufnehmen. <code>claude -c</code>: das letzte fortsetzen.</li>
+<li>Beenden: <code>/exit</code> oder zweimal <code>Strg+C</code>.</li>
+</ul>
+</li>
+<li><p><strong>Zurückspulen hat Grenzen:</strong> <code>Esc Esc</code> stellt nur Änderungen wieder her, die Claude mit seinen eigenen Datei-Werkzeugen gemacht hat, nicht solche durch Befehle. Das echte Sicherheitsnetz ist Git (<a href="../../II-git/1-git/lehrer.html#26-fehler-r%C3%BCckg%C3%A4ngig-machen">2.6</a>).</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo-3">Zeigen (Live-Demo)</h3>
+<p>Im Ordner <code>segeltoern</code> aus <a href="#14-die-erste-agenten-session">1.4</a>:</p>
+<ol>
+<li>Unten auf den Modus zeigen, <code>Shift+Tab</code> drücken, bis <code>manual mode on</code> steht.</li>
+<li>Mehrzeiligen Prompt mit <code>Strg+J</code> schreiben:<pre><code class="language-text">Lies @ideen.md.
+Ergänze bei jeder Idee eine Zeile „Bester Monat“.
+</code></pre>
+</li>
+<li>Mittendrin <code>Esc</code> drücken, dann tippen: „Nur für die ersten zwei Ideen.“</li>
+<li><code>Esc Esc</code> zeigen: das Menü öffnen, einen früheren Stand auswählen, „Never mind“ (nichts ändern).</li>
+<li><code>?</code> drücken und die Übersicht zeigen.</li>
+</ol>
+<h3 id="selbst-machen-übung-3">Selbst machen (Übung)</h3>
+<ol>
+<li>Schalte auf <code>manual mode on</code>.</li>
+<li>Schreib einen Prompt über drei Zeilen (mit <code>Strg+J</code>), der eine Datei per <code>@</code> nennt.</li>
+<li>Stoppe Claude einmal mit <code>Esc</code> und gib eine Korrektur.</li>
+<li>Öffne mit <code>Esc Esc</code> das Zurückspulen-Menü und schließe es wieder.</li>
+</ol>
+<p>Geklappt, wenn du alle vier Schritte ohne Spickzettel schaffst.</p>
+<h3 id="stolpersteine--fragen-3">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Mein halber Prompt ist weg!“</strong> <code>Enter</code> statt <code>Strg+J</code> gedrückt. Mit <code>Esc</code> stoppen, dann weiterschreiben.</li>
+<li><strong><code>Esc Esc</code> löscht meinen Text:</strong> Steht schon Text in der Eingabe, leert <code>Esc Esc</code> ihn (mit Pfeil-hoch zurückholen). Das Menü kommt nur bei leerer Eingabe.</li>
+<li><strong><code>Shift+Tab</code> tut nichts (Windows):</strong> <code>Alt+M</code> probieren.</li>
+<li><strong>Kein Modus zu sehen / Claude startet in <code>manual</code>:</strong> Organisationen können den Auto-Modus abschalten. Dann ist alles gut so.</li>
+<li><strong>Tastennamen:</strong> Auf dem Mac ist <code>Strg</code> die <code>control</code>-Taste, nicht <code>cmd</code>.</li>
+</ul>
+<h3 id="material--quellen-3">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Kasten „Claude Code bedienen“)</li>
+<li>[KB] 25: <span class="ref" title="intern">Claude Code in the Terminal</span>, Abschnitte Input, Control while it works, Permission modes, Sessions, Practical tips (Stand 2026-11, v2.1.322)</li>
+<li>Kürzel siehe <span class="ref" title="intern">material.md</span></li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="o5-modell-effort-und-abo-limits">O.5 Modell, Effort und Abo-Limits</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-4">Worum geht&#39;s</h3>
+<p>Ein Pro-Abo ist nicht unbegrenzt. Wer lange Sitzungen, große PDFs und mehrere Agenten nutzt, stößt mittags ans Limit. <strong>Drei Regler bestimmen den Verbrauch: Modell, Effort, Länge des Gesprächs.</strong> Wer sie kennt, kommt durch den Tag.</p>
+<blockquote>
+<p><strong>Ablaufdatum:</strong> Modelle, Preise und Limits ändern sich alle paar Monate. Alles hier: Stand 2026-11 ([KB] 16, zuletzt geprüft 2026-11-10). Vor dem Workshop neu prüfen.</p>
+</blockquote>
+<h3 id="lernziel-4">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>mit <code>/usage</code> nachsehen, wie viel vom Limit verbraucht ist,</li>
+<li>mit <code>/model</code> das Modell wählen,</li>
+<li>erklären, warum ein langes Gespräch mehr kostet als ein kurzes,</li>
+<li>Effort anpassen statt gleich das Modell zu wechseln,</li>
+<li>sagen, was man auf Pro besser nicht einschaltet.</li>
+</ul>
+<h3 id="so-erklären-wir-es-4">So erklären wir es</h3>
+<ol>
+<li><strong>Bild: Handyvertrag mit Datenvolumen.</strong><blockquote>
+<p>Pro ist wie ein Tarif mit Datenvolumen. Es gibt ein Kontingent für 5 Stunden und eines für die Woche. Chat im Browser und Claude Code teilen sich dasselbe Volumen.</p>
+</blockquote>
+</li>
+<li><strong>Die drei Regler</strong> ([KB] 16, Three knobs):<ul>
+<li><strong>Modell</strong> (<code>/model</code>): wie stark und wie teuer. Auf Pro ist <strong>Opus 5.5</strong> voreingestellt. Sonnet 5.5 ist günstiger und reicht für Alltägliches. Haiku empfehlen wir für Agenten-Arbeit nicht. In der Claude-App: Auswahl unten im Eingabefeld.</li>
+<li><strong>Effort</strong> (<code>/effort</code>): wie gründlich Claude nachdenkt und prüft. Stufen <code>low</code>, <code>medium</code> (Standard), <code>high</code>, <code>xhigh</code>, <code>max</code>.</li>
+<li><strong>Gesprächslänge:</strong> Claude hat kein Gedächtnis. Bei jeder Runde wird das ganze Gespräch neu geschickt (<a href="../../III-wissensbasis/3-kontextfenster/lehrer.html#36-kontext-verstehen">3.6</a>). Lange Gespräche verbrauchen also mit jeder Runde mehr.</li>
+</ul>
+</li>
+<li><strong>Erst Effort, dann Modell.</strong> Effort ist der feinere Regler. Ein Modellwechsel mitten im Gespräch ist teuer: Das neue Modell muss alles von vorn lesen ([KB] 16, Two more rules).</li>
+<li><strong>Billig ist nicht immer günstig.</strong> Ein schwaches Modell, das scheitert, kostet einen zweiten Versuch und deine Zeit ([KB] 16, Cost per solved task).</li>
+<li><strong>Nach der Mittagspause neu anfangen.</strong> Auf dem Abo merkt sich Claude das Gespräch etwa eine Stunde lang günstig (Cache). Danach wird alles wieder voll berechnet. Nach einer langen Pause: <code>/clear</code> und mit einer kurzen Zusammenfassung starten ([KB] 16, Subscription vs. API; [KB] 17).</li>
+<li><strong>Was auf Pro Extra-Geld kostet:</strong> Das Modell <strong>Fable</strong> und der Schnellmodus <code>/fast</code> laufen auf Pro nur über bezahlte Zusatz-Credits ([KB] 16, Plans; Fast mode). Nicht aus Versehen einschalten.</li>
+<li><strong>Mehrere Agenten sind teuer.</strong> Laut Anthropic braucht ein Agent etwa 4-mal so viele Tokens wie ein Chat, ein System mit mehreren Agenten etwa 15-mal so viele ([KB] 07/13). Hilfs-Agenten laufen standardmäßig mit demselben Modell wie das Hauptgespräch (<a href="../../V-visualisieren/3-mehrere-agenten/lehrer.html#55-mehrere-agenten">5.5</a>).</li>
+<li><strong>Für eine einzelne harte Frage:</strong> <code>ultrathink</code> in den Prompt schreiben. Das erhöht die Gründlichkeit nur für diese eine Antwort.</li>
+</ol>
+<h3 id="zeigen-live-demo-4">Zeigen (Live-Demo)</h3>
+<ol>
+<li><code>/usage</code> aufrufen: die Balken für 5 Stunden und Woche zeigen. Auf Vorschläge hinweisen (z. B. „Switch … effort“). In der Claude-App steht dasselbe unter Einstellungen → Nutzung.</li>
+<li><code>/model</code> zeigen: Liste der Modelle, Opus ist ausgewählt. Nichts umstellen.</li>
+<li><code>/context</code> aufrufen: wie voll das Gespräch ist.</li>
+<li><code>/effort</code> zeigen: Schieberegler, Standard <code>medium</code>.</li>
+<li>Gleiche Frage einmal mit <code>low</code>, einmal mit <code>high</code> stellen, z. B.:<pre><code class="language-text">Wie viele Höhenmeter mache ich auf einer Skitour von 1.200 m auf 2.650 m, wenn ich zwischendurch 150 m abfahre und wieder aufsteige?
+</code></pre>
+Wir vergleichen Dauer und Antwort.</li>
+</ol>
+<h3 id="selbst-machen-übung-4">Selbst machen (Übung)</h3>
+<ol>
+<li>Ruf <code>/usage</code> auf und notiere, wie viel vom 5-Stunden-Fenster schon verbraucht ist.</li>
+<li>Stell dein Effort auf <code>low</code> und lass dir drei Ideen für dein Projekt geben. Dann zurück auf <code>medium</code>.</li>
+</ol>
+<p>Geklappt, wenn du sagen kannst, wo du dein Limit siehst und welchen Regler du zuerst drehst.</p>
+<h3 id="stolpersteine--fragen-4">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„You&#39;ve hit your limit“:</strong> Warten, bis das Fenster zurückgesetzt wird. Ein Modellwechsel hilft nur, wenn die Meldung ein bestimmtes Modell nennt („Opus limit“) ([KB] 16).</li>
+<li><strong>„Welches Modell ist das beste?“</strong> Für den Workshop: beim voreingestellten Opus bleiben, Effort <code>medium</code>.</li>
+<li><strong>Wie viel ein Modell vom Limit frisst,</strong> veröffentlicht Anthropic nicht genau. Faustregel: größeres Modell, höherer Effort, längeres Gespräch = schneller am Limit.</li>
+<li><strong>Deutsch braucht mehr Tokens als Englisch</strong> (grob 1,5–1,8 statt 1,2 pro Wort; gemessen bei OpenAI-Tokenizern, für Claude nicht belegt, [KB] 26).</li>
+</ul>
+<h3 id="material--quellen-4">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Modell, Effort und Abo-Limits“)</li>
+<li>[KB] 16: <span class="ref" title="intern">Models and Effort</span> (Stand 2026-11-10)</li>
+<li>[KB] 17: <span class="ref" title="intern">Saving Tokens</span></li>
+<li>Organisation, Pro-Limits: <span class="ref" title="intern">organisation.md</span></li>
+<li>Kürzel siehe <span class="ref" title="intern">material.md</span></li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../4-diktieren/lehrer.html"><small>← zurück</small>Diktieren</a><a class="pn-next" href="../../II-git/1-git/lehrer.html"><small>weiter →</small>Git</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>

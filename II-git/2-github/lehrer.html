@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: GitHub · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-werkzeug)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">II · Git</a> <span aria-hidden="true">›</span> <span>GitHub</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="github">GitHub</h1><div class="drehbuch-head">
+      <p><strong>Teil II · Git</strong> · Dauer gesamt: ca. 5 Min. · Braucht: <a href="../1-git/lehrer.html">Git</a> · Führt zu: <a href="../../VI-toolkit/1-mcp/lehrer.html">MCP &amp; Co.</a>, <a href="../../optional/3-webseite-bauen/lehrer.html">Webseite bauen</a></p>
+      
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#29-github-kurz">2.9 GitHub (kurz)</a> · ca. 5 Min.</li></ul></div>
+<h2 id="29-github-kurz">2.9 GitHub (kurz)</h2>
+<p><em>Dauer: ca. 5 Min. (optional)</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>GitHub ist ein Online-Dienst, auf dem man Git-Repositories sichern und teilen kann. <strong>Git funktioniert komplett ohne GitHub; GitHub ist nur die Wolke dazu.</strong> Nur Erklärung und höchstens eine kurze Demo. Wenn die Zeit knapp ist, weglassen.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>Git (lokal) und GitHub (online) auseinanderhalten.</li>
+<li>sagen, wozu man GitHub braucht (Backup, Teilen, Zusammenarbeit).</li>
+<li>wissen, dass ein Repository privat oder öffentlich sein kann.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><strong>Das Bild: Skihütte und Gipfelbuch.</strong> Dein lokales Repository ist dein Notizbuch im Rucksack. GitHub ist das Gipfelbuch oben: Hier liegt eine Kopie, andere können sie lesen oder mitschreiben, und wenn dein Rucksack verloren geht, ist sie noch da.</li>
+<li><strong>Drei Gründe für GitHub:</strong><ul>
+<li><strong>Backup:</strong> Die Festplatte stirbt, das Projekt lebt.</li>
+<li><strong>Teilen:</strong> Link schicken, fertig.</li>
+<li><strong>Zusammenarbeit:</strong> mehrere Menschen am selben Projekt.</li>
+</ul>
+</li>
+<li><strong>Zwei Begriffe, mehr nicht:</strong><ul>
+<li><em>Push:</em> eigene Commits hochladen.</li>
+<li><em>Clone:</em> ein Repository von GitHub auf den eigenen Rechner holen.</li>
+</ul>
+</li>
+<li><strong>Privat oder öffentlich.</strong> Standard sollte <strong>privat</strong> sein. Öffentlich sieht es die ganze Welt, auch alles im Verlauf (<a href="../1-git/lehrer.html#27-gitignore">2.7</a>).<blockquote>
+<p>Was auf GitHub öffentlich liegt, liegt für immer im Netz. Darum: erst <code>.gitignore</code>, im Zweifel privat.</p>
+</blockquote>
+</li>
+<li><strong>Konto nötig.</strong> Kostenlos, aber nicht heute zwingend. Der Workshop läuft komplett ohne. Datenschutz: <a href="../../optional/2-datenschutz-passwoerter/lehrer.html#o1-datenschutz-wo-liegen-meine-daten">O.1</a>. Dort geht es auch darum, dass Dateien dann bei einem Dienstleister liegen.</li>
+<li><strong>Ausblick:</strong> Wer das später will, bittet Claude: „Hilf mir, dieses Projekt auf GitHub zu sichern.“ Das taucht in <a href="../../VI-toolkit/1-mcp/lehrer.html#64-die-n%C3%A4chste-stufe">6.4 Die nächste Stufe</a> wieder auf.</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Optional, 2 Minuten, mit unserem eigenen Konto: Ein fertiges Repository (Segeltörn-Planer) auf github.com im Browser zeigen: Dateiliste, Commit-Verlauf mit Nachrichten, ein Diff. Das Bild „Dieselbe Zeitleiste, nur online“ reicht. Wir pushen <strong>nicht live</strong> (Anmeldung kostet zu viel Zeit und ist für Teilnehmende nicht nachvollziehbar). Wer fragt, bekommt es nachher gezeigt.</p>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Keine Übung. Reflexionsfrage:</p>
+<blockquote>
+<p>Würdest du dein Projekt privat oder öffentlich stellen? Was dürfte auf keinen Fall mit hoch?</p>
+</blockquote>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Brauche ich ein Konto?“</strong> Heute nicht.</li>
+<li><strong>Anmeldung beim Hochladen:</strong> Die Anmeldung läuft heute über den Browser oder das Werkzeug <code>gh</code>, nicht mit dem Passwort im Terminal. Vor dem Workshop prüfen, falls wir es doch zeigen.</li>
+<li><strong>„Ist das sicher?“</strong> Privat: nur eingeladene Personen. Trotzdem nie Passwörter hochladen (<a href="../../optional/2-datenschutz-passwoerter/lehrer.html#o3-passw%C3%B6rter-managen">O.3</a>).</li>
+<li><strong>Uni-/Schul-Material:</strong> Regeln der Einrichtung beachten, nicht alles darf ins Netz.</li>
+<li><strong>Dropbox statt GitHub?</strong> Für Projekte nicht gleichwertig, siehe <a href="../../optional/1-dateien-speicherort/lehrer.html#o4-festplatte-und-cloud-speicher-dropbox--co">O.4</a>.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „GitHub (kurz)“)</li>
+<li>Kollegen-Folien: nichts Passendes.</li>
+<li>Externe Links: <a href="https://github.com" rel="noopener">https://github.com</a>, Doku: <a href="https://docs.github.com/de" rel="noopener">https://docs.github.com/de</a></li>
+</ul>
+<p><em>Stand: 2026-11-06</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../1-git/lehrer.html"><small>← zurück</small>Git</a><a class="pn-next" href="../../III-wissensbasis/1-wissensbasis/lehrer.html"><small>weiter →</small>Wissensbasis</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-23</span>
+  <a href="../../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>
