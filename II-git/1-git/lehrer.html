@@ -285,7 +285,7 @@ git status
 <h2 id="25-branches">2.5 Branches</h2>
 <p><em>Dauer: ca. 8 Min.</em></p>
 <h3 id="worum-gehts-4">Worum geht&#39;s</h3>
-<p>Ein Branch ist eine Abzweigung, auf der man eine Alternative ausprobiert, während das Hauptprojekt unberührt bleibt. <strong>Gefällt das Experiment, führt man es zurück; gefällt es nicht, wirft man den Branch weg.</strong> Kein Pflichtthema: Wer wenig Zeit hat, zeigt es nur als Demo.</p>
+<p>Ein Branch ist eine Abzweigung, auf der man eine Alternative ausprobiert, während das Hauptprojekt unberührt bleibt. <strong>Gefällt das Experiment, merged man den Branch nach <code>main</code>; gefällt es nicht, wirft man den Branch weg.</strong> Kein Pflichtthema: Wer wenig Zeit hat, zeigt es nur als Demo.</p>
 <h3 id="lernziel-4">Lernziel</h3>
 <p>Nach diesem Thema können die Teilnehmenden …</p>
 <ul>
@@ -301,8 +301,8 @@ alternative        ●────●             ← hier wird ausprobiert
 </code></pre>
 </li>
 <li><strong>Beispiel Reisen:</strong> Der Reiseplan für Island liegt als Hauptversion vor. Idee: „Was, wenn wir statt Mietwagen nur Bus und Bahn nehmen?“ Auf einem Branch <code>ohne-auto</code> lässt Claude den ganzen Plan umbauen. Der Original-Plan auf <code>main</code> bleibt unberührt.</li>
-<li><strong>Der Hauptzweig heißt <code>main</code></strong> (in manchen Installationen <code>master</code>). Das ist „die echte Version“.</li>
-<li><strong>Zusammenführen heißt <em>Merge</em>.</strong> Gefällt die Alternative, holen wir sie in <code>main</code>. Das zeigen wir nur, wenn Zeit ist, und lassen es Claude erledigen. Bei Textdateien gibt es selten Konflikte, die wir hier nicht vertiefen.</li>
+<li><strong>Der Haupt-Branch heißt <code>main</code></strong> (in manchen Installationen <code>master</code>). Das ist „die echte Version“.</li>
+<li><strong>Das heißt <em>Merge</em></strong> (auf Deutsch etwa „zusammenführen“). Gefällt die Alternative, holen wir sie in <code>main</code>. Das zeigen wir nur, wenn Zeit ist, und lassen es Claude erledigen. Bei Textdateien gibt es selten Konflikte, die wir hier nicht vertiefen.</li>
 <li><strong>Unterschied zu Commits:</strong> Commits sind die Punkte auf der Zeitleiste. Ein Branch ist eine zweite Zeitleiste daneben.</li>
 <li><strong>Einordnung:</strong> Für viele Einsteiger reicht ein einziger Branch plus Commits. Branches sind das „fortgeschrittene Werkzeug“, das wir kurz zeigen, damit der Begriff nicht fremd ist.</li>
 </ol>
@@ -383,13 +383,13 @@ alternative        ●────●             ← hier wird ausprobiert
 </code></pre>
 </li>
 <li>Im Browser ansehen. Das Publikum lachen lassen. Dann <strong>Diff</strong> ansehen (<a href="#23-%C3%A4nderungen--diffs">2.3</a>): Wie viel hat sich geändert?</li>
-<li>Zurückholen:<pre><code class="language-text">Gefällt mir nicht. Stell den Stand vom letzten Commit wieder her.
+<li>Zurückholen:<pre><code class="language-text">Gefällt mir nicht. Hol mit git restore den Stand vom letzten Commit zurück.
 </code></pre>
 </li>
 <li>Browser neu laden: Die alte Karte ist da.</li>
 </ol>
-<p>Wir sagen dazu laut: „Das hat 10 Sekunden gedauert. Die KI durfte alles umbauen, und wir haben nichts riskiert.“ Claude fragt vor dem Zurücksetzen nach Erlaubnis. Wir lesen die Anfrage gemeinsam vor, damit klar ist, dass das Verwerfen endgültig ist. <strong>Diese Demo im Manual-Modus zeigen</strong> (<a href="../../I-basics/5-claude-code/lehrer.html#14-die-erste-agenten-session">1.4</a>): Der Auto-Modus blockiert <code>git reset --hard</code> und <code>git clean -fd</code> standardmäßig, die Demo liefe dort ins Leere (Stand 2026-11, <span class="ref" title="intern">[KB] 24</span>, §In Claude Code).</p>
-<p>Zweite, kurze Variante für Fortgeschrittene: einen <em>schon committeten</em> schlechten Stand zeigen und „Mach den letzten Commit rückgängig“ sagen.</p>
+<p>Wir sagen dazu laut: „Das hat 10 Sekunden gedauert. Die KI durfte alles umbauen, und wir haben nichts riskiert.“ Claude fragt vor dem <code>git restore</code> nach Erlaubnis. Wir lesen die Anfrage gemeinsam vor, damit klar ist, dass das Verwerfen endgültig ist. <strong>Diese Demo im Manual-Modus zeigen</strong> (<a href="../../I-basics/5-claude-code/lehrer.html#14-die-erste-agenten-session">1.4</a>): Der Auto-Modus blockiert <code>git reset --hard</code> und <code>git clean -fd</code> standardmäßig, die Demo liefe dort ins Leere (Stand 2026-11, <span class="ref" title="intern">[KB] 24</span>, §In Claude Code).</p>
+<p>Zweite, kurze Variante für Fortgeschrittene: einen <em>schon committeten</em> schlechten Stand zeigen und „Mach den letzten Commit mit <code>git revert</code> rückgängig“ sagen. Fachbegriffe bleiben im Original: Restore, Revert, Branch, Merge.</p>
 <h3 id="selbst-machen-übung-5">Selbst machen (Übung)</h3>
 <p>Aus dem Handout („Mutig verschlimmbessern“):</p>
 <ol>
