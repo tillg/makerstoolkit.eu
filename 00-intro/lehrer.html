@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: Intro · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../design/tokens.css">
+<link rel="stylesheet" href="../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../"><img src="../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../inhalt/">Inhalt</a>
+    <a href="../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic"><nav class="crumbs" aria-label="Pfad"><a href="../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <span>Intro</span></nav><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="intro">Intro</h1>
+<h2 id="01-warum-wir-hier-sind">0.1 Warum wir hier sind</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Der Einstieg, bevor wir irgendetwas installieren oder erklären. <strong>Wir zeigen Freunden die Werkzeuge, mit denen Software-Entwickler arbeiten, weil diese Werkzeuge stark sind, auch für Nicht-Entwickler.</strong> Und gleich am Anfang ein Ergebnis, das beeindruckt.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema wissen die Teilnehmenden …</p>
+<ul>
+<li>warum ausgerechnet Entwickler-Werkzeuge (Terminal, Git, Markdown, Claude Code),</li>
+<li>dass sie nicht alles behalten müssen,</li>
+<li>was mit einem einzigen Satz an Claude möglich ist.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><strong>Motivation: Werkzeuge der Profis.</strong><blockquote>
+<p>Software-Entwickler arbeiten seit Jahren mit KI-Agenten. Ihre Werkzeuge sind nicht hübsch, aber sehr stark: Der Agent liest deine Dateien, schreibt neue, startet Programme und prüft das Ergebnis. Diese Werkzeuge zeigen wir euch heute, wie man sie Freunden zeigt: ohne Prüfung, ohne Programmierkurs.</p>
+</blockquote>
+</li>
+<li><strong>Die Idee des Tages: Buffet, nicht Menü.</strong><blockquote>
+<p>Ihr hört heute viel. Nehmt euch das, was euch hilft, und lasst den Rest vorbeirauschen. Niemand muss alles behalten. Alles steht auf der Webseite zum Nachlesen.</p>
+</blockquote>
+</li>
+<li><strong>Schnell anwenden.</strong><blockquote>
+<p>Was ihr heute gleich ausprobiert, bleibt hängen. Und es bringt sofort etwas: Am Ende des Tages habt ihr ein eigenes Projekt, nicht nur Notizen.</p>
+</blockquote>
+</li>
+<li><strong>Was heute kommt:</strong> kurz die sechs Teile auf der Themen-Tapete zeigen (oben im Menü: <em>Tapete</em>), von Basics bis Toolkit. Nicht erklären, nur zeigen, wohin die Reise geht.</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Eine kurze Liste mit Ideen zeigen und <strong>die Gruppe eins auswählen lassen</strong>. Dann den Prompt live an Claude geben (in einem leeren Ordner, Auto-Modus ist hier in Ordnung). Während Claude baut: nicht erklären, was passiert. Nur sagen: „Das lernt ihr heute.“</p>
+<table>
+<thead>
+<tr>
+<th>Idee</th>
+<th>Für wen</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Doppelpendel</td>
+<td>Physik, Mathematik, alle, die Chaos mögen</td>
+</tr>
+<tr>
+<td>Skigebiete Chiemgau und Tirol</td>
+<td>Berge, Reisen, Wintersport</td>
+</tr>
+</tbody></table>
+<p><strong>Doppelpendel:</strong></p>
+<pre><code class="language-text">Baue mir eine Webseite pendel.html mit einem Pendel mit zwei Gelenken (Doppelpendel).
+Mit Schiebereglern für die beiden Längen, die beiden Massen und die Startwinkel.
+Zeichne die Spur des unteren Pendels mit. Zeig daneben ein zweites Pendel mit fast
+gleichem Startwinkel (0,1 Grad Unterschied), damit man sieht, wie schnell sie
+auseinanderlaufen. Öffne die Seite danach im Browser.
+</code></pre>
+<p><strong>Skigebiete:</strong></p>
+<pre><code class="language-text">Baue mir eine Webseite skigebiete.html mit den wichtigsten Skigebieten im Chiemgau
+und in Tirol. Oben eine Karte mit einem Punkt für jedes Skigebiet. Klickt man auf
+einen Punkt, erscheinen darunter die Details: Höhe von Tal und Gipfel, Pistenkilometer,
+Anzahl der Lifte, Fahrzeit ab München und ein Link zur Webseite. Dazu eine Tabelle,
+die man nach jeder Spalte sortieren kann. Öffne die Seite danach im Browser.
+</code></pre>
+<p>Hinweise beim Zeigen:</p>
+<ul>
+<li>Das Ergebnis im Browser öffnen, mit den Reglern bzw. der Karte spielen.</li>
+<li>Skigebiete: Die Zahlen stammen aus dem Gedächtnis des Modells und können falsch sein. Das sagen wir offen und verweisen auf <a href="../V-visualisieren/2-recherche-pruefen/lehrer.html">Recherche prüfen</a>. Die Karte braucht Internet (Kartenkacheln).</li>
+<li>Dauer: meist 2 bis 5 Minuten. In der Zeit die Lernziele des Tages nennen.</li>
+</ul>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Demo dauert lange oder bricht ab:</strong> Vorher einmal durchspielen und das Ergebnis als Reserve bereithalten.</li>
+<li><strong>„Muss ich das auch können?“</strong> Nein, heute noch nicht. Am Ende des Tages schon.</li>
+<li><strong>„Ist das nicht Schummeln?“</strong> Entwickler arbeiten genau so. Wichtig ist, dass du prüfst, was herauskommt. Das üben wir.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li><a href="../00-vorbereitung/">Vorbereitung</a> (was die Teilnehmenden mitbringen)</li>
+<li>Ideen für eigene Projekte: <span class="ref" title="intern">beispielprojekte.md</span></li>
+</ul>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../00-vorbereitung/"><small>← zurück</small>Vorbereitung</a><a class="pn-next" href="../I-basics/1-terminal/lehrer.html"><small>weiter →</small>Terminal</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-25</span>
+  <a href="../impressum/">Impressum &amp; Datenschutz</a>
+</footer>
+</body>
+</html>
