@@ -301,3 +301,6 @@ svg.focus .tile.pre rect.bg { stroke: var(--amber); }
   .toc-topics a { grid-template-columns: 22px 1fr; }
   .toc-topics em { grid-column: 2; }
 }
+
+/* Vor der Freigabe gesperrte Links */
+[data-locked] { cursor: default; opacity: .7; }

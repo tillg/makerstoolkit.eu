@@ -128,14 +128,14 @@
         <dt>Braucht</dt><dd>${n.pre.length ? n.pre.map(link).join(' · ') : '–'}</dd>
         <dt>Führt zu</dt><dd>${kids.length ? kids.map(link).join(' · ') : '–'}</dd>
       </dl>
-      <div class="links"><a class="mat-btn" href="${n.href}">Zum Thema →</a>${n.teacher ? `<a class="view-btn hidden-teacher" href="${n.teacher}">Lehrer-Ansicht</a>` : ''}<a class="up" href="#graph" data-up="${id}">↑ im Graph zeigen</a></div>
+      <div class="links">${n.href ? `<a class="mat-btn" href="${n.href}">Zum Thema →</a>` : '<span class="mat-btn" data-locked>Noch nicht verfügbar</span>'}${n.teacher ? `<a class="view-btn hidden-teacher" href="${n.teacher}">Lehrer-Ansicht</a>` : ''}<a class="up" href="#graph" data-up="${id}">↑ im Graph zeigen</a></div>
     </article>`;
   };
   const cards = document.getElementById('cards');
   const groups = [...PARTS.map(p => ({ ...p, ids: p.rows.flat() })), ...(OPT ? [{ id: '+', ...OPT, ids: Object.keys(OPT.place) }] : [])];
   for (const p of groups) {
     cards.insertAdjacentHTML('beforeend',
-      `<div class="part-h"><span class="r">${p.id}</span><h3>${esc(p.title)}</h3><small>${esc(p.sub)}</small><a href="${p.href}">Teil-Übersicht →</a></div>
+      `<div class="part-h"><span class="r">${p.id}</span><h3>${esc(p.title)}</h3><small>${esc(p.sub)}</small>${p.href ? `<a href="${p.href}">Teil-Übersicht →</a>` : ''}</div>
        <div class="grid">${p.ids.map(card).join('')}</div>`);
   }
 
