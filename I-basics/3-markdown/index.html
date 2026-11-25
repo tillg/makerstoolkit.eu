@@ -51,6 +51,26 @@ Normaler Text, **fett**, *kursiv*, `Code`,
 | 1 | 2 |
 </code></pre>
 <p>Vorschau in VS Code: Rechtsklick auf die Datei → <em>Vorschau öffnen</em> (oder <code>Cmd/Strg + Shift + V</code>).</p>
+<h2 id="frontmatter-daten-über-die-datei">Frontmatter: Daten über die Datei</h2>
+<p>Ganz oben in einer Markdown-Datei kann ein <strong>Frontmatter</strong> stehen. Das ist ein kleiner Block zwischen zwei Zeilen <code>---</code>. Darin steht nicht der Inhalt, sondern Angaben <strong>über</strong> die Datei: Titel, Datum, Schlagwörter, Status.</p>
+<pre><code class="language-markdown">---
+titel: Hafen Vis
+datum: 2026-11-25
+quelle: https://de.wikipedia.org/wiki/Vis_(Insel)
+tags: [kroatien, hafen, segeln]
+status: entwurf
+---
+# Hafen Vis
+
+Kleiner Hafen auf der Insel Vis. Im Sommer früh da sein, die Plätze sind schnell voll.
+</code></pre>
+<p>So ist es aufgebaut:</p>
+<ul>
+<li>Jede Zeile hat die Form <code>name: wert</code>. Die Namen darfst du dir selbst ausdenken.</li>
+<li>Mehrere Werte kommen in eckige Klammern: <code>[kroatien, hafen]</code>.</li>
+<li>Die Vorschau zeigt das Frontmatter meist nicht an. Es ist für Programme und für Claude gedacht.</li>
+</ul>
+<p>Wozu das gut ist? Claude kann damit sortieren und filtern: „Zeig mir alle Notizen mit <code>status: entwurf</code>.“ · „Liste alle Häfen mit dem Tag <code>kroatien</code> als Tabelle.“ Auch diese Webseite ist so gebaut: Die Kacheln der Themen-Tapete kommen aus dem Frontmatter der Kurs-Dateien.</p>
 <h2 id="übung">Übung</h2>
 <p>Lass Claude ein Dokument <code>ueber-mich.md</code> anlegen: wer du bist, welches Thema du heute bearbeiten willst, und was am Ende dabei herauskommen soll. Lies es, korrigiere es – selbst oder per Anweisung an Claude.</p>
 <nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../2-vscode/"><small>← zurück</small>VS Code</a><a class="pn-next" href="../4-diktieren/"><small>weiter →</small>Diktieren</a></nav></article>
