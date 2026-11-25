@@ -38,6 +38,20 @@
 ├── quellen/           ← deine Originaldokumente
 └── notizen/           ← von dir und Claude erstellte Zusammenfassungen
 </code></pre>
+<h3 id="kein-material-dabei-hol-es-aus-dem-internet">Kein Material dabei? Hol es aus dem Internet</h3>
+<p>Claude kann Webseiten lesen und als Markdown-Dateien in <code>quellen/</code> ablegen. Ein paar Prompts:</p>
+<ul>
+<li><strong>Eine Seite:</strong> „Lies <a href="https://de.wikipedia.org/wiki/Kornaten" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Kornaten</a> und speichere den Inhalt als <code>quellen/kornaten.md</code>. Schreib oben die URL und das heutige Datum hin.“</li>
+<li><strong>Eine Seite mit Unterseiten:</strong> „Lies diese Seite und folge den Links zu den einzelnen Häfen, höchstens 10 Seiten. Leg für jede Seite eine eigene <code>.md</code> in <code>quellen/</code> an, mit URL und Datum.“</li>
+<li><strong>Selbst suchen lassen:</strong> „Such im Internet 5 gute Quellen zu ‚Segeln in Kroatien für Anfänger‘. Zeig mir erst die Liste. Wenn ich zustimme, fasse jede in einer eigenen <code>.md</code> in <code>quellen/</code> zusammen, mit URL und Datum.“</li>
+</ul>
+<p>Gut zu wissen:</p>
+<ul>
+<li>Claude fragt vor jedem Web-Zugriff um Erlaubnis (im Manual-Modus). Das ist normal.</li>
+<li>Bei langen Seiten fasst Claude zusammen, statt alles abzuschreiben. Brauchst du den genauen Wortlaut, speichere die Seite im Browser als PDF (<em>Drucken → Als PDF sichern</em>) und leg sie in <code>quellen/</code>.</li>
+<li><strong>Immer die URL notieren.</strong> Dann kannst du später prüfen, woher eine Aussage stammt (<a href="../../V-visualisieren/2-recherche-pruefen/">Recherche prüfen</a>).</li>
+<li>Fremde Texte nur für dich nutzen, nicht als deine eigenen veröffentlichen.</li>
+</ul>
 <h2 id="2-claude-erkunden-lassen">2. Claude erkunden lassen</h2>
 <ul>
 <li>„Mach ein Inventar aller Dokumente in <code>quellen/</code>: Titel, Thema, Umfang, eine Zeile Inhalt.“</li>
