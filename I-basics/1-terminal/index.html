@@ -36,14 +36,62 @@
 <li><strong>Windows:</strong> Windows Terminal (ist auf Windows 11 schon dabei).</li>
 <li><strong>Alternativ:</strong> das Terminal direkt in VS Code (<em>Terminal → Neues Terminal</em>).</li>
 </ul>
-<h2 id="diverses">Diverses</h2>
+<h2 id="ordner-und-wege">Ordner und Wege</h2>
+<p>Alle Dateien liegen in einem Baum aus Ordnern (englisch <em>Directories</em>). Ganz oben steht die Wurzel <code>/</code>. Darunter die wichtigsten Ordner auf dem Mac:</p>
+<pre><code class="language-text">/                    Wurzel: hier fängt alles an
+├── Applications     Programme (Safari, VS Code …)
+├── Library          Einstellungen und Hilfsdateien für alle Nutzer
+├── System           macOS selbst, nicht anfassen
+├── Users            die Home-Ordner aller Nutzer
+│   ├── anna         Home von Anna:  /Users/anna
+│   ├── ben          Home von Ben:   /Users/ben
+│   └── tgartner     Home von Till:  /Users/tgartner
+├── Volumes          USB-Sticks und externe Festplatten
+├── bin, usr         Grundbefehle des Systems (ls, cd …)
+├── etc              Einstellungen des Systems
+└── tmp              Zwischendateien, wird regelmäßig geleert
+</code></pre>
+<p>Linux sieht fast gleich aus, nur heißen die Home-Ordner <code>/home/anna</code>. Unter Windows beginnt der Baum mit dem Laufwerk: <code>C:\</code>, die Home-Ordner liegen in <code>C:\Users\anna</code>.</p>
+<p>Ein <strong>Pfad</strong> beschreibt den Weg durch den Baum: <code>/Users/anna/mein-projekt/ideen.md</code>.</p>
+<h2 id="kurzzeichen">Kurzzeichen</h2>
 <ul>
-<li>Was ist <code>~</code></li>
-<li>Was ist <code>.</code> und <code>..</code></li>
-<li><code>ls -al</code> , <code>cd ..</code></li>
-<li>Vervollständigen mit <code>tab</code></li>
-<li></li>
+<li><code>~</code>: dein <strong>Home-Ordner</strong>. Auf dem Mac z. B. <code>/Users/tgartner</code>, unter Linux <code>/home/tgartner</code>, unter Windows <code>C:\Users\tgartner</code>. <code>~/mein-projekt</code> ist also <code>/Users/tgartner/mein-projekt</code>.</li>
+<li><code>.</code>: der Ordner, in dem du <strong>gerade bist</strong>.</li>
+<li><code>..</code>: der Ordner <strong>eine Ebene höher</strong>.</li>
 </ul>
+<h2 id="die-wichtigsten-befehle">Die wichtigsten Befehle</h2>
+<table>
+<thead>
+<tr>
+<th>Befehl</th>
+<th>Was passiert</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>pwd</code></td>
+<td>Zeigt, wo du gerade bist.</td>
+</tr>
+<tr>
+<td><code>ls -al</code></td>
+<td>Zeigt alle Dateien im Ordner, auch versteckte (die mit <code>.</code> anfangen), mit Größe und Datum.</td>
+</tr>
+<tr>
+<td><code>cd mein-projekt</code></td>
+<td>Geht in den Ordner <code>mein-projekt</code>.</td>
+</tr>
+<tr>
+<td><code>cd ..</code></td>
+<td>Geht eine Ebene höher.</td>
+</tr>
+<tr>
+<td><code>cd ~</code></td>
+<td>Geht zurück in deinen Home-Ordner.</td>
+</tr>
+<tr>
+<td><code>Tab</code></td>
+<td>Vervollständigt. Tippe <code>cd mei</code> und drück <code>Tab</code>, das Terminal ergänzt zu <code>cd mein-projekt/</code>.</td>
+</tr>
+</tbody></table>
 <nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../../00-vorbereitung/"><small>← zurück</small>Vorbereitung</a><a class="pn-next" href="../2-vscode/"><small>weiter →</small>VS Code</a></nav></article>
 </main>
 <footer class="site-foot">
