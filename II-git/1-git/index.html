@@ -85,7 +85,11 @@ experiment    ●────●           ← ein Branch: ausprobieren, ohne ma
 <p>In VS Code siehst du alles auch grafisch: Symbol <em>Quellcodeverwaltung</em> in der linken Leiste.</p>
 <h2 id="übung-mutig-verschlimmbessern">Übung: Mutig verschlimmbessern</h2>
 <ol>
-<li>Committe deinen aktuellen Stand.</li>
+<li>Ist dein Ordner schon ein Git-Repository? Das siehst du in VS Code unten links: Steht dort <code>main</code>, ja. Wenn nicht, tippe im Terminal (im Projektordner):<pre><code class="language-text">git init
+</code></pre>
+Oder frag Claude: „Mach diesen Ordner zu einem Git-Repository.“</li>
+<li>Noch keine Datei <code>ueber-mich.md</code>? „Leg eine Datei <code>ueber-mich.md</code> an mit fünf Sätzen über mich: …“</li>
+<li>Committe deinen aktuellen Stand: „Committe alles mit einer passenden Nachricht.“</li>
 <li>Bitte Claude: „Schreib <code>ueber-mich.md</code> komplett um, im Stil eines Piraten.“</li>
 <li>Sieh dir den Diff an. Gefällt dir das?</li>
 <li>Nein? „Hol mit <code>git restore</code> den Stand vom letzten Commit zurück.“</li>
