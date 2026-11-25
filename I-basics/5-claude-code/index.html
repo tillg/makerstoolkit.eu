@@ -90,7 +90,83 @@
 <li>Wie wird das Prompt zusammengestellt</li>
 <li>Lokale Tools</li>
 <li>Rechte oder nicht</li>
-<li>Claude startet im <strong>Auto-Modus</strong>: Ein zweites Modell prüft im Hintergrund und erlaubt Harmloses selbst. Für den Anfang schalten wir auf <strong>manual</strong> (einmal <code>Shift+Tab</code>, unten steht dann <code>manual mode on</code>). Dann fragt Claude nach, bevor es Dateien ändert oder Befehle ausführt. Lies, was es vorhat, bevor du zustimmst. Du bist der Chef, Claude ist der Assistent. <em>(Stand 2026-11)</em></li>
+</ul>
+<h2 id="berechtigungen-und-modi">Berechtigungen und Modi</h2>
+<p><em>Stand 2026-11 (Claude Code 2.1). Wortlaut und Voreinstellung ändern sich.</em></p>
+<p>Claude Code fragt um Erlaubnis, bevor es Dateien ändert, Befehle ausführt oder ins Internet geht. Dateien im Projektordner lesen darf es immer. <strong>Du bist die Chefin, Claude ist der Assistent.</strong></p>
+<h3 id="eine-abfrage-lesen">Eine Abfrage lesen</h3>
+<ol>
+<li><strong>Was</strong> will Claude tun? (Datei anlegen, Befehl ausführen …)</li>
+<li><strong>Wo?</strong> Nur im Projektordner?</li>
+<li><strong>Verstehe ich das?</strong> Wenn nicht: Nein wählen und fragen: „Erklär mir, was dieser Befehl tut.“</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Deine Antwort</th>
+<th>Was passiert</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ja</td>
+<td>Einmal erlauben.</td>
+</tr>
+<tr>
+<td>Ja, und nicht mehr fragen</td>
+<td>Claude merkt sich diese Art Aktion. Bei Befehlen gilt das dauerhaft für dieses Projekt. Sparsam nutzen.</td>
+</tr>
+<tr>
+<td>Nein, mit <code>Tab</code> eine Begründung tippen</td>
+<td>Ablehnen und umsteuern: „Zeig mir erst, welche Dateien das wären.“</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Bricht den ganzen Arbeitsschritt ab.</td>
+</tr>
+</tbody></table>
+<p>Manchmal stellt Claude selbst eine Frage mit Auswahl, z. B. im Plan-Modus: „Welche Variante willst du?“ Mit den Pfeiltasten wählen, <code>Enter</code>. Passt keine? Eigene Antwort tippen.</p>
+<h3 id="die-modi">Die Modi</h3>
+<p>Der Modus steht unten in der Fußzeile. Wechseln mit <code>Shift+Tab</code> (Windows ggf. <code>Alt+M</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Modus</th>
+<th>Fußzeile</th>
+<th>Claude fragt …</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Manual</td>
+<td><code>manual mode on</code></td>
+<td>vor jeder Änderung und jedem Befehl. Zum Lernen.</td>
+</tr>
+<tr>
+<td>Accept edits</td>
+<td><code>accept edits on</code></td>
+<td>nicht mehr bei Dateien. Achtung: Auch Löschen und Verschieben im Ordner läuft dann ohne Frage.</td>
+</tr>
+<tr>
+<td>Plan</td>
+<td><code>plan mode on</code></td>
+<td>gar nicht, denn Claude ändert nichts, es plant nur (<a href="../../IV-agentisch-arbeiten/1-plan-modus/">Plan-Modus</a>).</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td><code>auto mode on</code></td>
+<td>fast nie. Ein zweites Modell prüft im Hintergrund und stoppt Gefährliches, z. B. <code>git reset --hard</code> (verwirft Änderungen) oder Programme aus dem Internet ausführen.</td>
+</tr>
+</tbody></table>
+<p>Claude startet normalerweise im <strong>Auto-Modus</strong>. Im Kurs schalten wir am Anfang auf <strong>Manual</strong>, damit du die Abfragen lesen lernst.</p>
+<h3 id="direkt-im-richtigen-modus-starten">Direkt im richtigen Modus starten</h3>
+<pre><code class="language-text">claude --permission-mode auto      # Auto: zügig arbeiten, dein Normalfall nach dem Kurs
+claude --permission-mode manual    # Manual: jede Aktion selbst freigeben
+claude --permission-mode plan      # Plan: erst planen, dann bauen
+</code></pre>
+<ul>
+<li><strong>Vor Auto committen.</strong> Dann kannst du mit Git alles zurückholen.</li>
+<li><code>/permissions</code> zeigt, was du mit „nicht mehr fragen“ erlaubt hast. Dort kannst du es auch wieder löschen.</li>
+<li>„Bitte frag nicht“ im Prompt ändert nichts. Die Regeln setzt das Programm durch, nicht Claude.</li>
+<li><strong>Nie</strong> <code>--dangerously-skip-permissions</code> oder den Modus „bypass permissions“ benutzen. Dann prüft gar nichts mehr.</li>
 </ul>
 <h2 id="claude-code-bedienen">Claude Code bedienen</h2>
 <table>
