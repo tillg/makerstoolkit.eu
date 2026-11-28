@@ -307,3 +307,11 @@ svg.focus .tile.pre rect.bg { stroke: var(--amber); }
 
 /* Vor der Freigabe gesperrte Links */
 [data-locked] { cursor: default; opacity: .7; }
+
+/* Suche (Pagefind-Oberfläche in den Farben der Seite) */
+.search .pagefind-ui {
+  --pagefind-ui-primary: var(--link); --pagefind-ui-text: var(--text); --pagefind-ui-background: var(--surface);
+  --pagefind-ui-border: var(--rule-2); --pagefind-ui-tag: var(--surface-2); --pagefind-ui-font: var(--mmt-font-body);
+  --pagefind-ui-border-radius: 8px; margin-top: 18px;
+}
+.search .pagefind-ui mark { background: var(--amber); color: var(--on-accent); }
