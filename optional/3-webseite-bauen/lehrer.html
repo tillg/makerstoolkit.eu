@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: Webseite bauen · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ergebnis)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">Optionale Themen</a> <span aria-hidden="true">›</span> <span>Webseite bauen</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="webseite-bauen">Webseite bauen</h1><div class="drehbuch-head">
+      <p><strong>Optionales Thema</strong> · Dauer gesamt: ca. 15 Min. · Braucht: <a href="../../II-git/2-github/lehrer.html">GitHub</a>, <a href="../../V-visualisieren/1-html-javascript/lehrer.html">HTML &amp; JavaScript</a> · Führt zu: –</p>
+      
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#o6-webseite-bauen">O.6 Webseite bauen</a> · ca. 15 Min.</li></ul></div>
+<h2 id="o6-webseite-bauen">O.6 Webseite bauen</h2>
+<p><em>Dauer: ca. 15 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Eine Visualisierung oder ein Lernleitfaden aus dem Workshop geht online. GitHub Pages hostet kostenlos, ein Programm macht aus Markdown eine Webseite, eine eigene Domain kostet ein paar Euro im Jahr und wird über DNS verbunden.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>ein öffentliches Repository mit GitHub Pages online stellen.</li>
+<li>in zwei Sätzen sagen, wie aus Markdown eine Webseite wird.</li>
+<li>erklären, was eine Domain ist, was sie kostet und wofür DNS da ist.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><strong>GitHub Pages:</strong> GitHub stellt die Dateien aus dem Repository als Webseite online. Ein Schalter in <em>Settings → Pages</em>. Adresse <code>name.github.io/projekt</code>. Jeder Push aktualisiert die Seite. Kostenlos für öffentliche Repositories; öffentlich heißt, alles im Repo ist lesbar (Bezug zu <a href="../2-datenschutz-passwoerter/lehrer.html#o1-datenschutz-wo-liegen-meine-daten">O.1</a>).</li>
+<li><strong>Ein Programm baut die Seite:</strong> „Ein Drucker für Webseiten.“ Rein gehen Markdown-Texte und eine Vorlage (Menü, Design), raus kommen fertige HTML-Seiten. Das Programm schreibt Claude, die Teilnehmenden müssen keines kennen oder installieren. Beispiel: Diese Kurs-Webseite entsteht genauso.</li>
+<li><strong>Domain:</strong> Ein Name wie <code>segeltoern-kroatien.de</code>, gemietet beim Registrar, z. B. GoDaddy, ca. 5–15 €/Jahr für <code>.de</code> (Stand 2026-11). Auf den Verlängerungspreis hinweisen: Das erste Jahr ist oft billiger.</li>
+<li><strong>DNS:</strong> „Das Telefonbuch des Internets“: übersetzt Namen in IP-Adressen. Beim Registrar trägt man ein, dass der Name zu GitHub zeigt. Änderungen brauchen Minuten bis Stunden, bis sie überall ankommen.</li>
+<li><strong>HTTPS:</strong> In GitHub <em>Enforce HTTPS</em> anhaken, das Zertifikat ist kostenlos.</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Die Doppelpendel-Demo (<code>demos/doppelpendel/</code>) in einem öffentlichen Test-Repository mit GitHub Pages online stellen lassen:</p>
+<pre><code class="language-text">Stell dieses Projekt mit GitHub Pages online. Erklär mir jeden Schritt, bevor du ihn machst, und sag mir am Ende die Adresse.
+</code></pre>
+<p>Dann <code>nslookup ihre-domain.de</code> im Terminal: So sieht eine DNS-Antwort aus.</p>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Eigenes Projekt (oder eine Kopie ohne Vertrauliches) als öffentliches Repository auf GitHub, Pages einschalten, Adresse im Browser öffnen.</p>
+<p>Geklappt, wenn die Seite unter <code>name.github.io/projekt</code> erscheint.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Privates Repo:</strong> Pages braucht dann ein bezahltes Konto. Lösung: eigenes öffentliches Repo nur für die Seite.</li>
+<li><strong>404 direkt nach dem Einschalten:</strong> ein, zwei Minuten warten, dann neu laden.</li>
+<li><strong>Seite zeigt README statt Visualisierung:</strong> Die Startseite muss <code>index.html</code> oder <code>index.md</code> heißen.</li>
+<li><strong>Eigene Domain geht nicht sofort:</strong> DNS braucht Zeit. Erst nach ein paar Stunden Fehler suchen.</li>
+<li><strong>Ordner mit <code>_</code> am Anfang fehlen online:</strong> GitHub Pages lässt sie weg. Eine leere Datei <code>.nojekyll</code> im Repository hilft.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a></li>
+<li>GitHub-Hilfe: GitHub Pages, Custom domains (docs.github.com)</li>
+</ul>
+<p><em>Stand: 2026-11-22</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../2-datenschutz-passwoerter/lehrer.html"><small>← zurück</small>Datenschutz &amp; Passwörter</a><span></span></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-26 18:24</span>
+  <span class="foot-links"><a class="gh" href="https://github.com/tillg/makers-toolkit" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="../../impressum/">Impressum &amp; Datenschutz</a></span>
+</footer>
+</body>
+</html>

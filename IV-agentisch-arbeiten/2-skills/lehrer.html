@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: Skills · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ki)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">IV · Agentisch arbeiten</a> <span aria-hidden="true">›</span> <span>Skills</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="skills">Skills</h1><div class="drehbuch-head">
+      <p><strong>Teil IV · Agentisch arbeiten</strong> · Dauer gesamt: ca. 40 Min. · Braucht: <a href="../../III-wissensbasis/2-claude-md/lehrer.html">CLAUDE.md</a>, <a href="../../III-wissensbasis/3-kontextfenster/lehrer.html">Kontextfenster</a> · Führt zu: <a href="../../VI-toolkit/1-mcp/lehrer.html">MCP &amp; Co.</a></p>
+      <p><strong>Material:</strong> Aufbau <code>SKILL.md</code> [CC] 12, [OC] 27, „grill me“ [CC] 26</p>
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#46-was-sind-skills">4.6 Was sind Skills?</a> · ca. 10 Min.</li><li><a href="#47-skill-beispiel-grill-with-docs">4.7 Skill-Beispiel: grill-with-docs</a> · ca. 15 Min.</li><li><a href="#62-eigene-skills">6.2 Eigene Skills</a> · ca. 15 Min.</li></ul></div>
+<h2 id="46-was-sind-skills">4.6 Was sind Skills?</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Ein Skill ist eine <strong>gespeicherte Anleitung für wiederkehrende Aufgaben</strong>: ein Ordner mit einer Datei <code>SKILL.md</code>. Claude kennt immer nur Name und Beschreibung und liest den Rest erst, wenn er gebraucht wird. Die <code>CLAUDE.md</code> dagegen ist immer geladen.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>erklären, was ein Skill ist und woraus eine <code>SKILL.md</code> besteht,</li>
+<li>Skill und <code>CLAUDE.md</code> unterscheiden,</li>
+<li>einen Skill per <code>/name</code> aufrufen,</li>
+<li>begründen, warum man fremde Skills nur aus vertrauenswürdiger Quelle installiert.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><p><strong>Problem:</strong> Wir erklären Claude jedes Mal dasselbe („fass das Paper so zusammen: Fragestellung, Methode, …“). Das nervt und wird jedes Mal anders.</p>
+</li>
+<li><p><strong>Bild: Rezeptkarte.</strong> Ein Rezept steht auf einer Karte im Kasten. Du holst sie raus, wenn du das Gericht kochst, nicht jeden Morgen.</p>
+<blockquote>
+<p>Die <code>CLAUDE.md</code> ist der Zettel am Kühlschrank: hängt immer da. Ein Skill ist die Rezeptkarte im Kasten: Claude weiß, dass sie existiert, und holt sie nur, wenn sie passt.</p>
+</blockquote>
+</li>
+<li><p><strong>Aufbau:</strong> Oben Kopf mit <code>name</code> und <code>description</code>, darunter die Anleitung in Markdown.</p>
+<p><img loading="lazy" src="skill-md-aufbau.png" alt="Anthropic-Grafik: Aufbau einer einfachen SKILL.md mit Kopf und Anleitung (Englisch)"></p>
+<p>Unser Beispiel (aus dem Handout):</p>
+<pre><code class="language-markdown">---
+name: paper-zusammenfassen
+description: Fasst ein wissenschaftliches Paper nach festem Schema zusammen. Verwenden, wenn jemand ein Paper oder eine Studie zusammengefasst haben will.
+---
+
+1. Lies das Paper ganz.
+2. Schreib: Fragestellung, Methode, Ergebnis, Grenzen, offene Fragen.
+3. Nenne zu jeder Aussage die Seite.
+</code></pre>
+</li>
+<li><p><strong>Warum nur der Kopf immer geladen wird:</strong> Kontext ist knapp (<a href="../../III-wissensbasis/3-kontextfenster/lehrer.html#36-kontext-verstehen">3.6</a>). Hundert Anleitungen im Kontext wären Ballast. Die Beschreibung ist der <strong>Auslöser</strong>: Sie entscheidet, wann Claude den Skill zieht. Deshalb gehört neben „Was?“ auch „Verwenden, wenn …“ hinein, mit Wörtern, die du wirklich tippst („Fasst … zusammen“, nicht „Hilfsskill 1“; <span class="ref" title="intern">[KB] 06</span>, §Writing the description). Der <code>name</code> besteht aus Kleinbuchstaben, Ziffern und Bindestrichen und muss dem Ordnernamen entsprechen.</p>
+</li>
+<li><p><strong>Aufrufen:</strong> Entweder Claude erkennt, dass er passt, oder wir tippen <code>/paper-zusammenfassen</code>. Mit <code>/skills</code> siehst du, welche Skills Claude kennt. Manche Skills sind so gebaut, dass sie nur per <code>/name</code> starten, z. B. <code>grill-with-docs</code> in <a href="#47-skill-beispiel-grill-with-docs">4.7</a>.</p>
+</li>
+<li><p><strong>Skills erstellen lassen:</strong> „Erstelle mir einen Skill, der …“. Mehr dazu in <a href="#62-eigene-skills">6.2</a>.</p>
+</li>
+<li><p><strong>Vertrauen.</strong> Ein fremder Skill ist ein Text, dem dein Agent folgt, mit deinen Rechten.</p>
+<blockquote>
+<p>Fremde Skills sind wie fremde Rezepte, die dein Koch ohne Rückfrage befolgt. Installiere nur welche aus Quellen, denen du vertraust, und wirf einen Blick in die <code>SKILL.md</code>.</p>
+</blockquote>
+</li>
+<li><p><strong>Tipp aus dem Material:</strong> Für immer gleiche, feste Aufgaben (z. B. Dateien umbenennen) lieber ein Skript schreiben lassen als die KI jedes Mal arbeiten lassen ([CC] 24).</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Einen kleinen Skill live erstellen lassen und aufrufen.</p>
+<pre><code class="language-text">Erstelle mir einen Skill „konzept-erklaeren“. Er erklärt ein Konzept in drei Stufen: ein Satz für Kinder, ein Absatz für Abiturient:innen, ein Absatz mit Formeln für Studierende. Nenne am Ende ein Alltagsbeispiel.
+</code></pre>
+<p>Dann Ordner und <code>SKILL.md</code> im Explorer von VS Code zeigen (Kopf und Anleitung markieren), danach:</p>
+<pre><code class="language-text">/konzept-erklaeren Zinseszins
+</code></pre>
+<p>Worauf wir hinweisen: Kopf = immer bekannt, Rest = nur bei Bedarf. Wo der Skill liegt, schlägt Claude vor: im Projekt (<code>.claude/skills/&lt;name&gt;/SKILL.md</code>) oder persönlich (<code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>). Änderungen an einem Skill gelten sofort, ohne Neustart. Nur wenn der Ordner <code>skills/</code> ganz neu ist, hilft <code>/reload-skills</code> (<span class="ref" title="intern">[KB] 06</span>, §Live reload; Stand 2026-11).</p>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Reflexion statt Übung (Selbermachen folgt in <a href="#62-eigene-skills">6.2</a>): <em>Welche Aufgabe erklärst du Claude immer wieder? Schreib in zwei Sätzen auf, was ein Skill dafür enthalten würde.</em> In Paaren vorlesen. Wer will, lässt Claude daraus gleich einen Skill erstellen.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Skill vs. <code>CLAUDE.md</code>?</strong> <code>CLAUDE.md</code>: Regeln, die immer gelten (Ton, Ordnerstruktur). Skill: Anleitung für eine bestimmte Aufgabe.</li>
+<li><strong>Claude nutzt den Skill nicht.</strong> Beschreibung zu vage (fehlt „Verwenden, wenn …“?), oder Skill ist auf manuellen Aufruf eingestellt. Dann <code>/name</code> tippen.</li>
+<li><strong>Ist das sicher?</strong> Nur mit vertrauenswürdigen Quellen. Beim Installieren fremder Skills immer vorher reinschauen.</li>
+<li><strong>Wo liegen Skills?</strong> Der Ordnername entspricht dem Namen (Kleinbuchstaben, Bindestriche), darin <code>SKILL.md</code>. Orte siehe oben (<span class="ref" title="intern">[KB] 06</span>, Stand 2026-11).</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt „Skills“</li>
+<li>Kollegen-Folien: [CC] Folie 12 / [OC] 27 (Aufbau SKILL.md), [CC] 24 (Best Practices), siehe <span class="ref" title="intern">material.md</span></li>
+<li>Wissensbasis: <span class="ref" title="intern">[KB] 06</span></li>
+<li>Offizielle Doku: Skills in Claude Code (code.claude.com/docs)</li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="47-skill-beispiel-grill-with-docs">4.7 Skill-Beispiel: grill-with-docs</h2>
+<p><em>Dauer: ca. 15 Min.</em></p>
+<h3 id="worum-gehts-1">Worum geht&#39;s</h3>
+<p>Statt dir selbst eine Spezifikation auszudenken, <strong>lässt du dich vom Agenten ausfragen, bis ihr dasselbe meint.</strong> <code>grill-with-docs</code> stellt Fragen in Runden, jede mit einer empfohlenen Antwort, liest nach, was in den Dateien steht, und schreibt nebenbei ein Glossar.</p>
+<h3 id="lernziel-1">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>den Skill installieren und mit <code>/grill-with-docs</code> starten,</li>
+<li>eine Fragerunde mit „ja“ (Empfehlung übernehmen) oder eigener Antwort beantworten,</li>
+<li>erklären, was <code>GLOSSARY.md</code> und <code>docs/adr/</code> sind,</li>
+<li>einschätzen, wann sie <code>grill-with-docs</code> und wann <code>grill-me</code> brauchen.</li>
+</ul>
+<h3 id="so-erklären-wir-es-1">So erklären wir es</h3>
+<ol>
+<li><p><strong>Problem:</strong> Beim Schreiben der Spezifikation (<a href="../1-plan-modus/lehrer.html#41-vom-prompt-zur-spezifikation">4.1</a>) wissen wir oft nicht, was wir nicht wissen. Wir vergessen Punkte, oder wir und Claude meinen mit demselben Wort etwas anderes.</p>
+</li>
+<li><p><strong>Bild: das Aufnahmegespräch.</strong> Eine Bergführerin fragt vor der Tour: Kondition? Erfahrung? Wetterfenster? Sie plant erst danach. Hier macht das der Agent.</p>
+<blockquote>
+<p>Normal fragst du Claude. Hier dreht sich das um: Claude fragt dich aus, und zwar „gnadenlos“, wie es im Skill heißt, bis nichts mehr ungeklärt ist.</p>
+</blockquote>
+</li>
+<li><p><strong>So läuft eine Runde.</strong> Der Agent baut einen „Entscheidungsbaum“: Jede Entscheidung führt zu weiteren. Er fragt <strong>alles, was jetzt schon geklärt werden kann, in einer Runde</strong>, nummeriert, jeweils mit seiner <strong>empfohlenen Antwort</strong>. Die Fragen sind so formuliert, dass <strong>„ja“ die Empfehlung übernimmt</strong>. Dann wartet er auf deine Antworten, die neue Fragen freischalten. Das wiederholt sich, bis alles geklärt ist.</p>
+<pre><code class="language-text">❓ Q1 - Reisezeit: Soll der Törn im Juni oder im September stattfinden?
+➡️ September: weniger Wind-Extreme, Meer noch warm.
+</code></pre>
+</li>
+<li><p><strong>Fakten sucht der Agent selbst.</strong> Was in deinen Dateien steht, schaut er nach (dafür startet er einen Hilfs-Agenten, der in Ruhe sucht). Dich fragt er nur nach <strong>Entscheidungen</strong>, nicht nach Dingen, die er nachlesen kann.</p>
+</li>
+<li><p><strong>Das Glossar.</strong> Sobald ein Begriff geklärt ist, schreibt er ihn in <code>GLOSSARY.md</code>: Was meinen wir mit „Etappe“? Mit „Crew“? Das ist reines Vokabular.</p>
+<blockquote>
+<p>Ein Glossar ist wie die gemeinsame Speisekarte: Alle wissen, was „Törn“ in diesem Projekt bedeutet.</p>
+</blockquote>
+</li>
+<li><p><strong>Entscheidungsnotizen (ADR).</strong> Schwer umkehrbare, überraschende Entscheidungen mit echtem Abwägen schreibt er als kurze Notiz in <code>docs/adr/</code>. ADR heißt Architecture Decision Record, für uns: „Entscheidungstagebuch“. Dafür müssen <strong>alle drei Bedingungen</strong> zutreffen, deshalb entstehen oft gar keine.</p>
+</li>
+<li><p><strong>Was nicht herauskommt:</strong> Eine fertige Spezifikation. Das meiste, was wir beantworten, steht nur im Gespräch. Danach: Plan schreiben lassen (<a href="../1-plan-modus/lehrer.html#42-erst-planen-dann-bauen">4.2</a>), im selben Gespräch.</p>
+</li>
+<li><p><strong><code>grill-me</code>:</strong> Ohne Projektordner (nur ein Chat-Gespräch) gibt es die Variante <code>/grill-me</code>: dieselbe Fragerunde, aber ohne Dateien. Vor dem Workshop prüfen, ob <code>grill-me</code> im Plugin enthalten ist.</p>
+</li>
+<li><p><strong>Vertrauen:</strong> Wir installieren hier fremde Anweisungen (<a href="#46-was-sind-skills">4.6</a>). Das Repo ist MIT-lizenziert und öffentlich einsehbar: <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">github.com/mattpocock/skills</a>. Kurz in die Dateien schauen ist erlaubt und erwünscht.</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo-1">Zeigen (Live-Demo)</h3>
+<p>Installieren (außerhalb von Claude Code im Terminal; Stand der Anleitung im README: 2026-11-06):</p>
+<pre><code class="language-bash">claude plugin install mattpocock-skills@claude-plugins-official
+</code></pre>
+<p>Der Skill besteht aus drei Teilen (<code>grill-with-docs</code> verweist auf <code>grilling</code> und <code>domain-modeling</code>). Mit dem Plugin kommen sie zusammen. Dann im Segeltörn-Projektordner <code>claude</code> starten und:</p>
+<pre><code class="language-text">/grill-with-docs Ich will einen Planer für eine Segelwoche in Kroatien.
+</code></pre>
+<p>Dabei zeigen: (1) die erste Runde mit Nummern und Empfehlungen, (2) eine Antwort „ja“, eine eigene Antwort, (3) wie der Agent Fakten aus <code>quellen/</code> selbst nachliest, (4) <code>GLOSSARY.md</code> im Editor, wie sie während des Gesprächs wächst. Nach der letzten Runde: „Schreib daraus eine Spezifikation und einen Plan in <code>plan.md</code>“ und weiter wie in <a href="../1-plan-modus/lehrer.html#43-gemeinsam-am-plan-arbeiten">4.3</a>.</p>
+<p>Der Skill startet nur, wenn wir <code>/grill-with-docs</code> tippen, Claude wählt ihn nicht von allein.</p>
+<h3 id="selbst-machen-übung-1">Selbst machen (Übung)</h3>
+<p>Jede:r installiert das Plugin (falls nicht schon durch uns geschehen) und startet im eigenen Projekt:</p>
+<pre><code class="language-text">/grill-with-docs Ich will [eigene Idee: Lernplan / Bergtour / Budget / …].
+</code></pre>
+<p>Mindestens zwei Runden beantworten. Zwischendurch „ja“ sagen, wo die Empfehlung passt, und mindestens einmal widersprechen.</p>
+<p>Geklappt, wenn: Es gibt eine <code>GLOSSARY.md</code> mit mindestens drei Begriffen, und du kannst dein Vorhaben in drei Sätzen erklären, die vorher nicht klar waren. Wer fertig ist, lässt sich einen Plan schreiben.</p>
+<h3 id="stolpersteine--fragen-1">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Installation klappt nicht.</strong> <code>claude plugin install</code> im normalen Terminal, nicht in der Claude-Code-Eingabe. Alternativ in Claude Code <code>/plugin</code>. Name der Quelle (<code>claude-plugins-official</code>) vor dem Workshop prüfen, Plugin-Namen können sich ändern.</li>
+<li><strong>Alle Fragen auf einmal, ohne Empfehlungen, kein Glossar.</strong> Der Skill besteht aus mehreren Dateien und der Agent hat nicht alle geladen. Fragen: „Welche Skills hast du geladen?“ Notfalls neu starten.</li>
+<li><strong>Keine <code>GLOSSARY.md</code> entstanden.</strong> Entweder gab es keinen neuen Begriff, oder die Datei-Teilfunktion hat nicht geklappt. Im Projektordner nachsehen, ob Claude dort arbeitet.</li>
+<li><strong>Keine ADRs.</strong> Normal. Sie entstehen nur bei seltenen Entscheidungen.</li>
+<li><strong>„Ich weiß keine Antwort.“</strong> Dann „weiß ich nicht, schlag etwas vor“ sagen. Ihr klärt das gemeinsam.</li>
+<li><strong>Nicht alle sind überzeugt</strong>, dass das Glossar dem Agenten hilft. Der Hauptnutzen liegt bei den Menschen, die dieselben Wörter benutzen. Bei uns kein Streitpunkt, aber ehrlich sagen.</li>
+<li><strong>Zu viele Runden.</strong> Wir können jederzeit sagen: „Das reicht, schreib jetzt die Spezifikation.“</li>
+</ul>
+<h3 id="material--quellen-1">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt „Beispiel: grill-with-docs“</li>
+<li>Kollegen-Folien: [CC] Folie 26 – Vorläufer „grill me“, siehe <span class="ref" title="intern">material.md</span></li>
+<li>Repo: <a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">mattpocock/skills</a> (MIT). Dateien: <code>skills/engineering/grill-with-docs/SKILL.md</code>, <code>skills/productivity/grilling/SKILL.md</code>, <code>docs/engineering/grill-with-docs.md</code></li>
+</ul>
+<p><em>Stand: 2026-11-06</em></p>
+<h2 id="62-eigene-skills">6.2 Eigene Skills</h2>
+<p><em>Dauer: ca. 15 Min.</em></p>
+<h3 id="worum-gehts-2">Worum geht&#39;s</h3>
+<p>Alles, was du mehr als zweimal erklärst, gehört in einen Skill. <strong>Ein eigener Skill ist ein Rezept, das du einmal schreibst und immer wieder abrufst.</strong> Den Skill schreibt Claude, du sagst, was drin stehen soll, und prüfst das Ergebnis.</p>
+<h3 id="lernziel-2">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>eine wiederkehrende Aufgabe aus ihrem Alltag benennen</li>
+<li>Claude daraus einen Skill (<code>SKILL.md</code>) erstellen lassen</li>
+<li>den Skill an einem echten Dokument ausprobieren und nachschärfen</li>
+</ul>
+<h3 id="so-erklären-wir-es-2">So erklären wir es</h3>
+<ol>
+<li><strong>Wiederholung (30 Sek.)</strong> zu <a href="#46-was-sind-skills">4.6</a>: Skill = Ordner mit einer <code>SKILL.md</code>. Oben Name und Beschreibung, darunter die Anleitung in Markdown.
+<img loading="lazy" src="skill-md-aufbau.png" alt="Aufbau einer SKILL.md: Kopf mit name und description, darunter Markdown-Anleitung">
+Grafik ist von Anthropic und auf Englisch. Wir zeigen nur: oben der Steckbrief, unten das Rezept.</li>
+<li><strong>Bild: Rezeptkarte.</strong> Wer jeden Sonntag denselben Kuchen backt, schreibt das Rezept auf. Ein Skill ist die Rezeptkarte für Claude.</li>
+<li><strong>Welche Aufgabe wiederholst du?</strong> Wir sammeln mit der Gruppe, abwechselnd aus allen Bereichen:<ul>
+<li>Vorlesung nachbereiten → Zusammenfassung + Glossar + 3 Übungsfragen</li>
+<li>Prüfungsvorbereitung → Lernplan aus allen Quellen</li>
+<li>Tourenplanung → Checkliste, Höhenprofil, Wetter-Check</li>
+<li>Törn-Briefing → Crew-Checkliste, Wachplan, Hafenüberblick</li>
+<li>Paper lesen → feste Struktur (Fragestellung, Methode, Ergebnis, Grenzen)</li>
+<li>Rechnung prüfen → Einheiten, Formeln, Plausibilität (Mathe/Physik)</li>
+</ul>
+</li>
+<li><strong>Die Faustregel:</strong> Wenn du Claude zum dritten Mal dasselbe erklärst, ist es ein Skill. Sonst reicht ein Prompt oder die <code>CLAUDE.md</code> (Unterschied: <code>CLAUDE.md</code> gilt immer, ein Skill nur, wenn er gebraucht wird).</li>
+<li><strong>Gute Skills sind klein.</strong> Eine Aufgabe, feste Schritte, festes Ausgabeformat, ein Satz „Verwenden, wenn …“ in der Beschreibung. Die Beschreibung ist der Auslöser: Sie entscheidet, ob Claude den Skill findet (<span class="ref" title="intern">[KB] 06</span>). Die wichtigsten Regeln stehen <strong>ganz oben</strong> im Skill, denn bei langen Skills wird nach einer Verdichtung nur der Anfang neu geladen.</li>
+<li><strong>Beispiel „grill me“</strong> als Gegenstück: Auch dieser Skill ist nur ein kurzer Text. Wir zeigen den Kern (aus dem Kollegen-Material, [CC] 26):<blockquote>
+<p>„Interview me relentlessly about every aspect of this plan until we reach a shared understanding. … For each question, provide your recommended answer. Ask the questions one at a time.“
+Pointe: Kein Code, nur klare Anweisung. Das kannst du auch.</p>
+</blockquote>
+</li>
+<li><strong>Wo liegen Skills?</strong> Im Projekt (<code>.claude/skills/&lt;name&gt;/SKILL.md</code>, nur dort) oder persönlich (<code>~/.claude/skills/&lt;name&gt;/SKILL.md</code>, überall; <span class="ref" title="intern">[KB] 06</span>, Stand 2026-11). Im Workshop: Claude legt den Ort selbst an und sagt uns, wo. Name: Kleinbuchstaben und Bindestriche, wie der Ordner.</li>
+</ol>
+<h3 id="zeigen-live-demo-2">Zeigen (Live-Demo)</h3>
+<p>Am Segeltörn-Planer einen Skill „Hafen-Steckbrief“ bauen:</p>
+<pre><code class="language-text">Ich will für jeden Hafen in meinen Quellen immer denselben Steckbrief haben:
+Lage, Einfahrt, Liegeplätze, Versorgung, Besonderheiten, Quelle.
+Erstelle mir dafür einen Skill. Frag mich, wenn dir etwas fehlt.
+</code></pre>
+<p>Wir zeigen: Claude fragt nach, legt die <code>SKILL.md</code> an, wir lesen sie gemeinsam. Kontrolle, ob Claude den Skill kennt: „Welche Skills hast du?“ (oder <code>/skills</code>). Dann ausprobieren:</p>
+<pre><code class="language-text">Mach einen Hafen-Steckbrief für Trogir.
+</code></pre>
+<p>Worauf wir hinweisen: Format stimmt jedes Mal gleich. Fehlt etwas, nicht die Datei von Hand ändern, sondern sagen: „Ergänze im Skill, dass immer die Entfernung zum nächsten Hafen drinsteht.“
+Danach committen (Skill gehört zum Projekt).</p>
+<h3 id="selbst-machen-übung-2">Selbst machen (Übung)</h3>
+<p>Jede:r baut einen eigenen Skill (ca. 10 Min.):</p>
+<pre><code class="language-text">Ich mache oft folgende Aufgabe: [Aufgabe in 1–2 Sätzen].
+Das Ergebnis soll immer so aufgebaut sein: [Gliederung].
+Erstelle mir dafür einen Skill. Frag nach, wenn etwas unklar ist.
+</code></pre>
+<p>Dann mit einem echten Dokument aus <code>quellen/</code> testen, das Ergebnis lesen, einmal nachschärfen. Committen.
+Geklappt, wenn: Der Skill liefert zweimal hintereinander (an zwei Dokumenten) das gleiche Format.
+Wer keine Idee hat: „Vorlesung nachbereiten“ oder „Paper lesen“ nehmen.</p>
+<h3 id="stolpersteine--fragen-2">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Claude nutzt den Skill nicht von selbst.</strong> Beschreibung zu vage. Fix: „Schreibe die Beschreibung so um, dass klar ist, wann der Skill benutzt wird.“ Notfalls den Skill beim Namen nennen.</li>
+<li><strong>Skill wird zu lang.</strong> Ein Skill, eine Aufgabe. Lieber zwei kleine.</li>
+<li><strong>Skill vs. <code>CLAUDE.md</code>?</strong> <code>CLAUDE.md</code> = Grundregeln für alles. Skill = Rezept für eine Aufgabe.</li>
+<li><strong>Fremde Skills installieren?</strong> Nur aus Quellen, denen du traust: Es sind Anweisungen an deinen Agenten (siehe <a href="#46-was-sind-skills">4.6</a>).</li>
+<li><strong>Skill ändert sich nicht?</strong> Änderungen an bestehenden Skills gelten sofort. Nur ein ganz neuer <code>skills/</code>-Ordner braucht <code>/reload-skills</code> (<span class="ref" title="intern">[KB] 06</span>, §Live reload; Stand 2026-11). Mit „Welche Skills hast du?“ prüfen, ob Claude den Skill überhaupt sieht.</li>
+</ul>
+<h3 id="material--quellen-2">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a> (Abschnitt „Eigene Skills“), Skill-Grundlagen in <a href="./">Schüler-Seite</a></li>
+<li>Kollegen-Folien: [CC] Folie 12 – Aufbau SKILL.md; [CC] Folie 26 – „grill me“ (Kürzel siehe <span class="ref" title="intern">material.md</span>)</li>
+<li>Wissensbasis: <span class="ref" title="intern">[KB] 06</span></li>
+<li>Offizielle Doku zu Skills: code.claude.com/docs</li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../1-plan-modus/lehrer.html"><small>← zurück</small>Plan-Modus</a><a class="pn-next" href="../../V-visualisieren/1-html-javascript/lehrer.html"><small>weiter →</small>HTML &amp; JavaScript</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-26 18:24</span>
+  <span class="foot-links"><a class="gh" href="https://github.com/tillg/makers-toolkit" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="../../impressum/">Impressum &amp; Datenschutz</a></span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan-Modus · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Erst eine klare Aufgabe, dann einen Plan, dann bauen lassen und prüfen. Im Plan-Modus ändert Claude nichts.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ki)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">IV · Agentisch arbeiten</a> <span aria-hidden="true">›</span> <span>Plan-Modus</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="plan-modus">Plan-Modus</h1><p class="topic-meta">Teil IV · Agentisch arbeiten · ca. 50 Min. · Braucht: <a href="../../III-wissensbasis/2-claude-md/">CLAUDE.md</a>, <a href="../../II-git/1-git/">Git</a></p>
+<h2 id="der-kreislauf">Der Kreislauf</h2>
+<pre><code class="language-text">Idee ──► Spezifikation ──► Plan ──► Ausführen ──► Prüfen ──┐
+            ▲                                              │
+            └──────────────── Feedback ◄───────────────────┘
+</code></pre>
+<h2 id="1-vom-prompt-zur-spezifikation">1. Vom Prompt zur Spezifikation</h2>
+<p>Ein vager Wunsch: <em>„Mach mir einen Lernplan.“</em></p>
+<p>Eine Spezifikation:</p>
+<pre><code class="language-markdown"># Spezifikation: Lernplan Thermodynamik
+
+**Ziel:** In 3 Wochen klausurfit.
+**Grundlage:** Alles in `quellen/thermo/`.
+**Rahmen:** 1 h pro Werktag, am Wochenende frei.
+**Ergebnis:** `lernplan.md` mit Tagesplan, je Tag Thema, Quelle, 2 Übungsaufgaben.
+**Fertig, wenn:** Jedes Kapitel vorkommt und die letzte Woche Wiederholung ist.
+</code></pre>
+<p>Funktioniert genauso für „Bergtour planen“ oder „Budget für die WG“.</p>
+<h2 id="2-erst-planen-dann-bauen">2. Erst planen, dann bauen</h2>
+<p>Schalte Claude in den <strong>Plan-Modus</strong> (<code>Shift + Tab</code>, bis „plan mode“ angezeigt wird). Claude erkundet, stellt Fragen und schlägt einen Plan vor – ohne etwas zu ändern.</p>
+<h2 id="3-gemeinsam-am-plan-arbeiten">3. Gemeinsam am Plan arbeiten</h2>
+<p>Lass Claude den Plan als <code>plan.md</code> speichern. Lies ihn, ändere ihn, frag nach Alternativen: „Welche zwei anderen Herangehensweisen gäbe es?“</p>
+<h2 id="4-ausführen-lassen">4. Ausführen lassen</h2>
+<p>„Setze <code>plan.md</code> um.“ Schau zu, welche Dateien Claude liest und schreibt.</p>
+<h2 id="5-prüfen-und-iterieren">5. Prüfen und iterieren</h2>
+<ul>
+<li>Entspricht das Ergebnis der Spezifikation? Geh die Punkte unter <em>Fertig, wenn</em> durch.</li>
+<li>Konkretes Feedback geben: nicht „besser machen“, sondern „Tag 4 ist zu voll, verteile auf Tag 4 und 5“.</li>
+<li>Zwischenstände committen.</li>
+</ul>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../../III-wissensbasis/3-kontextfenster/"><small>← zurück</small>Kontextfenster</a><a class="pn-next" href="../2-skills/"><small>weiter →</small>Skills</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-26 18:24</span>
+  <span class="foot-links"><a class="gh" href="https://github.com/tillg/makers-toolkit" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="../../impressum/">Impressum &amp; Datenschutz</a></span>
+</footer>
+</body>
+</html>

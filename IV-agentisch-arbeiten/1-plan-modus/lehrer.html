@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drehbuch: Plan-Modus · The Modern Maker’s Toolkit</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="teacher">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-ki)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">IV · Agentisch arbeiten</a> <span aria-hidden="true">›</span> <span>Plan-Modus</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn active" href="lehrer.html" aria-current="page">Lehrer-Ansicht</a>
+    <a class="view-btn" href="./">Schüler-Ansicht</a>
+  </div></div><p class="teacher-badge">Drehbuch für die Kursleitung</p><h1 id="plan-modus">Plan-Modus</h1><div class="drehbuch-head">
+      <p><strong>Teil IV · Agentisch arbeiten</strong> · Dauer gesamt: ca. 50 Min. · Braucht: <a href="../../III-wissensbasis/2-claude-md/lehrer.html">CLAUDE.md</a>, <a href="../../II-git/1-git/lehrer.html">Git</a> · Führt zu: <a href="../../V-visualisieren/1-html-javascript/lehrer.html">HTML &amp; JavaScript</a>, <a href="../../V-visualisieren/2-recherche-pruefen/lehrer.html">Recherche &amp; Prüfen</a>, <a href="../../V-visualisieren/3-mehrere-agenten/lehrer.html">Mehrere Agenten</a></p>
+      <p><strong>Material:</strong> Prompt-Formel [CW] S. 16, Planen mit Screenshots [CC] 16–21, Vertrauens-Tabelle und 70/30-Regel [CW] S. 8–9</p>
+      <p><strong>Abschnitte:</strong></p><ul><li><a href="#41-vom-prompt-zur-spezifikation">4.1 Vom Prompt zur Spezifikation</a> · ca. 10 Min.</li><li><a href="#42-erst-planen-dann-bauen">4.2 Erst planen, dann bauen</a> · ca. 10 Min.</li><li><a href="#43-gemeinsam-am-plan-arbeiten">4.3 Gemeinsam am Plan arbeiten</a> · ca. 10 Min.</li><li><a href="#44-den-agenten-ausführen-lassen">4.4 Den Agenten ausführen lassen</a> · ca. 10 Min.</li><li><a href="#45-prüfen-und-iterieren">4.5 Prüfen und iterieren</a> · ca. 10 Min.</li></ul></div>
+<h2 id="41-vom-prompt-zur-spezifikation">4.1 Vom Prompt zur Spezifikation</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts">Worum geht&#39;s</h3>
+<p>Ein vager Wunsch führt zu einem vagen Ergebnis. <strong>Je klarer du vorher sagst, wann die Aufgabe fertig ist, desto besser wird das Ergebnis, und desto leichter kannst du es prüfen.</strong> Eine Spezifikation ist nur ein kurzer Text mit Ziel, Rahmen, Ergebnis und „fertig, wenn …“.</p>
+<h3 id="lernziel">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>einen vagen Wunsch in eine Spezifikation mit fünf Bestandteilen umschreiben,</li>
+<li>ein prüfbares „Fertig, wenn“ formulieren,</li>
+<li>erklären, warum „nicht zu genau, nicht zu vage“ die Mitte ist.</li>
+</ul>
+<h3 id="so-erklären-wir-es">So erklären wir es</h3>
+<ol>
+<li><p><strong>Kreislauf zeigen</strong> (Folie/Tafel): Idee → Spezifikation → Plan → Ausführen → Prüfen → zurück. Das ist der rote Faden von Teil IV. Optional das Flyer-Motiv:</p>
+<p><img loading="lazy" src="route-idee-ergebnis.png" alt="Route von der Idee über Planung und Umsetzung zum Ergebnis"></p>
+<blockquote>
+<p>Das ist unser Weg für den Rest des Blocks: Idee, Planung, Umsetzung, Ergebnis. Heute schauen wir uns den ersten Schritt an, aus der Idee eine klare Aufgabe machen.</p>
+</blockquote>
+</li>
+<li><p><strong>Alltags-Bild: Briefing für eine freie Autorin.</strong> Wer „Schreib was über Skifahren“ sagt, bekommt irgendwas. Wer Länge, Zielgruppe, Ton und Abgabetermin nennt, bekommt etwas Brauchbares.</p>
+<blockquote>
+<p>Stell dir vor, du briefst eine gute Freelancerin, die dich nicht kennt. Was müsste sie wissen, damit sie nicht dreimal nachfragen muss? Genau das gehört in die Spezifikation.</p>
+</blockquote>
+</li>
+<li><p><strong>Vorher/Nachher an einem Beispiel.</strong> Vage: <em>„Plan mir einen Segeltörn.“</em> Die Spezifikation dazu an der Tafel gemeinsam entwickeln (Gruppe ruft Punkte zu):</p>
+<pre><code class="language-markdown"># Spezifikation: Segeltörn Kroatien
+**Ziel:** Eine Woche Törn für 4 Personen, Start und Ziel Split.
+**Grundlage:** Alles in `quellen/hafenhandbuch/` und `quellen/wetter/`.
+**Rahmen:** Max. 4 Stunden Segeln pro Tag, jede Nacht in einem Hafen oder einer Bucht, Budget 600 € pro Person.
+**Ergebnis:** `toern.md` mit Tagesplan (Route, Distanz, Hafen) und einer Crew-Checkliste.
+**Fertig, wenn:** Jede Tagesetappe unter 25 Seemeilen liegt, jeder Hafen im Hafenhandbuch vorkommt und die Gesamtkosten dokumentiert sind.
+</code></pre>
+</li>
+<li><p><strong>Die fünf Bausteine</strong> benennen: Ziel, Grundlage, Rahmen, Ergebnis, Fertig-wenn. Das „Fertig, wenn“ ist das Wichtigste, denn damit prüfen wir später in <a href="#45-pr%C3%BCfen-und-iterieren">4.5</a>.</p>
+</li>
+<li><p><strong>Prompt-Formel als Gedächtnisstütze</strong> (aus [CW] S. 16): Rolle, Kontext, Aufgabe, Rahmen, Beispiele. Die <strong>Beispiele</strong> werden am häufigsten weggelassen und wirken am stärksten („so soll ein Tagesplan aussehen“).</p>
+</li>
+<li><p><strong>Nicht zu genau, nicht zu vage.</strong> Zu viele Vorgaben engen ein oder widersprechen sich, zu wenige lassen Claude raten:</p>
+<p><img loading="lazy" src="prompt-kalibrieren.png" alt="Anthropic-Grafik: Prompt kalibrieren, zu genau, genau richtig, zu vage (Englisch)"></p>
+<blockquote>
+<p>Die Grafik ist von Anthropic und auf Englisch, die Idee gilt für jeden Text: Sag, was dir wichtig ist, und lass den Rest offen.</p>
+</blockquote>
+</li>
+<li><p><strong>Brücke:</strong> Wer nicht weiß, was in die Spezifikation gehört, muss sie nicht allein schreiben. In <a href="../2-skills/lehrer.html#47-skill-beispiel-grill-with-docs">4.7</a> lassen wir uns von Claude ausfragen.</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo">Zeigen (Live-Demo)</h3>
+<p>Gleicher Wunsch, zwei Mal, jeweils in einer frischen Session (<code>/clear</code> dazwischen). Wir lassen vorerst nur Text erzeugen, nichts bauen.</p>
+<pre><code class="language-text">Plan mir einen Segeltörn.
+</code></pre>
+<pre><code class="language-text">Lies die Spezifikation in spezifikation.md und erstelle daraus toern.md.
+</code></pre>
+<p>Vorher <code>spezifikation.md</code> mit dem Beispiel oben anlegen (vorbereiten). Worauf wir hinweisen: Das erste Ergebnis ist generisch und passt zu niemandem. Das zweite lässt sich Punkt für Punkt gegen „Fertig, wenn“ prüfen.</p>
+<h3 id="selbst-machen-übung">Selbst machen (Übung)</h3>
+<p>Jede:r nimmt einen eigenen Wunsch (Lernplan, Bergtour, WG-Budget, Skitrip) und schreibt die Spezifikation in eine Datei <code>spezifikation.md</code>, mit den fünf Bausteinen. Wer hängt, bittet Claude: <em>„Hier ist mein Wunsch: … Stell mir die Fragen, die du für eine Spezifikation brauchst.“</em></p>
+<p>Geklappt, wenn: Das „Fertig, wenn“ lässt sich mit Ja/Nein beantworten (nicht „soll gut sein“, sondern „jedes Kapitel kommt vor“). Die Dateien bleiben liegen, wir brauchen sie in <a href="#42-erst-planen-dann-bauen">4.2</a>.</p>
+<h3 id="stolpersteine--fragen">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Das ist doch viel Aufwand für einen Prompt.“</strong> Für Kleinkram stimmt das. Bei größeren Aufgaben spart die Minute Nachdenken mehrere Korrekturrunden.</li>
+<li><strong>Zu lange Spezifikationen.</strong> Eine halbe Seite reicht. Lieber Beispiele als Regeln.</li>
+<li><strong>„Fertig, wenn“ nicht prüfbar</strong> („schön“, „übersichtlich“). Nachfragen: Woran würdest du das merken?</li>
+<li><strong>Wo liegt die Datei?</strong> Im Projektordner, damit Claude sie lesen kann. Dauerhafte Regeln gehören in die <code>CLAUDE.md</code> (<a href="../../III-wissensbasis/2-claude-md/lehrer.html#34-projektkontext-mit-claudemd">3.4</a>), die Spezifikation gilt nur für diese Aufgabe.</li>
+</ul>
+<h3 id="material--quellen">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt 1</li>
+<li>Kollegen-Folien: [CC] Folie 2 (Ablauf), [CC] 11 / [OC] 12 (Prompt kalibrieren), [CW] S. 16 (Prompt-Formel), siehe <span class="ref" title="intern">material.md</span></li>
+<li>Beispielprojekt: <span class="ref" title="intern">beispielprojekte.md</span> (Segeltörn-Planer)</li>
+</ul>
+<p><em>Stand: 2026-11-06</em></p>
+<h2 id="42-erst-planen-dann-bauen">4.2 Erst planen, dann bauen</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-1">Worum geht&#39;s</h3>
+<p>Im Plan-Modus liest Claude und denkt nach, <strong>ändert aber nichts</strong>. Erst wenn der Plan stimmt, wird gebaut. Das ist billiger als Reparieren.</p>
+<h3 id="lernziel-1">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>den Plan-Modus mit <code>/plan</code> oder <code>Shift + Tab</code> einschalten,</li>
+<li>erklären, warum Planen vor dem Bauen Zeit spart,</li>
+<li>Claude einen Plan als <code>plan.md</code> speichern lassen.</li>
+</ul>
+<h3 id="so-erklären-wir-es-1">So erklären wir es</h3>
+<ol>
+<li><p><strong>Bild: Architektin und Bagger.</strong> Niemand fängt ein Haus mit dem Bagger an. Erst Plan, dann Baugenehmigung, dann Bagger.</p>
+<blockquote>
+<p>Ohne Plan-Modus ist Claude der Bagger mit Vollgas. Mit Plan-Modus ist es die Architektin, die nur zeichnet.</p>
+</blockquote>
+</li>
+<li><p><strong>Zweites Bild aus unseren Domänen:</strong> Bergtour. Nach dem Aufbruch merkt man am Grat, dass die Route zu lang war. Vorher auf der Karte war das Umplanen gratis.</p>
+</li>
+<li><p><strong>Was der Plan-Modus macht:</strong> Claude liest Dateien, erkundet, stellt Rückfragen und schlägt einen Plan vor. Es ändert nichts, bis du den Plan freigibst (<span class="ref" title="intern">[KB] 05</span>, §Plan before you edit; Stand 2026-11). Berechtigungen: siehe <a href="../../I-basics/5-claude-code/lehrer.html#17-berechtigungen">1.7</a>.</p>
+</li>
+<li><p><strong>Einschalten:</strong> Am einfachsten tippst du <code>/plan</code> und gleich die Aufgabe dahinter, z. B. <code>/plan Plane den Törn ab Split</code>. Oder <code>Shift + Tab</code> drücken, bis unten „plan mode on“ steht. Seit Claude Code v2.1.283 startet jede Session im <strong>Auto-Modus</strong>. Von dort sind es drei Drücke: Manual, Änderungen annehmen, Plan. Unter Windows kann statt <code>Shift + Tab</code> auch <code>Alt + M</code> nötig sein (<span class="ref" title="intern">[KB] 25</span>, §Modes). Auf dem Bild unten rot umrandet:</p>
+<p><img loading="lazy" src="plan-start-prompt.png" alt="Terminal: einfacher Prompt, darunter rot markiert der Hinweis plan mode on"></p>
+<blockquote>
+<p>Das Beispiel ist ein Entwickler-Beispiel (Versicherung). Wir zeigen es live mit unserem eigenen Beispiel, dem Segeltörn.</p>
+</blockquote>
+</li>
+<li><p><strong>Der Prompt darf einfach sein.</strong> Wichtig ist, dass der Plan <strong>in einer Datei</strong> landet (<code>plan.md</code>), denn die können wir lesen und bearbeiten (<a href="#43-gemeinsam-am-plan-arbeiten">4.3</a>). Mit <code>Ctrl + G</code> öffnest du den Plan direkt im Editor.</p>
+</li>
+<li><p><strong>Freigabe:</strong> Ist der Plan fertig, fragt Claude. Du wählst „Ja, und Auto-Modus“, „Ja, Änderungen einzeln bestätigen“ oder „Nein, weiter planen“ (<span class="ref" title="intern">[KB] 05</span>; im Programm auf Englisch, Stand 2026-11). Für uns jetzt: „Nein, weiter planen“.</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo-1">Zeigen (Live-Demo)</h3>
+<p>Segeltörn-Projekt mit <code>spezifikation.md</code> aus <a href="#41-vom-prompt-zur-spezifikation">4.1</a>. <code>/plan</code> (oder <code>Shift + Tab</code> bis „plan mode on“), dann:</p>
+<pre><code class="language-text">Lies spezifikation.md und die Dokumente in quellen/. Erstelle einen detaillierten Umsetzungsplan und schreib ihn in plan.md.
+</code></pre>
+<p>Worauf wir hinweisen: Claude liest Dateien, ändert aber nichts am Projekt. Er stellt eventuell Rückfragen. Plan-Modus ist am Ende noch an: nach dem Plan fragt Claude, wie es weitergeht (siehe Freigabe oben). Wir wählen <strong>noch nicht</strong> eine der Ja-Optionen, sondern wechseln zu <a href="#43-gemeinsam-am-plan-arbeiten">4.3</a>.</p>
+<p>Laut <span class="ref" title="intern">[KB] 05</span> ändert der Plan-Modus nichts bis zur Freigabe. Ob Claude <code>plan.md</code> im Projektordner dabei schon direkt schreibt, steht dort nicht. <strong>Vor dem Workshop prüfen.</strong> Sonst hilft: Plan im Chat zeigen lassen, mit <code>Ctrl + G</code> ansehen oder nach der Freigabe speichern lassen. Notfalls: „Zeig mir den Plan hier im Chat“ und anschließend im normalen Modus speichern lassen.</p>
+<h3 id="selbst-machen-übung-1">Selbst machen (Übung)</h3>
+<p>Alle schalten den Plan-Modus ein und lassen einen Plan für ihre Spezifikation aus <a href="#41-vom-prompt-zur-spezifikation">4.1</a> erzeugen:</p>
+<pre><code class="language-text">Lies spezifikation.md. Erstelle einen detaillierten Umsetzungsplan und schreib ihn in plan.md.
+</code></pre>
+<p>Geklappt, wenn: <code>plan.md</code> existiert (in der Dateiliste von VS Code sichtbar) und im Projekt sonst nichts verändert wurde. Wer will, prüft das mit <code>git status</code> (<a href="../../II-git/1-git/lehrer.html#28-git--claude-code">2.8</a>).</p>
+<h3 id="stolpersteine--fragen-1">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Ich sehe kein ‚plan mode‘.“</strong> Aus dem Auto-Modus sind es drei Drücke von <code>Shift + Tab</code>. Einfacher: <code>/plan &lt;Aufgabe&gt;</code> tippen. Unter Windows ggf. <code>Alt + M</code>, siehe oben.</li>
+<li><strong>Claude baut trotzdem los.</strong> Dann war der Plan-Modus nicht an (die Session startet im Auto-Modus!). Abbrechen (Esc) und Modus prüfen, ggf. mit Git zurückholen (<a href="../../II-git/1-git/lehrer.html#26-fehler-r%C3%BCckg%C3%A4ngig-machen">2.6</a>).</li>
+<li><strong>„Brauche ich das immer?“</strong> Nein. Für kleine, klare Aufgaben (Tippfehler, Umbenennen) reicht ein Prompt. Planen lohnt, wenn mehrere Dateien oder mehrere Schritte betroffen sind.</li>
+<li><strong>Der Plan ist zu lang.</strong> Gut so, dann ist <a href="#43-gemeinsam-am-plan-arbeiten">4.3</a> wichtig: kürzen, streichen, nachfragen.</li>
+</ul>
+<h3 id="material--quellen-1">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt 2</li>
+<li>Kollegen-Folien: [CC] Folie 16 – Plan-Modus mit einfachem Prompt, siehe <span class="ref" title="intern">material.md</span></li>
+<li>Wissensbasis: <span class="ref" title="intern">[KB] 05</span> (§Plan before you edit), <span class="ref" title="intern">[KB] 25</span> (§Modes)</li>
+<li>Offizielle Doku: Plan-Modus und Modi in Claude Code (code.claude.com/docs)</li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="43-gemeinsam-am-plan-arbeiten">4.3 Gemeinsam am Plan arbeiten</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-2">Worum geht&#39;s</h3>
+<p>Der erste Plan ist ein Entwurf. <strong>Lies ihn, beantworte die offenen Fragen direkt in <code>plan.md</code> und lass Claude ihn kritisch prüfen, bevor etwas gebaut wird.</strong> Ein Plan in einer Markdown-Datei ist Text, den du wie jeden anderen Text bearbeitest.</p>
+<h3 id="lernziel-2">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>einen Plan lesen und auf Lücken prüfen,</li>
+<li>offene Fragen des Agenten direkt in <code>plan.md</code> beantworten,</li>
+<li>Claude bitten, den Plan kritisch zu hinterfragen und Alternativen zu nennen.</li>
+</ul>
+<h3 id="so-erklären-wir-es-2">So erklären wir es</h3>
+<ol>
+<li><p><strong>Bild: Entwurf mit Rotstift.</strong> Wie bei einem Aufsatz: Die erste Fassung ist nie die letzte. Du bist Lektorin, Claude schreibt.</p>
+</li>
+<li><p><strong>Offene Fragen.</strong> Claude schreibt von sich aus Fragen in den Plan (Abschnitt „Open Questions“ bzw. „Offene Fragen“). Wir beantworten sie <strong>direkt in der Datei</strong>, im Editor, unter der jeweiligen Frage:</p>
+<p><img loading="lazy" src="plan-fragen.png" alt="plan.md mit Abschnitt Open Questions, den der Agent angelegt hat"></p>
+<blockquote>
+<p>Das ist ein Entwickler-Beispiel. Bei uns steht dort z. B. „Soll die Route Inseln anlaufen oder an der Küste bleiben?“ Und wir schreiben die Antwort darunter.</p>
+</blockquote>
+<p>Abkürzung: Mit <code>Ctrl + G</code> öffnet Claude Code den Plan direkt im Editor, noch bevor du ihn freigibst (<span class="ref" title="intern">[KB] 25</span>, <span class="ref" title="intern">[KB] 05</span>). Lieber so ändern als im Chat diskutieren.</p>
+</li>
+<li><p><strong>Dann „sei kritisch“.</strong> Nach den Antworten fragen wir Claude nach einem Gegencheck:</p>
+<p><img loading="lazy" src="plan-kritisch-pruefen.png" alt="Terminal-Prompt: Plan objektiv prüfen, Fehlendes nennen, kritisch sein"></p>
+<blockquote>
+<p>Der Agent hat den Plan selbst geschrieben und findet ihn deshalb erst mal gut. Wir bitten ihn ausdrücklich, kritisch zu sein.</p>
+</blockquote>
+</li>
+<li><p><strong>Ergebnis und Verbesserung.</strong> Typisch ist ein Urteil wie „vernünftiger Entwurf, aber noch nicht umsetzbar“, dann bitten wir um Überarbeitung:</p>
+<p><img loading="lazy" src="plan-verbessern.png" alt="Agent-Urteil: vernünftiger Entwurf, nicht umsetzungsreif; Antwort: untersuchen und Plan verbessern"></p>
+</li>
+<li><p><strong>Mehrere Runden sind normal.</strong> Zwei bis drei Durchgänge, dann ist der Plan meist gut. Danach nicht endlos weiter feilen.</p>
+</li>
+<li><p><strong>Alternativen verlangen:</strong> „Welche zwei anderen Herangehensweisen gäbe es?“ Das verhindert, dass wir den ersten Einfall nur abnicken.</p>
+</li>
+<li><p><strong>Wann reichen Fragen in <code>plan.md</code> nicht?</strong> Wenn die Idee selbst noch unscharf ist, lassen wir uns ausfragen, siehe <a href="../2-skills/lehrer.html#47-skill-beispiel-grill-with-docs">4.7 grill-with-docs</a>.</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo-2">Zeigen (Live-Demo)</h3>
+<p>Mit dem <code>plan.md</code> aus <a href="#42-erst-planen-dann-bauen">4.2</a>: Datei in VS Code öffnen (oder <code>Ctrl + G</code>), die offenen Fragen vorlesen, zwei davon live unter die Frage beantworten, speichern. Dann in Claude Code:</p>
+<pre><code class="language-text">Ich habe die offenen Fragen in plan.md beantwortet. Schau dir den Plan nochmal an und versuch objektiv zu sein: Fehlt etwas? Ist das ein guter Plan? Sei kritisch und schlag Verbesserungen vor.
+</code></pre>
+<pre><code class="language-text">Welche zwei anderen Herangehensweisen gäbe es? Nenne jeweils Vor- und Nachteile.
+</code></pre>
+<pre><code class="language-text">Überarbeite plan.md entsprechend: Übernimm die Verbesserung 1 und 3, lass 2 weg.
+</code></pre>
+<p>Worauf wir hinweisen: Wir entscheiden, was in den Plan kommt, Claude liefert Vorschläge. Optional: Plan committen (<a href="../../II-git/1-git/lehrer.html#24-commits">2.4</a>), dann ist jede Fassung nachvollziehbar.</p>
+<h3 id="selbst-machen-übung-2">Selbst machen (Übung)</h3>
+<p>Eigenes <code>plan.md</code> lesen. Mindestens eine offene Frage in der Datei beantworten, einen Schritt streichen oder ändern, dann den Kritik-Prompt oben verwenden und eine Verbesserung übernehmen.</p>
+<p>Geklappt, wenn: Der Plan ist nach der Runde sichtbar anders (Diff in VS Code, <a href="../../II-git/1-git/lehrer.html#23-%C3%A4nderungen--diffs">2.3</a>) und du kannst begründen, warum.</p>
+<h3 id="stolpersteine--fragen-2">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Ich verstehe den Plan nicht.“</strong> Nachfragen: „Erklär Schritt 3 in einfachen Worten.“ Was du nicht verstehst, kannst du nicht prüfen.</li>
+<li><strong>Claude stimmt allem zu.</strong> Agenten sind höflich. Deshalb ausdrücklich nach Kritik, Lücken und Alternativen fragen.</li>
+<li><strong>Antworten ohne Speichern.</strong> Datei speichern, bevor Claude sie liest.</li>
+<li><strong>Wo ist die Grenze?</strong> Plan zu detailliert ist auch schlecht: Wenn er jede Zeile vorschreibt, bist du der Programmierer. Er soll Schritte und Prüfkriterien enthalten.</li>
+</ul>
+<h3 id="material--quellen-2">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt 3</li>
+<li>Kollegen-Folien: [CC] Folien 18–20 (Fragen in <code>plan.md</code>, „sei kritisch“), [OC] Folie 23, siehe <span class="ref" title="intern">material.md</span></li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="44-den-agenten-ausführen-lassen">4.4 Den Agenten ausführen lassen</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-3">Worum geht&#39;s</h3>
+<p>Jetzt wird gebaut. Du gibst den Plan frei und <strong>schaust zu, was Claude liest, schreibt und ausführt.</strong> Ein Commit vorher ist dein Sicherheitsnetz.</p>
+<h3 id="lernziel-3">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>einen Plan zur Umsetzung freigeben,</li>
+<li>an der Ausgabe erkennen, welche Dateien Claude liest, ändert oder anlegt,</li>
+<li>vor dem Start einen Commit als Rückweg anlegen,</li>
+<li>laufende Arbeit unterbrechen, wenn es in die falsche Richtung geht.</li>
+</ul>
+<h3 id="so-erklären-wir-es-3">So erklären wir es</h3>
+<ol>
+<li><strong>Erst sichern.</strong> Vor dem Ausführen committen (<a href="../../II-git/1-git/lehrer.html#24-commits">2.4</a>), damit wir mit <a href="../../II-git/1-git/lehrer.html#26-fehler-r%C3%BCckg%C3%A4ngig-machen">2.6</a> zurückkönnen.<blockquote>
+<p>Beim Skifahren schnallst du die Ski auch erst an, bevor du die Piste runterfährst. Der Commit ist die Bindung.</p>
+</blockquote>
+</li>
+<li><strong>Freigeben.</strong> Entweder auf Claudes Frage nach dem Plan zustimmen („Ja, und Auto-Modus“ oder „Ja, Änderungen einzeln bestätigen“, <span class="ref" title="intern">[KB] 05</span>; wer noch lernt, nimmt das zweite) oder schlicht: „Setze <code>plan.md</code> um.“ Wer will, startet vorher mit <code>/clear</code>, dann hat Claude einen frischen Kopf und nur den Plan als Gedächtnis (Kontext: <a href="../../III-wissensbasis/3-kontextfenster/lehrer.html#36-kontext-verstehen">3.6</a>).</li>
+<li><strong>Zuschauen ist Teil des Jobs.</strong> Wir lesen live mit: Welche Dateien werden gelesen, welche geschrieben, welche Befehle ausgeführt? Bei Rückfragen nach Erlaubnis bewusst entscheiden (<a href="../../I-basics/5-claude-code/lehrer.html#17-berechtigungen">1.7</a>).</li>
+<li><strong>Zwischenergebnisse.</strong> Bei größeren Plänen nach jedem Schritt kurz hinschauen, nicht erst am Ende. Sinnvoll: „Setze nur Schritt 1 und 2 um, dann halte an.“</li>
+<li><strong>Eingreifen.</strong> Geht etwas schief: <code>Esc</code> unterbricht Claude, die bisherige Arbeit bleibt. Dann sagen, was falsch läuft. Nicht warten, bis alles fertig ist. Du kannst auch <strong>während</strong> Claude arbeitet tippen: Die Korrektur wird eingereiht und gelesen, sobald die laufenden Schritte fertig sind (<span class="ref" title="intern">[KB] 14</span>, §Watch the first minute).<ul>
+<li><strong>Zweimal korrigiert und es wird nicht besser?</strong> Dann <code>/clear</code> und <strong>ein</strong> besserer Auftrag statt einer dritten Korrektur (<span class="ref" title="intern">[KB] 14</span>).</li>
+<li><strong>Zurückspulen:</strong> <code>Esc Esc</code> oder <code>/rewind</code> setzt Dateien und/oder Gespräch auf einen früheren Stand. Grenze: Was Claude per Befehl im Terminal geändert hat, wird nicht zurückgesetzt (<span class="ref" title="intern">[KB] 25</span>, §Rewind). Dafür bleibt Git das Netz (<a href="../../II-git/1-git/lehrer.html#26-fehler-r%C3%BCckg%C3%A4ngig-machen">2.6</a>).</li>
+</ul>
+</li>
+<li><strong>Unterwegs committen.</strong> Was gut ist, committen. Was schlecht ist, verwerfen.</li>
+</ol>
+<h3 id="zeigen-live-demo-3">Zeigen (Live-Demo)</h3>
+<p>Segeltörn-Plan aus <a href="#43-gemeinsam-am-plan-arbeiten">4.3</a>. Zuerst Commit-Moment:</p>
+<pre><code class="language-text">Mach einen Commit mit der Nachricht „Spezifikation und Plan“.
+</code></pre>
+<p>Dann <code>/clear</code> und Umsetzung in Etappen:</p>
+<pre><code class="language-text">Setze plan.md um, aber nur die Schritte 1 bis 3. Danach halt an und fasse zusammen, was du gemacht hast.
+</code></pre>
+<p>Worauf wir hinweisen: Welche Dateien entstehen? Was fragt Claude um Erlaubnis? Was steht in der Zusammenfassung, und stimmt sie mit dem überein, was wir in VS Code sehen? Den Diff zeigen (<a href="../../II-git/1-git/lehrer.html#23-%C3%A4nderungen--diffs">2.3</a>).</p>
+<h3 id="selbst-machen-übung-3">Selbst machen (Übung)</h3>
+<ol>
+<li><p>Eigenen Stand committen.</p>
+</li>
+<li><p>Claude die ersten Schritte des Plans umsetzen lassen:</p>
+<pre><code class="language-text">Setze plan.md um, Schritt 1 bis 2. Halte danach an und fasse zusammen.
+</code></pre>
+</li>
+<li><p>Im Diff nachsehen, was sich geändert hat. Dann ggf. weitermachen.</p>
+</li>
+</ol>
+<p>Geklappt, wenn: Du kannst benennen, welche Dateien neu oder geändert sind, und hast einen Commit, zu dem du zurückkehren könntest.</p>
+<h3 id="stolpersteine--fragen-3">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>Erlaubnis-Abfragen nerven.</strong> Einzeln lesen und bewusst bestätigen. „Immer erlauben“ nur für harmlose Dinge (<a href="../../I-basics/5-claude-code/lehrer.html#17-berechtigungen">1.7</a>).</li>
+<li><strong>Es dauert lange.</strong> Normal. Wir sehen zu und trinken Tee. Hängt es offensichtlich: <code>Esc</code>.</li>
+<li><strong>Claude macht etwas anderes als im Plan.</strong> Unterbrechen, auf den Plan verweisen („Das steht so nicht in plan.md“), notfalls zurückrollen.</li>
+<li><strong>Kontext wird voll.</strong> Bei langen Sessions nachlassende Qualität: neu starten und <code>plan.md</code> lesen lassen (<a href="../../III-wissensbasis/3-kontextfenster/lehrer.html#36-kontext-verstehen">3.6</a>).</li>
+<li><strong>Freigabe nach dem Plan-Modus</strong> (Stand 2026-11, <span class="ref" title="intern">[KB] 05</span>): drei Optionen, siehe oben. Wer in 1.4 auf Manual gewechselt hat, nimmt „einzeln bestätigen“.</li>
+</ul>
+<h3 id="material--quellen-3">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt 4</li>
+<li>Kollegen-Folien: [CC] Folie 2 (Ablauf: Umsetzung), siehe <span class="ref" title="intern">material.md</span></li>
+</ul>
+<p><em>Stand: 2026-11-12</em></p>
+<h2 id="45-prüfen-und-iterieren">4.5 Prüfen und iterieren</h2>
+<p><em>Dauer: ca. 10 Min.</em></p>
+<h3 id="worum-gehts-4">Worum geht&#39;s</h3>
+<p>Fertig heißt nicht richtig. <strong>Prüfe das Ergebnis gegen dein „Fertig, wenn“ und gib konkretes Feedback statt „mach besser“.</strong> Claude macht etwa 70 % schnell, die letzten 30 % sind deine.</p>
+<h3 id="lernziel-4">Lernziel</h3>
+<p>Nach diesem Thema können die Teilnehmenden …</p>
+<ul>
+<li>ein Ergebnis Punkt für Punkt gegen die Spezifikation prüfen,</li>
+<li>konkretes, umsetzbares Feedback formulieren,</li>
+<li>einschätzen, wo sie Claude eher vertrauen können und wo sie nachprüfen müssen,</li>
+<li>gute Zwischenstände committen.</li>
+</ul>
+<h3 id="so-erklären-wir-es-4">So erklären wir es</h3>
+<ol>
+<li><p><strong>Zurück zum „Fertig, wenn“</strong> aus <a href="#41-vom-prompt-zur-spezifikation">4.1</a>. Das ist unsere Checkliste. Beim Segeltörn: Ist jede Etappe unter 25 Seemeilen? Kommt jeder Hafen im Hafenhandbuch vor?</p>
+</li>
+<li><p><strong>Feedback muss konkret sein.</strong> Gegenüberstellung an die Tafel:</p>
+<table>
+<thead>
+<tr>
+<th>Schlecht</th>
+<th>Besser</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>„Mach das besser.“</td>
+<td>„Tag 4 ist zu voll. Verteile auf Tag 4 und 5.“</td>
+</tr>
+<tr>
+<td>„Stimmt das?“</td>
+<td>„Zeig mir die Quelle für die Distanz Split–Hvar.“</td>
+</tr>
+<tr>
+<td>„Zu lang.“</td>
+<td>„Kürze jeden Tag auf drei Zeilen.“</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>Wann kann ich trauen?</strong> Dreistufig (nach [CW] S. 9, vor dem Workshop gegenlesen):</p>
+<ul>
+<li><strong>Hohes Vertrauen:</strong> Entwürfe, Zusammenfassungen, Umformulieren, Ideen.</li>
+<li><strong>Erst prüfen:</strong> Fakten, Zahlen, Daten, Quellen, Rechnungen.</li>
+<li><strong>Wenig Vertrauen:</strong> Alles Aktuelle (Preise, Wetter heute), Rechtliches, exakte Berechnungen ohne Gegenprobe.<blockquote>
+<p>Claude ist wie ein belesener Autor, keine Datenbank. Was klingt wie ein Fakt, kann trotzdem erfunden sein.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Gegenprobe-Beispiele</strong> aus unseren Domänen: Sparplan mit Monats- und Jahreszins gegenrechnen, Wurfwinkel 45 Grad als Test (maximale Weite), Distanz auf der Karte nachmessen. Mehr in <span class="ref" title="intern">beispielprojekte.md</span> (Prüf-Challenge).</p>
+</li>
+<li><p><strong>Claude beim Prüfen einspannen.</strong> „Prüfe dein Ergebnis gegen die Spezifikation und liste jede Abweichung.“ Das ersetzt unser Prüfen nicht, findet aber Offensichtliches.</p>
+</li>
+<li><p><strong>Committen, wenn gut.</strong> Jede brauchbare Fassung ein Commit (<a href="../../II-git/1-git/lehrer.html#24-commits">2.4</a>). Wird eine Änderung schlechter, geht es zurück (<a href="../../II-git/1-git/lehrer.html#26-fehler-r%C3%BCckg%C3%A4ngig-machen">2.6</a>).</p>
+</li>
+<li><p><strong>Und im Kreis:</strong> Feedback führt zur nächsten Runde, bis das „Fertig, wenn“ erfüllt ist. Dann aufhören.</p>
+</li>
+</ol>
+<h3 id="zeigen-live-demo-4">Zeigen (Live-Demo)</h3>
+<p>Ergebnis aus <a href="#44-den-agenten-ausf%C3%BChren-lassen">4.4</a>. Wir gehen die Fertig-wenn-Punkte am Bildschirm durch. Einen Punkt lassen wir bewusst Claude prüfen:</p>
+<pre><code class="language-text">Prüfe toern.md gegen spezifikation.md. Liste für jeden Punkt unter „Fertig, wenn“ auf, ob er erfüllt ist, mit Beleg.
+</code></pre>
+<p>Dann ein konkretes Korrektur-Beispiel:</p>
+<pre><code class="language-text">Die Etappe an Tag 3 hat 31 Seemeilen. Verteile Tag 3 und 4 so, dass beide unter 25 liegen, und zeig mir die neue Aufteilung, bevor du die Datei änderst.
+</code></pre>
+<p>Worauf wir hinweisen: Wir fragen nach Belegen. Wir prüfen mindestens eine Zahl selbst.</p>
+<h3 id="selbst-machen-übung-4">Selbst machen (Übung)</h3>
+<ol>
+<li>Eigene Spezifikation öffnen, jeden „Fertig, wenn“-Punkt abhaken oder markieren.</li>
+<li>Zwei konkrete Feedbacks formulieren (je ein Satz) und umsetzen lassen.</li>
+<li>Eine Zahl oder Aussage selbst nachprüfen.</li>
+</ol>
+<p>Geklappt, wenn: Mindestens ein Fehler gefunden oder bewusst bestätigt wurde, und der Stand ist committet.</p>
+<h3 id="stolpersteine--fragen-4">Stolpersteine &amp; Fragen</h3>
+<ul>
+<li><strong>„Sieht doch gut aus.“</strong> Schön ist nicht richtig, siehe Prüf-Challenge in Teil V (<a href="../../V-visualisieren/2-recherche-pruefen/lehrer.html#56-erst-pr%C3%BCfen-dann-vertrauen">5.6</a>).</li>
+<li><strong>Endlos weiter verbessern.</strong> Das „Fertig, wenn“ ist die Abbruchbedingung.</li>
+<li><strong>Claude „bestätigt“ sich selbst.</strong> Selbstprüfung hilft, ersetzt aber nicht die eigene Stichprobe.</li>
+<li><strong>Was, wenn es schlimmer wurde?</strong> Zurück zum letzten Commit (<a href="../../II-git/1-git/lehrer.html#26-fehler-r%C3%BCckg%C3%A4ngig-machen">2.6</a>).</li>
+<li><strong>Vor dem Workshop prüfen:</strong> Vertrauens-Tabelle aus [CW] S. 9 mit aktuellen Erfahrungen abgleichen (Modelle ändern sich).</li>
+</ul>
+<h3 id="material--quellen-4">Material &amp; Quellen</h3>
+<ul>
+<li>Handout: <a href="./">Schüler-Seite</a>, Abschnitt 5</li>
+<li>Kollegen-Folien: [CW] S. 8–9 (Vertrauens-Tabelle, 70/30-Regel), [CW] S. 19 (Was Claude nicht kann), siehe <span class="ref" title="intern">material.md</span></li>
+</ul>
+<p><em>Stand: 2026-11-06</em></p>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../../III-wissensbasis/3-kontextfenster/lehrer.html"><small>← zurück</small>Kontextfenster</a><a class="pn-next" href="../2-skills/lehrer.html"><small>weiter →</small>Skills</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-26 18:24</span>
+  <span class="foot-links"><a class="gh" href="https://github.com/tillg/makers-toolkit" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="../../impressum/">Impressum &amp; Datenschutz</a></span>
+</footer>
+</body>
+</html>

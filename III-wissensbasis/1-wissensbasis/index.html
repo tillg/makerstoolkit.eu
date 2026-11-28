@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wissensbasis · The Modern Maker’s Toolkit</title>
+<meta name="description" content="Eigene Dokumente in einen Ordner, Claude macht Inventar, Index und Glossar. Dann Fragen über alles hinweg.">
+<link rel="icon" href="../../assets/logo-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../design/tokens.css">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>(function(){var t;try{t=localStorage.getItem('mmt-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t})();</script>
+<script src="../../assets/site.js" defer></script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-head">
+  <a class="brand" href="../../"><img src="../../assets/logo-mark.svg" alt="" width="30" height="30"><span>The Modern Maker’s Toolkit</span></a>
+  <nav class="site-nav" aria-label="Hauptnavigation">
+    <a href="../../inhalt/">Inhalt</a>
+    <a href="../../tapete/">Tapete</a>
+    <button class="theme-toggle" type="button" aria-label="Hell oder dunkel umschalten" title="Hell / dunkel">
+      <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<article class="doc topic" style="--k: var(--k-wissen)"><div class="doc-top"><nav class="crumbs" aria-label="Pfad"><a href="../../inhalt/">Inhalt</a> <span aria-hidden="true">›</span> <a href="../">III · Wissensbasis</a> <span aria-hidden="true">›</span> <span>Wissensbasis</span></nav><div class="view-switch" role="group" aria-label="Ansicht">
+    <a class="view-btn hidden-teacher" href="lehrer.html">Lehrer-Ansicht</a>
+    <a class="view-btn active" href="./" aria-current="page">Schüler-Ansicht</a>
+  </div></div><h1 id="wissensbasis">Wissensbasis</h1><p class="topic-meta">Teil III · Wissensbasis · ca. 80 Min. · Braucht: <a href="../../I-basics/5-claude-code/">Claude Code</a>, <a href="../../II-git/1-git/">Git</a></p>
+<h2 id="1-dokumente-hinzufügen">1. Dokumente hinzufügen</h2>
+<p>Lege in deinem Projekt einen Ordner <code>quellen/</code> an und kopiere deine mitgebrachten Dokumente hinein.</p>
+<pre><code class="language-text">mein-projekt/
+├── CLAUDE.md          ← Anweisungen für Claude
+├── index.md           ← Überblick über alles
+├── quellen/           ← deine Originaldokumente
+└── notizen/           ← von dir und Claude erstellte Zusammenfassungen
+</code></pre>
+<h3 id="kein-material-dabei-hol-es-aus-dem-internet">Kein Material dabei? Hol es aus dem Internet</h3>
+<p>Claude kann Webseiten lesen und als Markdown-Dateien in <code>quellen/</code> ablegen. Ein paar Prompts:</p>
+<ul>
+<li><strong>Eine Seite:</strong> „Lies <a href="https://de.wikipedia.org/wiki/Kornaten" target="_blank" rel="noopener">https://de.wikipedia.org/wiki/Kornaten</a> und speichere den Inhalt als <code>quellen/kornaten.md</code>. Schreib oben die URL und das heutige Datum hin.“</li>
+<li><strong>Eine Seite mit Unterseiten:</strong> „Lies diese Seite und folge den Links zu den einzelnen Häfen, höchstens 10 Seiten. Leg für jede Seite eine eigene <code>.md</code> in <code>quellen/</code> an, mit URL und Datum.“</li>
+<li><strong>Selbst suchen lassen:</strong> „Such im Internet 5 gute Quellen zu ‚Segeln in Kroatien für Anfänger‘. Zeig mir erst die Liste. Wenn ich zustimme, fasse jede in einer eigenen <code>.md</code> in <code>quellen/</code> zusammen, mit URL und Datum.“</li>
+</ul>
+<p>Gut zu wissen:</p>
+<ul>
+<li>Claude fragt vor jedem Web-Zugriff um Erlaubnis (im Manual-Modus). Das ist normal.</li>
+<li>Bei langen Seiten fasst Claude zusammen, statt alles abzuschreiben. Brauchst du den genauen Wortlaut, speichere die Seite im Browser als PDF (<em>Drucken → Als PDF sichern</em>) und leg sie in <code>quellen/</code>.</li>
+<li><strong>Immer die URL notieren.</strong> Dann kannst du später prüfen, woher eine Aussage stammt (<a href="../../V-visualisieren/2-recherche-pruefen/">Recherche prüfen</a>).</li>
+<li>Fremde Texte nur für dich nutzen, nicht als deine eigenen veröffentlichen.</li>
+</ul>
+<h2 id="2-claude-erkunden-lassen">2. Claude erkunden lassen</h2>
+<ul>
+<li>„Mach ein Inventar aller Dokumente in <code>quellen/</code>: Titel, Thema, Umfang, eine Zeile Inhalt.“</li>
+<li>„Welche Themen kommen in mehreren Dokumenten vor?“</li>
+<li>„Lege für jedes Hauptthema eine Zusammenfassung in <code>notizen/</code> an, mit Verweisen auf die Originale.“</li>
+<li>„Erstelle ein Glossar der wichtigsten Begriffe.“</li>
+<li>„Erstelle eine <code>index.md</code>, die alles verlinkt.“</li>
+</ul>
+<h2 id="3-wissen-befragen">3. Wissen befragen</h2>
+<ul>
+<li>„Was sagen die verschiedenen Quellen zu …? Wo widersprechen sie sich?“</li>
+<li>„Was fehlt in meinem Material, um … zu beantworten?“</li>
+<li>„Erkläre mir … und zeige mir die Stelle im Original.“</li>
+</ul>
+<h2 id="4-aufräumen">4. Aufräumen</h2>
+<p>„Schlag eine bessere Ordnerstruktur für mein Projekt vor und setze sie um, wenn ich zustimme.“ Danach committen.</p>
+<h2 id="5-erweitern">5. Erweitern</h2>
+<ul>
+<li>Neue Dokumente in <code>quellen/</code> legen und <code>index.md</code> aktualisieren lassen.</li>
+<li>Neue Themen als eigene Projekte anlegen – mit eigener <code>CLAUDE.md</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Info: das „LLM-Wiki“ nach Karpathy</strong></p>
+<p>Genau so baut Andrej Karpathy (KI-Forscher) seine eigene Wissensbasis. Er nennt es <strong>LLM-Wiki</strong>. Die Idee: Die KI sucht nicht bei jeder Frage neu in den Originalen, sondern pflegt ein Wiki aus Markdown-Dateien. Das Wissen wird einmal aufbereitet und dann aktuell gehalten.</p>
+<ul>
+<li><strong>Drei Ebenen:</strong> die Originale (<code>quellen/</code>, werden nur gelesen), das Wiki (<code>notizen/</code>, schreibt die KI) und eine Anleitung dazu (<code>CLAUDE.md</code>).</li>
+<li><strong>Einlesen:</strong> Neue Quelle rein → Claude fasst sie zusammen, ergänzt passende Seiten, aktualisiert <code>index.md</code>.</li>
+<li><strong>Fragen:</strong> Claude liest zuerst <code>index.md</code>, dann die passenden Seiten, und antwortet mit Verweisen. Gute Antworten kommen als neue Seite ins Wiki.</li>
+<li><strong>Aufräumen:</strong> Ab und zu prüfen lassen: Widersprüche, veraltete Aussagen, Seiten ohne Links.</li>
+</ul>
+<p>Karpathy hat die Idee zuerst am 2. April 2026 <a href="https://x.com/karpathy/status/2039805659525644595" target="_blank" rel="noopener">auf X vorgestellt</a> („LLM Knowledge Bases“). Zwei Tage später folgte die ausführliche Beschreibung (Englisch): <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank" rel="noopener">LLM Wiki auf GitHub</a>. Du kannst den Text auch Claude geben: „Lies diese Beschreibung und richte mein Projekt so ein.“</p>
+</blockquote>
+<nav class="prev-next" aria-label="Blättern"><a class="pn-prev" href="../../II-git/2-github/"><small>← zurück</small>GitHub</a><a class="pn-next" href="../2-claude-md/"><small>weiter →</small>CLAUDE.md</a></nav></article>
+</main>
+<footer class="site-foot">
+  <span>The Modern Maker’s Toolkit · Till &amp; Henri · Stand 2026-11-26 18:24</span>
+  <span class="foot-links"><a class="gh" href="https://github.com/tillg/makers-toolkit" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a><a href="../../impressum/">Impressum &amp; Datenschutz</a></span>
+</footer>
+</body>
+</html>
